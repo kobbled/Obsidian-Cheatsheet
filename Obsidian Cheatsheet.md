@@ -1,9 +1,14 @@
-# Obsidian cheatsheet
+# 1 Obsidian cheatsheet
 
-```toc
+```ad-warning
+Open in Obsidian to view correctly.
 ```
+```ad-info
+If you have any helpful additions to this document, please contribute!
+```
+[[__TOC__]]
 
-## Plugins
+## 1.1 Plugins
 
 - Admonition
 - Advanced Tables
@@ -40,14 +45,14 @@
 - Vantage - Advanced search builder
 - Zotero Integration
 
-## Themes
+## 1.2 Themes
 
 * https://github.com/colineckert/obsidian-things **USING**
 * https://github.com/ceciliamay/obsidianmd-theme-primary
 * https://github.com/damiankorcz/Prism-Theme
 
 
-## Terminology
+## 1.3 Terminology
 
 - Zettelkasten
 - Johnny Decimal
@@ -55,18 +60,18 @@
 - [Linking Your Thinking](https://www.linkingyourthinking.com/)
 
 
-## Markdown
+## 1.4 Markdown
 
 - [Markdown-Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 - [The Ultimate Markdown Cheat Sheet](https://towardsdatascience.com/the-ultimate-markdown-cheat-sheet-3d3976b31a0)
 
-## Latex
+## 1.5 Latex
 
 - [MathJax-demos-web](https://github.com/mathjax/MathJax-demos-web#samples-of-mathjax-v3)
 - [LATEX Math for Undergrads](http://tug.ctan.org/info/undergradmath/undergradmath.pdf)
 - [LATEX Math Cheatsheet](https://c-tan.com/download/latex_math_cheatsheet_2018-01-13.pdf)
 
-## Hotkeys
+## 1.6 Hotkeys
 
 ```ad-note
 Set **Commands** to **Hotkeys** by going to `Settings -> Hotkeys`
@@ -75,13 +80,13 @@ Set **Commands** to **Hotkeys** by going to `Settings -> Hotkeys`
 - https://keycombiner.com/collections/obsidian/
  - [Obsidian Hotkeys: Favorites and best practices](https://forum.obsidian.md/t/obsidian-hotkeys-favorites-and-best-practices/12125)
  
-## Tips
-### how to put the graphs in the sidebar
+## 1.7 Tips
+### 1.7.1 how to put the graphs in the sidebar
 
 ![[Obsidian-mini-graph.gif]]
 
 
-## Commands (CNTRL+P)
+## 1.8 Commands (CNTRL+P)
 
 | **Command**                                  | **Action**                                                               |
 | -------------------------------------------- | ------------------------------------------------------------------------ |
@@ -93,7 +98,7 @@ Set **Commands** to **Hotkeys** by going to `Settings -> Hotkeys`
 
 
 
-## CSS
+## 1.9 CSS
 
 
 ```css
@@ -123,7 +128,7 @@ mjx-math {
 ```
 
 
-### Update Settings
+### 1.9.1 Update Settings
 
 - `settings->editor->display->readable line length`
 - `excaidraw->display->new drawing to match obsidian theme`
@@ -132,12 +137,12 @@ mjx-math {
 * `core plugins -> Outgoing Links`  **Optional**
 
 
-## References
+## 1.10 References
 * [**Obsidian Hub**](publish.obsidian.md/hub)
 * [Obsidian Hub Showcases](https://publish.obsidian.md/hub/03+-+Showcases+%26+Templates/%F0%9F%97%82%EF%B8%8F+03+-+Showcases+%26+Templates)
 * [Linking Your Thinking](https://www.linkingyourthinking.com/)
 
-### Obsidian Publish References
+### 1.10.1 Obsidian Publish References
 https://obsidian.md/publish
 https://workinginpublic.one/
 ----
@@ -147,9 +152,9 @@ https://workinginpublic.one/
 - [Alex Digital Garden](https://publish.obsidian.md/alexander/1_Home/%F0%9F%8F%A0+Home)
 
 
-### Guides
+### 1.10.2 Guides
 
-#### Setting up Obsidian for Papers and Research
+#### 1.10.2.1 Setting up Obsidian for Papers and Research
 
 - [How to Boost Your Productivity for Scientific Research Using Obsidian](https://universvm.medium.com/how-to-boost-your-productivity-for-scientific-research-using-obsidian-fe85c98c63c8)
 - [Obsidian Tutorial for Academic Writing](https://betterhumans.pub/obsidian-tutorial-for-academic-writing-87b038060522?gi=9664895fa2cc)
@@ -157,26 +162,26 @@ https://workinginpublic.one/
 - [Using Dataview with Charts in Obsidian](https://agileadam.com/2022/07/using-dataview-with-charts-in-obsidian/)
 - [The Beginner’s Guide to DATAVIEW Obsidian Plugin — 10 areas where things can go wrong and how to fix them](https://denisetodd.medium.com/obsidian-dataview-for-beginners-a-checklist-to-help-fix-your-dataview-queries-11acc57f1e48)
 
-#### Johnny Decimal System
+#### 1.10.2.2 Johnny Decimal System
 - [Byran Jenks: Johnny Decimal](https://publish.obsidian.md/bryan-jenks/Z/Johnny+Decimal)
 - [Johnny Decimal-ising my life](https://colinwren.medium.com/johnny-decimal-ising-my-life-82ee453f79a4)
 
-#### PARA Method
+#### 1.10.2.3 PARA Method
 [The PARA Method: A Universal System for Organizing Digital Information](https://fortelabs.co/blog/para/)
 
 
-### Reddit Links
+### 1.10.3 Reddit Links
 [ObsidianMD Subreddit](https://www.reddit.com/r/ObsidianMD/)
 https://www.reddit.com/r/ObsidianMD/comments/wb6wwy/need_help_indexing_3d_print_files_see_comments/
 https://www.reddit.com/r/ObsidianMD/comments/we4b06/has_anyone_created_a_bookmarking_system_in/
 
-### Discord Server
+### 1.10.4 Discord Server
 https://obsidian.md/community
 
 
-### Youtube
+### 1.10.5 Youtube
 
-#### Youtube Channels
+#### 1.10.5.1 Youtube Channels
 https://www.youtube.com/channel/UC85D7ERwhke7wVqskV_DZUA
 https://www.youtube.com/c/NicolevanderHoeven
 https://www.youtube.com/user/Peepnbrick
@@ -186,7 +191,7 @@ https://www.youtube.com/c/VisualPKM
 https://www.youtube.com/c/SantiYounger
 
 
-#### Videos
+#### 1.10.5.2 Videos
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/E6ySG7xYgjY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
