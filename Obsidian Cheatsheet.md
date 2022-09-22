@@ -1,5 +1,8 @@
 # Obsidian cheatsheet
 
+```toc
+```
+
 ## Plugins
 
 - Admonition
@@ -37,7 +40,7 @@
 - Vantage - Advanced search builder
 - Zotero Integration
 
-## themes
+## Themes
 
 * https://github.com/colineckert/obsidian-things **USING**
 * https://github.com/ceciliamay/obsidianmd-theme-primary
