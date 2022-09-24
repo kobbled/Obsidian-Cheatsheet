@@ -1,0 +1,15 @@
+
+:root {
+  --h1: 2em;
+  --h2: 1.7em;
+  --h3: 1.4em;
+}
+
+strong {
+   color: pink ;
+}
+
+body .frontmatter-container .tag, body a.tag {
+    background-color: rgb(29, 105, 75) !important ;  
+    color: #ffffff !important ; 
+}
