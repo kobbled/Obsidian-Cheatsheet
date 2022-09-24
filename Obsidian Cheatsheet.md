@@ -150,6 +150,45 @@ img {
 }
 ```
 
+#### img-grid
+
+If using **Minimal Theme** with `Minimal Theme Settings` and `Contextual Typography` plugins you will have access to the _img-grid_ class. Use this CSS as a default template:
+
+```css
+/* Updated for Obsidian 0.9.22 and up */
+
+.img-grid .markdown-preview-section img:not([width]),
+.img-grid .markdown-preview-section video {
+    width:100%;
+}
+.img-grid .markdown-preview-section > div {
+    display:flex;
+}
+.img-grid .markdown-preview-section > div > .internal-embed {
+    flex:1;
+    margin-left:-0.5rem;
+    padding:0 0.5rem 0.5rem 0.5rem;
+}
+.img-grid .markdown-preview-section > div > *:not(div) {
+    margin-block-start: 0rem;
+    margin-block-end: 1rem;
+    max-width: 50%
+}
+.img-grid .markdown-preview-section > div hr {
+    width:100%;
+}
+/* These lines make every image the same height */
+.img-grid .markdown-preview-section > div > .internal-embed img:not(:active) {
+    object-fit:cover;
+    height:100%;
+}
+```
+
+To use for individual pages put this in the notes frontmatter:
+
+```yaml
+cssclass: img-grid
+```
 
 ### 10.2 Tables
 
