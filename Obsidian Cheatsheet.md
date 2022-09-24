@@ -232,6 +232,56 @@ mjx-math {
 - `core plugins -> Templates`
 * `core plugins -> Outgoing Links`  **Optional**
 
+## 11 Dataview
+
+Dataview table can be viewed as cards if using the **Minimal Theme** and placing in the yaml frontmatter of a note:
+
+```yaml
+cssClasses: [cards, cards-cover, cards-2-3]
+
+```
+
+## 12 Javascript/DataviewJS
+
+The root directory of the vault can be accessed with:
+```javascript
+this.app.vault.adapter.basePath
+```
+
+```ad-tip
+You can debug **dataviewjs**, or javascript by going into the inspector ( `Ctrl + Shift + I` ), and going to the console window.
+```
+
+### 12.1 Writing Dataviewjs
+
+javascript for dataview can be written with:
+
+> ```dataviewjs                             ```
+
+
+## 13 Templater
+
+### 13.1 Automating Titles
+
+For creating a Title during template creation you will need to use the javascript below in the frontmatter
+
+```javascript
+<%* 
+	let title = tp.file.title 
+	if (title.startsWith("Untitled")) { 
+		title = await tp.system.prompt("Title"); 
+		await tp.file.rename(`${title}`); 
+	} 
+%>
+```
+
+And then in the body call the title like:
+
+```javascript
+# <% `${title}`%>
+```
+
+
 
 ## 1.10 References
 * [**Obsidian Hub**](publish.obsidian.md/hub)
