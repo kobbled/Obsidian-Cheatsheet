@@ -49,12 +49,21 @@ If you have any helpful additions to this document, please contribute!
 - Vantage  ->  Advanced search builder
 - Zotero Integration
 
-## 1.2 Themes
+## 2 Themes
 
-* https://github.com/colineckert/obsidian-things **USING**
-* https://github.com/ceciliamay/obsidianmd-theme-primary
-* https://github.com/damiankorcz/Prism-Theme
+* [Things](https://github.com/colineckert/obsidian-things) **USING**
+* [Minimal](https://github.com/kepano/obsidian-minimal)
+* [Primary](https://github.com/ceciliamay/obsidianmd-theme-primary)
+* [Prism](https://github.com/damiankorcz/Prism-Theme)
 
+### 2.1 Minimal Theme
+```ad-note
+Install the `Minimal Theme Settings` plugin for custimization
+```
+
+**Minimal Theme** can be used in conjunction with **Contextual Typography** to produce _image_grids_ (See [Docs](https://minimal.guide/Block+types/Image+grids), and ).
+
+* [Minimal Block Types](https://minimal.guide/Block+types/Cards)
 
 ## 1.3 Terminology
 
