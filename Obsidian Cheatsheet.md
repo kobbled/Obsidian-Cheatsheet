@@ -125,6 +125,7 @@ To see the CSS that is running open up the Inspector with `Ctrl + Shift + I`
 ### 10.1 Images
 
 <dt>Center images at max width of page</dt>
+
 ```css
 img {
   display: block;
@@ -135,6 +136,7 @@ img {
 ```
 
 <dt>Hover over images in preview mode</dt>
+
 ```css
 /* Enlarge image on hover */
 .markdown-preview-view img {
@@ -196,6 +198,7 @@ cssclass: img-grid
 ### 10.2 Tables
 
 <dt>Center tables</dt>
+
 ```css
 table {
   table-layout: fixed;
@@ -207,6 +210,7 @@ table {
 ### 10.3 Math
 
 <dt> Increase sie of Latex Math </dt>
+
 ```css
 mjx-math {
   font-size: 130% !important;
@@ -216,6 +220,7 @@ mjx-math {
 ### 10.4 Mermaid
 
 <dt>Get mermaid charts to not overflow</dt>
+
 ```css
 .mermaid {
   max-width: 100%;
