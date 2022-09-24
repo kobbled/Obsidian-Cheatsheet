@@ -8,15 +8,16 @@ If you have any helpful additions to this document, please contribute!
 ```
 [[__TOC__]]
 
-## 1.1 Plugins
+## 1 Plugins
 
-- Admonition
-- Advanced Tables
+- Admonition            **ESSENTIAL**
+- Advanced Tables           **ESSENTIAL**
 - Buttons
 - Calendar
 - Charts View
 - Citations
-- Dataview
+- Contextual Typography   ->  (Useful with Minimal Theme Settings for using img-grid)
+- Dataview                **ESSENTIAL**
 - dictionary
 - Dynamic Table of Contents
 - Editor Syntax Highlight
@@ -29,10 +30,13 @@ If you have any helpful additions to this document, please contribute!
 - Kanban
 - Kindle Highlights
 - Link Favicons
+- Minimal Theme Settings
+- Open Vault in VS Code
 - Outliner
 - Ozan's image in editor plugin
 - PDF Highlights
 - Periodic Note
+- Quick Add                **ESSENTIAL** ([watch demo](https://www.youtube.com/watch?v=gYK3VDQsZJo&ab_channel=ChristianB.B.Houmann))
 - Quick Latex
 - Search on Internet
 - Sliding Panes (Andy Matuschak Mode)
@@ -40,9 +44,9 @@ If you have any helpful additions to this document, please contribute!
 - Sort & Permute lines
 - Tag Wrangler
 - Tasks
-- Templater
+- Templater           **ESSENTIAL**
 - Tracker
-- Vantage - Advanced search builder
+- Vantage  ->  Advanced search builder
 - Zotero Integration
 
 ## 1.2 Themes
@@ -60,10 +64,11 @@ If you have any helpful additions to this document, please contribute!
 - [Linking Your Thinking](https://www.linkingyourthinking.com/)
 
 
-## 1.4 Markdown
+## 4 Markdown
 
 - [Markdown-Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 - [The Ultimate Markdown Cheat Sheet](https://towardsdatascience.com/the-ultimate-markdown-cheat-sheet-3d3976b31a0)
+- [Markdown Extended Syntax](https://www.markdownguide.org/extended-syntax/)
 
 ## 1.5 Latex
 
@@ -97,10 +102,69 @@ Set **Commands** to **Hotkeys** by going to `Settings -> Hotkeys`
 | *Toogle Bullet List*                                             |                    Turn Selected Block into a list                                                      |
 
 
+## 10 CSS
 
-## 1.9 CSS
+Goto `settings->appearance->css snippets`. Click the `Open snippets folder` button. Make a CSS file, and copy the css into a single or multiple file.
+
+```ad-tip
+To see the CSS that is running open up the Inspector with `Ctrl + Shift + I`
+```
+
+### 10.1 Images
+
+<dt>Center images at max width of page</dt>
+```css
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 50%;
+}
+```
+
+<dt>Hover over images in preview mode</dt>
+```css
+/* Enlarge image on hover */
+.markdown-preview-view img {
+  display: block;
+  margin-top: 20pt;
+  margin-bottom: 20pt;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%; /*experiment with values*/
+  transition: transform 0.25s ease;
+}
+
+.markdown-preview-view img:hover {
+  -webkit-transform: scale(2); /* experiment with values */
+  transform: scale(2);
+}
+```
 
 
+### 10.2 Tables
+
+<dt>Center tables</dt>
+```css
+table {
+  table-layout: fixed;
+  margin-left: auto;
+  margin-right: auto;
+}
+```
+
+### 10.3 Math
+
+<dt> Increase sie of Latex Math </dt>
+```css
+mjx-math {
+  font-size: 130% !important;
+}
+```
+
+### 10.4 Mermaid
+
+<dt>Get mermaid charts to not overflow</dt>
 ```css
 .mermaid {
   max-width: 100%;
@@ -108,27 +172,9 @@ Set **Commands** to **Hotkeys** by going to `Settings -> Hotkeys`
   text-align: center;
   justify-content: center;
 }
-
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 50%;
-}
-
-table {
-  table-layout: fixed;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-mjx-math {
-  font-size: 130% !important;
-}
 ```
 
-
-### 1.9.1 Update Settings
+### 10.5 Update Settings
 
 - `settings->editor->display->readable line length`
 - `excaidraw->display->new drawing to match obsidian theme`
@@ -139,10 +185,12 @@ mjx-math {
 
 ## 1.10 References
 * [**Obsidian Hub**](publish.obsidian.md/hub)
+## 14 References
+* [**Obsidian Hub**](https://publish.obsidian.md/hub)
 * [Obsidian Hub Showcases](https://publish.obsidian.md/hub/03+-+Showcases+%26+Templates/%F0%9F%97%82%EF%B8%8F+03+-+Showcases+%26+Templates)
 * [Linking Your Thinking](https://www.linkingyourthinking.com/)
 
-### 1.10.1 Obsidian Publish References
+### 14.1 Obsidian Publish References
 https://obsidian.md/publish
 https://workinginpublic.one/
 ----
@@ -153,6 +201,11 @@ https://workinginpublic.one/
 
 
 ### 1.10.2 Guides
+#### 14.2.1 Dataview Guides
+
+* [Create Cards (Movie Database)](https://minimal.guide/Guides/Create+a+movie+database)
+* [Tutorial: How to Create a Bookshelf](https://thebuccaneersbounty.wordpress.com/2021/08/21/tutorial-how-to-create-a-bookshelf-in-obsidian/)
+* [Obsidian Dataviewjs](https://www.jkoster.com/Obsidian-Dataviewjs-6f3e76cf455747fb9fa30de3e5dff197#d2d6f279cc634256b724b165672c3e03)
 
 #### 1.10.2.1 Setting up Obsidian for Papers and Research
 
