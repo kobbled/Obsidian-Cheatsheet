@@ -258,6 +258,30 @@ javascript for dataview can be written with:
 
 > ```dataviewjs                             ```
 
+### 12.2 inserting images into dataview
+(# ref::  [Obsidian Dataviewjs](https://www.jkoster.com/Obsidian-Dataviewjs-6f3e76cf455747fb9fa30de3e5dff197#d2d6f279cc634256b724b165672c3e03) ; https://www.reddit.com/r/ObsidianMD/comments/soapkd/dataview_plugin_help_how_to_display_images/)
+
+To insert local images into a Dataview table, a Dataviewjs query must be made:
+
+```javascript
+let searchterm = dv.current().searchterm;  
+let pages = dv.pages(searchterm).where(p => p.img != undefined).sort(p => p.file.name, 'desc');  
+// console.log(dv.current());
+// Create table  
+dv.table(["File", "Image"],  
+  pages   
+    .map(p => [    
+ 	   `<img class="myTableImg" src="${this.app.vault.adapter.basePath}/${p.img.path}">`,
+		p.file.link
+  ])  
+);
+```
+
+where `img` is the field (i.e `img::`) on the note where the image should be located
+
+```
+img:: ![[picture.jpg]]
+```
 
 ## 13 Templater
 
