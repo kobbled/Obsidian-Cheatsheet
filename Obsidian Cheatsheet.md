@@ -100,7 +100,7 @@ Set **Commands** to **Hotkeys** by going to `Settings -> Hotkeys`
 ![[Obsidian-mini-graph.gif]]
 
 
-## 1.8 Commands (CNTRL+P)
+## 8 Commands (CNTRL+P)
 
 | **Command**                                  | **Action**                                                               |
 | -------------------------------------------- | ------------------------------------------------------------------------ |
@@ -108,7 +108,9 @@ Set **Commands** to **Hotkeys** by going to `Settings -> Hotkeys`
 | *Dyanamic Table of Contents*                 | Create table of contents for current document                            |
 | *Number All Headings in Document*            | Number heading sequentially and by level                                 |
 | *Sort & Permute lines : Sort Alphabetically* | Sort selected lines alphabetically                                       |
-| *Toogle Bullet List*                                             |                    Turn Selected Block into a list                                                      |
+| *Toogle Bullet List*                         | Turn Selected Block into a list                                          |
+| Templater: Create Note from Template         | Initialize note from template                                            |
+| Tempalter: Replace Templates in current file | Update note that was created from a template                                                                          |
 
 
 ## 10 CSS
