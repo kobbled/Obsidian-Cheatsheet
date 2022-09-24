@@ -1,4 +1,4 @@
-# 1 Obsidian cheatsheet
+# Obsidian Cheatsheet
 
 ```ad-warning
 Open in Obsidian to view correctly.
@@ -65,7 +65,7 @@ Install the `Minimal Theme Settings` plugin for custimization
 
 * [Minimal Block Types](https://minimal.guide/Block+types/Cards)
 
-## 1.3 Terminology
+## 3 Terminology
 
 - Zettelkasten
 - Johnny Decimal
@@ -79,13 +79,13 @@ Install the `Minimal Theme Settings` plugin for custimization
 - [The Ultimate Markdown Cheat Sheet](https://towardsdatascience.com/the-ultimate-markdown-cheat-sheet-3d3976b31a0)
 - [Markdown Extended Syntax](https://www.markdownguide.org/extended-syntax/)
 
-## 1.5 Latex
+## 5 Latex
 
 - [MathJax-demos-web](https://github.com/mathjax/MathJax-demos-web#samples-of-mathjax-v3)
 - [LATEX Math for Undergrads](http://tug.ctan.org/info/undergradmath/undergradmath.pdf)
 - [LATEX Math Cheatsheet](https://c-tan.com/download/latex_math_cheatsheet_2018-01-13.pdf)
 
-## 1.6 Hotkeys
+## 6 Hotkeys
 
 ```ad-note
 Set **Commands** to **Hotkeys** by going to `Settings -> Hotkeys`
@@ -94,8 +94,8 @@ Set **Commands** to **Hotkeys** by going to `Settings -> Hotkeys`
 - https://keycombiner.com/collections/obsidian/
  - [Obsidian Hotkeys: Favorites and best practices](https://forum.obsidian.md/t/obsidian-hotkeys-favorites-and-best-practices/12125)
  
-## 1.7 Tips
-### 1.7.1 how to put the graphs in the sidebar
+## 7 Tips
+### 7.1 how to put the graphs in the sidebar
 
 ![[Obsidian-mini-graph.gif]]
 
@@ -112,6 +112,7 @@ Set **Commands** to **Hotkeys** by going to `Settings -> Hotkeys`
 | Templater: Create Note from Template         | Initialize note from template                                            |
 | Tempalter: Replace Templates in current file | Update note that was created from a template                                                                          |
 
+## 9 Images
 
 ## 10 CSS
 
@@ -307,8 +308,6 @@ And then in the body call the title like:
 
 
 
-## 1.10 References
-* [**Obsidian Hub**](publish.obsidian.md/hub)
 ## 14 References
 * [**Obsidian Hub**](https://publish.obsidian.md/hub)
 * [Obsidian Hub Showcases](https://publish.obsidian.md/hub/03+-+Showcases+%26+Templates/%F0%9F%97%82%EF%B8%8F+03+-+Showcases+%26+Templates)
@@ -324,14 +323,15 @@ https://workinginpublic.one/
 - [Alex Digital Garden](https://publish.obsidian.md/alexander/1_Home/%F0%9F%8F%A0+Home)
 
 
-### 1.10.2 Guides
+### 14.2 Guides
+
 #### 14.2.1 Dataview Guides
 
 * [Create Cards (Movie Database)](https://minimal.guide/Guides/Create+a+movie+database)
 * [Tutorial: How to Create a Bookshelf](https://thebuccaneersbounty.wordpress.com/2021/08/21/tutorial-how-to-create-a-bookshelf-in-obsidian/)
 * [Obsidian Dataviewjs](https://www.jkoster.com/Obsidian-Dataviewjs-6f3e76cf455747fb9fa30de3e5dff197#d2d6f279cc634256b724b165672c3e03)
 
-#### 1.10.2.1 Setting up Obsidian for Papers and Research
+#### 14.2.2 Setting up Obsidian for Papers and Research
 
 - [How to Boost Your Productivity for Scientific Research Using Obsidian](https://universvm.medium.com/how-to-boost-your-productivity-for-scientific-research-using-obsidian-fe85c98c63c8)
 - [Obsidian Tutorial for Academic Writing](https://betterhumans.pub/obsidian-tutorial-for-academic-writing-87b038060522?gi=9664895fa2cc)
@@ -339,26 +339,26 @@ https://workinginpublic.one/
 - [Using Dataview with Charts in Obsidian](https://agileadam.com/2022/07/using-dataview-with-charts-in-obsidian/)
 - [The Beginner’s Guide to DATAVIEW Obsidian Plugin — 10 areas where things can go wrong and how to fix them](https://denisetodd.medium.com/obsidian-dataview-for-beginners-a-checklist-to-help-fix-your-dataview-queries-11acc57f1e48)
 
-#### 1.10.2.2 Johnny Decimal System
+#### 14.2.3 Johnny Decimal System
 - [Byran Jenks: Johnny Decimal](https://publish.obsidian.md/bryan-jenks/Z/Johnny+Decimal)
 - [Johnny Decimal-ising my life](https://colinwren.medium.com/johnny-decimal-ising-my-life-82ee453f79a4)
 
-#### 1.10.2.3 PARA Method
+#### 14.2.4 PARA Method
 [The PARA Method: A Universal System for Organizing Digital Information](https://fortelabs.co/blog/para/)
 
 
-### 1.10.3 Reddit Links
+### 14.3 Reddit Links
 [ObsidianMD Subreddit](https://www.reddit.com/r/ObsidianMD/)
 https://www.reddit.com/r/ObsidianMD/comments/wb6wwy/need_help_indexing_3d_print_files_see_comments/
 https://www.reddit.com/r/ObsidianMD/comments/we4b06/has_anyone_created_a_bookmarking_system_in/
 
-### 1.10.4 Discord Server
+### 14.4 Discord Server
 https://obsidian.md/community
 
 
-### 1.10.5 Youtube
+### 14.5 Youtube
 
-#### 1.10.5.1 Youtube Channels
+#### 14.5.1 Youtube Channels
 https://www.youtube.com/channel/UC85D7ERwhke7wVqskV_DZUA
 https://www.youtube.com/c/NicolevanderHoeven
 https://www.youtube.com/user/Peepnbrick
@@ -368,7 +368,7 @@ https://www.youtube.com/c/VisualPKM
 https://www.youtube.com/c/SantiYounger
 
 
-#### 1.10.5.2 Videos
+#### 14.5.2 Videos
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/E6ySG7xYgjY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
