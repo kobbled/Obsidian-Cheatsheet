@@ -22,7 +22,7 @@ If you have any helpful additions to this document, please contribute!
 - Dynamic Table of Contents
 - Editor Syntax Highlight
 - Excalibrain
-- Excalidraw
+- Excalidraw          **ESSENTIAL**
 - Highlightr
 - Hotkeys++
 - Icon Folder -> https://github.com/FlorianWoelki/obsidian-icon-folder
@@ -374,6 +374,15 @@ And then in the body call the title like:
 # <% `${title}`%>
 ```
 
+
+## 16 Excalidraw
+
+```ad-tip'
+excalidraw can be set to conform to light or dark theme by changing the settings:
+`excaidraw->display->new drawing to match obsidian theme`
+```
+
+* Drawing libraries can be found at [Excalidraw Libraries](https://libraries.excalidraw.com/)
 
 
 ## 17 References
