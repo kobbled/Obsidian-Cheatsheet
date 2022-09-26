@@ -159,7 +159,13 @@ Goto `settings->appearance->css snippets`. Click the `Open snippets folder` butt
 To see the CSS that is running open up the Inspector with `Ctrl + Shift + I`
 ```
 
-### 10.1 Images
+### 11.1 CSS Templates
+
+| type | url |
+| ---- | --- |
+|   Box-Shadow   |   https://getcssscan.com/css-box-shadow-examples  |
+
+### 11.2 Images
 
 <dt>Center images at max width of page</dt>
 
