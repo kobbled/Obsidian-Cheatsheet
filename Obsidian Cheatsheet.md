@@ -94,9 +94,19 @@ Set **Commands** to **Hotkeys** by going to `Settings -> Hotkeys`
 
 - https://keycombiner.com/collections/obsidian/
  - [Obsidian Hotkeys: Favorites and best practices](https://forum.obsidian.md/t/obsidian-hotkeys-favorites-and-best-practices/12125)
- 
-## 7 Tips
-### 7.1 how to put the graphs in the sidebar
+
+## 7 Linking
+
+* To link files and folder use:
+```
+[statswords.csv](file:///C:/Users/bruno/Dropbox/Obsidian/Vaults/ClippingContents/statswords.csv)
+```
+```ad-important
+Any _SPACES_ in the file address **MUST** be replaces with `\%20`, or else it will say it cannot find the file
+```
+
+## 8 Tips
+### 8.1 how to put the graphs in the sidebar
 
 ![[Obsidian-mini-graph.gif]]
 
