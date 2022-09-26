@@ -4,6 +4,7 @@
 .img-grid .markdown-preview-section video {
     width:100%;
 }
+
 .img-grid .markdown-preview-section > div {
     display:flex;
 }
@@ -15,7 +16,9 @@
 .img-grid .markdown-preview-section > div > *:not(div) {
     margin-block-start: 0rem;
     margin-block-end: 1rem;
-    max-width: 50%
+}
+.img-grid .markdown-preview-section > div img {
+	padding-bottom: 20px;
 }
 .img-grid .markdown-preview-section > div hr {
     width:100%;
