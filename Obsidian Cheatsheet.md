@@ -78,6 +78,7 @@ Install the `Minimal Theme Settings` plugin for custimization
 - [Markdown-Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 - [The Ultimate Markdown Cheat Sheet](https://towardsdatascience.com/the-ultimate-markdown-cheat-sheet-3d3976b31a0)
 - [Markdown Extended Syntax](https://www.markdownguide.org/extended-syntax/)
+- [Markdown Extended for VScode](https://marketplace.visualstudio.com/items?itemName=jebbs.markdown-extended) -> This shows some of the extra features that can be achieved with markdown. This is for VSCode but most of the features can be achieved in Obsidian with various community plugins (Just have to search for them).
 
 ## 5 Latex
 
@@ -155,7 +156,7 @@ img {
 }
 ```
 
-#### img-grid
+#### 11.2.1 img-grid
 
 If using **Minimal Theme** with `Minimal Theme Settings` and `Contextual Typography` plugins you will have access to the _img-grid_ class. Use this CSS as a default template:
 
@@ -166,6 +167,7 @@ If using **Minimal Theme** with `Minimal Theme Settings` and `Contextual Typogra
 .img-grid .markdown-preview-section video {
     width:100%;
 }
+
 .img-grid .markdown-preview-section > div {
     display:flex;
 }
@@ -177,7 +179,9 @@ If using **Minimal Theme** with `Minimal Theme Settings` and `Contextual Typogra
 .img-grid .markdown-preview-section > div > *:not(div) {
     margin-block-start: 0rem;
     margin-block-end: 1rem;
-    max-width: 50%
+}
+.img-grid .markdown-preview-section > div img {
+	padding-bottom: 20px;
 }
 .img-grid .markdown-preview-section > div hr {
     width:100%;
@@ -189,13 +193,30 @@ If using **Minimal Theme** with `Minimal Theme Settings` and `Contextual Typogra
 }
 ```
 
+To center grid on page use
+
+```css
+.img-grid .markdown-preview-section > div {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+```
+
+```ad-caution
+This will disable resizing, and some other feature of img-grid
+```
+```ad-question
+Is there a better way to center image grids?
+```
+
 To use for individual pages put this in the notes frontmatter:
 
 ```yaml
 cssclass: img-grid
 ```
 
-### 10.2 Tables
+### 11.3 Tables
 
 <dt>Center tables</dt>
 
@@ -207,7 +228,7 @@ table {
 }
 ```
 
-### 10.3 Math
+### 11.4 Math
 
 <dt> Increase sie of Latex Math </dt>
 
@@ -217,7 +238,7 @@ mjx-math {
 }
 ```
 
-### 10.4 Mermaid
+### 11.5 Mermaid
 
 <dt>Get mermaid charts to not overflow</dt>
 
@@ -230,7 +251,7 @@ mjx-math {
 }
 ```
 
-### 10.5 Update Settings
+## 12 Update Settings
 
 - `settings->editor->display->readable line length`
 - `excaidraw->display->new drawing to match obsidian theme`
@@ -238,7 +259,7 @@ mjx-math {
 - `core plugins -> Templates`
 * `core plugins -> Outgoing Links`  **Optional**
 
-## 11 Dataview
+## 13 Dataview
 
 Dataview table can be viewed as cards if using the **Minimal Theme** and placing in the yaml frontmatter of a note:
 
@@ -247,7 +268,7 @@ cssClasses: [cards, cards-cover, cards-2-3]
 
 ```
 
-## 12 Javascript/DataviewJS
+## 14 Javascript/DataviewJS
 
 The root directory of the vault can be accessed with:
 ```javascript
@@ -258,13 +279,13 @@ this.app.vault.adapter.basePath
 You can debug **dataviewjs**, or javascript by going into the inspector ( `Ctrl + Shift + I` ), and going to the console window.
 ```
 
-### 12.1 Writing Dataviewjs
+### 14.1 Writing Dataviewjs
 
 javascript for dataview can be written with:
 
 > ```dataviewjs                             ```
 
-### 12.2 inserting images into dataview
+### 14.2 inserting images into dataview
 (# ref::  [Obsidian Dataviewjs](https://www.jkoster.com/Obsidian-Dataviewjs-6f3e76cf455747fb9fa30de3e5dff197#d2d6f279cc634256b724b165672c3e03) ; https://www.reddit.com/r/ObsidianMD/comments/soapkd/dataview_plugin_help_how_to_display_images/)
 
 To insert local images into a Dataview table, a Dataviewjs query must be made:
@@ -289,9 +310,9 @@ where `img` is the field (i.e `img::`) on the note where the image should be loc
 img:: ![[picture.jpg]]
 ```
 
-## 13 Templater
+## 15 Templater
 
-### 13.1 Automating Titles
+### 15.1 Automating Titles
 
 For creating a Title during template creation you will need to use the javascript below in the frontmatter
 
@@ -313,12 +334,12 @@ And then in the body call the title like:
 
 
 
-## 14 References
+## 17 References
 * [**Obsidian Hub**](https://publish.obsidian.md/hub)
 * [Obsidian Hub Showcases](https://publish.obsidian.md/hub/03+-+Showcases+%26+Templates/%F0%9F%97%82%EF%B8%8F+03+-+Showcases+%26+Templates)
 * [Linking Your Thinking](https://www.linkingyourthinking.com/)
 
-### 14.1 Obsidian Publish References
+### 17.1 Obsidian Publish References
 https://obsidian.md/publish
 https://workinginpublic.one/
 ----
@@ -328,15 +349,20 @@ https://workinginpublic.one/
 - [Alex Digital Garden](https://publish.obsidian.md/alexander/1_Home/%F0%9F%8F%A0+Home)
 
 
-### 14.2 Guides
+### 17.2 Guides
 
-#### 14.2.1 Dataview Guides
+#### 17.2.1 General Formatting
+
+[Format your notes](https://help.obsidian.md/How+to/Format+your+notes)
+
+
+#### 17.2.2 Dataview Guides
 
 * [Create Cards (Movie Database)](https://minimal.guide/Guides/Create+a+movie+database)
 * [Tutorial: How to Create a Bookshelf](https://thebuccaneersbounty.wordpress.com/2021/08/21/tutorial-how-to-create-a-bookshelf-in-obsidian/)
 * [Obsidian Dataviewjs](https://www.jkoster.com/Obsidian-Dataviewjs-6f3e76cf455747fb9fa30de3e5dff197#d2d6f279cc634256b724b165672c3e03)
 
-#### 14.2.2 Setting up Obsidian for Papers and Research
+#### 17.2.3 Setting up Obsidian for Papers and Research
 
 - [How to Boost Your Productivity for Scientific Research Using Obsidian](https://universvm.medium.com/how-to-boost-your-productivity-for-scientific-research-using-obsidian-fe85c98c63c8)
 - [Obsidian Tutorial for Academic Writing](https://betterhumans.pub/obsidian-tutorial-for-academic-writing-87b038060522?gi=9664895fa2cc)
@@ -344,26 +370,26 @@ https://workinginpublic.one/
 - [Using Dataview with Charts in Obsidian](https://agileadam.com/2022/07/using-dataview-with-charts-in-obsidian/)
 - [The Beginner’s Guide to DATAVIEW Obsidian Plugin — 10 areas where things can go wrong and how to fix them](https://denisetodd.medium.com/obsidian-dataview-for-beginners-a-checklist-to-help-fix-your-dataview-queries-11acc57f1e48)
 
-#### 14.2.3 Johnny Decimal System
+#### 17.2.4 Johnny Decimal System
 - [Byran Jenks: Johnny Decimal](https://publish.obsidian.md/bryan-jenks/Z/Johnny+Decimal)
 - [Johnny Decimal-ising my life](https://colinwren.medium.com/johnny-decimal-ising-my-life-82ee453f79a4)
 
-#### 14.2.4 PARA Method
+#### 17.2.5 PARA Method
 [The PARA Method: A Universal System for Organizing Digital Information](https://fortelabs.co/blog/para/)
 
 
-### 14.3 Reddit Links
+### 17.3 Reddit Links
 [ObsidianMD Subreddit](https://www.reddit.com/r/ObsidianMD/)
 https://www.reddit.com/r/ObsidianMD/comments/wb6wwy/need_help_indexing_3d_print_files_see_comments/
 https://www.reddit.com/r/ObsidianMD/comments/we4b06/has_anyone_created_a_bookmarking_system_in/
 
-### 14.4 Discord Server
+### 17.4 Discord Server
 https://obsidian.md/community
 
 
-### 14.5 Youtube
+### 17.5 Youtube
 
-#### 14.5.1 Youtube Channels
+#### 17.5.1 Youtube Channels
 https://www.youtube.com/channel/UC85D7ERwhke7wVqskV_DZUA
 https://www.youtube.com/c/NicolevanderHoeven
 https://www.youtube.com/user/Peepnbrick
@@ -373,7 +399,7 @@ https://www.youtube.com/c/VisualPKM
 https://www.youtube.com/c/SantiYounger
 
 
-#### 14.5.2 Videos
+#### 17.5.2 Videos
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/E6ySG7xYgjY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
