@@ -111,7 +111,7 @@ Any _SPACES_ in the file address **MUST** be replaces with `\%20`, or else it wi
 ![[Obsidian-mini-graph.gif]]
 
 
-## 8 Commands (CNTRL+P)
+## 9 Commands (CNTRL+P)
 
 | **Command**                                  | **Action**                                                               |
 | -------------------------------------------- | ------------------------------------------------------------------------ |
@@ -123,9 +123,35 @@ Any _SPACES_ in the file address **MUST** be replaces with `\%20`, or else it wi
 | Templater: Create Note from Template         | Initialize note from template                                            |
 | Tempalter: Replace Templates in current file | Update note that was created from a template                                                                          |
 
-## 9 Images
+## 10 Images
 
-## 10 CSS
+### 10.1 Resize Images
+
+```ad-important
+```
+
+Add width in pixels after image name:
+
+```
+![[image.png|500]]
+```
+
+### 10.2 Image Size Codes
+(ref: https://forum.obsidian.md/t/resize-image/6517/17)
+To set standard images sizes use this css:
+
+```css
+.markdown-preview-view img[alt="sm"] { width: max(300px,30%); max-height:auto; } .markdown-preview-view img[alt="md"] { width: max(500px,50%); max-height:auto; } .markdown-preview-view img[alt="lg"] { width: max(1080px,70%); max-height:auto; }
+```
+
+and show images like this:
+
+```
+![sm](image.png) 
+![md](image.png) 
+![lg](image.png)
+```
+## 11 CSS
 
 Goto `settings->appearance->css snippets`. Click the `Open snippets folder` button. Make a CSS file, and copy the css into a single or multiple file.
 
