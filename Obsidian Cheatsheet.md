@@ -1,16 +1,16 @@
 # Obsidian Cheatsheet
 
-```ad-warning
-Open in Obsidian to view correctly.
-```
-```ad-info
-If you have any helpful additions to this document, please contribute!
-```
+> [!warning]
+> Open in Obsidian to view correctly.
+
+> [!info] 
+> If you have any helpful additions to this document, please contribute!
+
 [[__TOC__]]
 
 ## 1 Plugins
 
-- Admonition            **ESSENTIAL**
+- ~~Admonition~~            **USE BUILTIN CALLOUTS**
 - Advanced Tables           **ESSENTIAL**
 - Buttons
 - Calendar
@@ -57,9 +57,8 @@ If you have any helpful additions to this document, please contribute!
 * [Prism](https://github.com/damiankorcz/Prism-Theme)
 
 ### 2.1 Minimal Theme
-```ad-note
-Install the `Minimal Theme Settings` plugin for custimization
-```
+> [!note]
+> Install the `Minimal Theme Settings` plugin for custimization
 
 **Minimal Theme** can be used in conjunction with **Contextual Typography** to produce _image_grids_ (See [Docs](https://minimal.guide/Block+types/Image+grids), and ).
 
@@ -87,10 +86,8 @@ Install the `Minimal Theme Settings` plugin for custimization
 - [LATEX Math Cheatsheet](https://c-tan.com/download/latex_math_cheatsheet_2018-01-13.pdf)
 
 ## 6 Hotkeys
-
-```ad-note
-Set **Commands** to **Hotkeys** by going to `Settings -> Hotkeys`
-```
+> [!note]
+> Set **Commands** to **Hotkeys** by going to `Settings -> Hotkeys`
 
 - https://keycombiner.com/collections/obsidian/
  - [Obsidian Hotkeys: Favorites and best practices](https://forum.obsidian.md/t/obsidian-hotkeys-favorites-and-best-practices/12125)
@@ -101,9 +98,9 @@ Set **Commands** to **Hotkeys** by going to `Settings -> Hotkeys`
 ```
 [statswords.csv](file:///C:/Users/bruno/Dropbox/Obsidian/Vaults/ClippingContents/statswords.csv)
 ```
-```ad-important
-Any _SPACES_ in the file address **MUST** be replaces with `\%20`, or else it will say it cannot find the file
-```
+
+> [!important] 
+> Any _SPACES_ in the file address **MUST** be replaces with `\%20`, or else it will say it cannot find the file
 
 ## 8 Tips
 ### 8.1 how to put the graphs in the sidebar
@@ -127,8 +124,7 @@ Any _SPACES_ in the file address **MUST** be replaces with `\%20`, or else it wi
 
 ### 10.1 Resize Images
 
-```ad-important
-```
+> [!important] 
 
 Add width in pixels after image name:
 
@@ -155,9 +151,8 @@ and show images like this:
 
 Goto `settings->appearance->css snippets`. Click the `Open snippets folder` button. Make a CSS file, and copy the css into a single or multiple file.
 
-```ad-tip
-To see the CSS that is running open up the Inspector with `Ctrl + Shift + I`
-```
+> [!tip] 
+> To see the CSS that is running open up the Inspector with `Ctrl + Shift + I`
 
 ### 11.1 CSS Templates
 
@@ -245,12 +240,11 @@ To center grid on page use
 }
 ```
 
-```ad-caution
-This will disable resizing, and some other feature of img-grid
-```
-```ad-question
-Is there a better way to center image grids?
-```
+> [!caution] 
+> This will disable resizing, and some other feature of img-grid
+
+> [!question] 
+> Is there a better way to center image grids?
 
 To use for individual pages put this in the notes frontmatter:
 
@@ -317,9 +311,8 @@ The root directory of the vault can be accessed with:
 this.app.vault.adapter.basePath
 ```
 
-```ad-tip
-You can debug **dataviewjs**, or javascript by going into the inspector ( `Ctrl + Shift + I` ), and going to the console window.
-```
+> [!tip]
+> You can debug **dataviewjs**, or javascript by going into the inspector ( `Ctrl + Shift + I` ), and going to the console window.
 
 ### 14.1 Writing Dataviewjs
 
@@ -377,10 +370,9 @@ And then in the body call the title like:
 
 ## 16 Excalidraw
 
-```ad-tip'
-excalidraw can be set to conform to light or dark theme by changing the settings:
+> [!tip]
+> excalidraw can be set to conform to light or dark theme by changing the settings:
 `excaidraw->display->new drawing to match obsidian theme`
-```
 
 * Drawing libraries can be found at [Excalidraw Libraries](https://libraries.excalidraw.com/)
 
