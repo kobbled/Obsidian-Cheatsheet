@@ -1,4 +1,3 @@
-# Obsidian Cheatsheet
 
 > [!warning]
 > Open in Obsidian to view correctly.
@@ -39,7 +38,7 @@
 - Quick Add                **ESSENTIAL** ([watch demo](https://www.youtube.com/watch?v=gYK3VDQsZJo&ab_channel=ChristianB.B.Houmann))
 - Quick Latex
 - Search on Internet
-- Sliding Panes (Andy Matuschak Mode)
+- ~~Sliding Panes (Andy Matuschak Mode)~~      **SLIDING PANES IN NATIVE OBSIDIAN 1.0**
 - Sortable
 - Sort & Permute lines
 - Tag Wrangler
@@ -51,8 +50,8 @@
 
 ## 2 Themes
 
-* [Things](https://github.com/colineckert/obsidian-things) **USING**
-* [Minimal](https://github.com/kepano/obsidian-minimal)
+* [Things](https://github.com/colineckert/obsidian-things)
+* [Minimal](https://github.com/kepano/obsidian-minimal) **USING**
 * [Primary](https://github.com/ceciliamay/obsidianmd-theme-primary)
 * [Prism](https://github.com/damiankorcz/Prism-Theme)
 
@@ -348,6 +347,9 @@ img:: ![[picture.jpg]]
 ## 15 Templater
 
 ### 15.1 Automating Titles
+
+> [!note] 
+> This is deprecated since Obsidian 1.0. Leaving in as a templater code example.
 
 For creating a Title during template creation you will need to use the javascript below in the frontmatter
 
