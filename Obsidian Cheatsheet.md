@@ -10,43 +10,46 @@
 ## 1 Plugins
 
 - ~~Admonition~~            **USE BUILTIN CALLOUTS**
-- Advanced Tables           **ESSENTIAL**
+- ~~Sliding Panes (Andy Matuschak Mode)~~      **SLIDING PANES IN NATIVE OBSIDIAN 1.0**
+- [Advanced Tables](https://github.com/tgrosinger/advanced-tables-obsidian) **ESSENTIAL**
 - Buttons
-- Calendar
-- Charts View
-- Citations
+- [Calendar](https://github.com/liamcain/obsidian-calendar-plugin)
+- [Charts View](https://github.com/caronchen/obsidian-chartsview-plugin)
+- [Citations](https://github.com/hans/obsidian-citation-plugin)
 - Contextual Typography   ->  (Useful with Minimal Theme Settings for using img-grid)
-- Dataview                **ESSENTIAL**
+- [Dataview](https://github.com/blacksmithgu/obsidian-dataview)   **ESSENTIAL** -> Data querying, and databasing, and data visualizer
 - dictionary
-- Dynamic Table of Contents
+- [Dynamic Table of Contents](https://github.com/Aidurber/obsidian-plugin-dynamic-toc)
 - Editor Syntax Highlight
-- Excalibrain
-- Excalidraw          **ESSENTIAL**
-- Highlightr
+- [Excalibrain](https://github.com/zsviczian/excalibrain)
+- [Excalidraw](https://github.com/zsviczian/obsidian-excalidraw-plugin)          **ESSENTIAL**
+- [Highlightr](https://github.com/chetachiezikeuzor/Highlightr-Plugin)
 - Hotkeys++
-- Icon Folder -> https://github.com/FlorianWoelki/obsidian-icon-folder
-- Journey
-- Kanban
+- [Icon Folder](https://github.com/FlorianWoelki/obsidian-icon-folder)
+- [Journey](https://github.com/akaalias/obsidian-journey-plugin)
+- [Kanban](https://github.com/mgmeyers/obsidian-kanban)
 - Kindle Highlights
 - Link Favicons
-- Minimal Theme Settings
+-  [Math+](https://github.com/ocapraro/obsidian-math-plus) 
+- [Mathpad](https://github.com/Canna71/obsidian-mathpad) **ESSENTIAL** -> jupytr like support for math and plotting. uses [nerdamer](https://nerdamer.com/documentation.html)
+- [Minimal Theme Settings](https://minimal.guide/Plugins/Minimal+Theme+Settings)
+- [Numerals](https://github.com/gtg922r/obsidian-numerals)
 - Open Vault in VS Code
-- Outliner
+- [Outliner](https://github.com/vslinko/obsidian-outliner)
 - Ozan's image in editor plugin
-- PDF Highlights
-- Periodic Note
-- Quick Add                **ESSENTIAL** ([watch demo](https://www.youtube.com/watch?v=gYK3VDQsZJo&ab_channel=ChristianB.B.Houmann))
+- [PDF Highlights](https://github.com/akaalias/obsidian-extract-pdf-highlights)
+- [Periodic Note](https://github.com/liamcain/obsidian-periodic-notes)
+- [Quick Add](https://github.com/chhoumann/quickadd)                **ESSENTIAL** ([watch demo](https://www.youtube.com/watch?v=gYK3VDQsZJo&ab_channel=ChristianB.B.Houmann))
 - Quick Latex
 - Search on Internet
-- ~~Sliding Panes (Andy Matuschak Mode)~~      **SLIDING PANES IN NATIVE OBSIDIAN 1.0**
-- Sortable
-- Sort & Permute lines
-- Tag Wrangler
-- Tasks
-- Templater           **ESSENTIAL**
+- [Sortable](https://github.com/alexandru-dinu/obsidian-sortable) **ESSENTIAL**
+- [Sort & Permute lines](https://github.com/Vinzent03/obsidian-sort-and-permute-lines)
+- [Tag Wrangler](https://github.com/pjeby/tag-wrangler)
+- [Tasks](https://github.com/obsidian-tasks-group/obsidian-tasks)
+- [Templater](https://github.com/SilentVoid13/Templater)           **ESSENTIAL**
 - Tracker
 - Vantage  ->  Advanced search builder
-- Zotero Integration
+- [Zotero Integration](https://github.com/mgmeyers/obsidian-zotero-integration) **ESSENTIAL**
 
 ## 2 Themes
 
@@ -84,14 +87,22 @@
 - [LATEX Math for Undergrads](http://tug.ctan.org/info/undergradmath/undergradmath.pdf)
 - [LATEX Math Cheatsheet](https://c-tan.com/download/latex_math_cheatsheet_2018-01-13.pdf)
 
-## 6 Hotkeys
+## 6 Math
+
+view [[Math]] for examples.
+
+## 7 Charts
+
+view [[Charts]] for examples.
+
+## 8 Hotkeys
 > [!note]
 > Set **Commands** to **Hotkeys** by going to `Settings -> Hotkeys`
 
 - https://keycombiner.com/collections/obsidian/
  - [Obsidian Hotkeys: Favorites and best practices](https://forum.obsidian.md/t/obsidian-hotkeys-favorites-and-best-practices/12125)
 
-## 7 Linking
+## 9 Linking
 
 * To link files and folder use:
 ```
@@ -101,13 +112,13 @@
 > [!important] 
 > Any _SPACES_ in the file address **MUST** be replaces with `\%20`, or else it will say it cannot find the file
 
-## 8 Tips
-### 8.1 how to put the graphs in the sidebar
+## 10 Tips
+### 10.1 how to put the graphs in the sidebar
 
 ![[Obsidian-mini-graph.gif]]
 
 
-## 9 Commands (CNTRL+P)
+## 11 Commands (CNTRL+P)
 
 | **Command**                                  | **Action**                                                               |
 | -------------------------------------------- | ------------------------------------------------------------------------ |
@@ -119,9 +130,9 @@
 | Templater: Create Note from Template         | Initialize note from template                                            |
 | Tempalter: Replace Templates in current file | Update note that was created from a template                                                                          |
 
-## 10 Images
+## 12 Images
 
-### 10.1 Resize Images
+### 12.1 Resize Images
 
 > [!important] 
 
@@ -131,7 +142,7 @@ Add width in pixels after image name:
 ![[image.png|500]]
 ```
 
-### 10.2 Image Size Codes
+### 12.2 Image Size Codes
 (ref: https://forum.obsidian.md/t/resize-image/6517/17)
 To set standard images sizes use this css:
 
@@ -146,20 +157,20 @@ and show images like this:
 ![md](image.png) 
 ![lg](image.png)
 ```
-## 11 CSS
+## 13 CSS
 
 Goto `settings->appearance->css snippets`. Click the `Open snippets folder` button. Make a CSS file, and copy the css into a single or multiple file.
 
 > [!tip] 
 > To see the CSS that is running open up the Inspector with `Ctrl + Shift + I`
 
-### 11.1 CSS Templates
+### 13.1 CSS Templates
 
 | type | url |
 | ---- | --- |
 |   Box-Shadow   |   https://getcssscan.com/css-box-shadow-examples  |
 
-### 11.2 Images
+### 13.2 Images
 
 <dt>Center images at max width of page</dt>
 
@@ -192,7 +203,7 @@ img {
 }
 ```
 
-#### 11.2.1 img-grid
+#### 13.2.1 img-grid
 
 If using **Minimal Theme** with `Minimal Theme Settings` and `Contextual Typography` plugins you will have access to the _img-grid_ class. Use this CSS as a default template:
 
@@ -251,7 +262,7 @@ To use for individual pages put this in the notes frontmatter:
 cssclass: img-grid
 ```
 
-### 11.3 Tables
+### 13.3 Tables
 
 <dt>Center tables</dt>
 
@@ -263,7 +274,7 @@ table {
 }
 ```
 
-### 11.4 Math
+### 13.4 Math
 
 <dt> Increase sie of Latex Math </dt>
 
@@ -273,7 +284,7 @@ mjx-math {
 }
 ```
 
-### 11.5 Mermaid
+### 13.5 Mermaid
 
 <dt>Get mermaid charts to not overflow</dt>
 
@@ -286,7 +297,7 @@ mjx-math {
 }
 ```
 
-## 12 Update Settings
+## 14 Update Settings
 
 - `settings->editor->display->readable line length`
 - `excaidraw->display->new drawing to match obsidian theme`
@@ -294,7 +305,7 @@ mjx-math {
 - `core plugins -> Templates`
 * `core plugins -> Outgoing Links`  **Optional**
 
-## 13 Dataview
+## 15 Dataview
 
 Dataview table can be viewed as cards if using the **Minimal Theme** and placing in the yaml frontmatter of a note:
 
@@ -303,7 +314,11 @@ cssClasses: [cards, cards-cover, cards-2-3]
 
 ```
 
-## 14 Javascript/DataviewJS
+
+### 15.1 Annotations
+(ref: https://blacksmithgu.github.io/obsidian-dataview/data-annotation/)
+
+## 16 Javascript/DataviewJS
 
 The root directory of the vault can be accessed with:
 ```javascript
@@ -313,13 +328,13 @@ this.app.vault.adapter.basePath
 > [!tip]
 > You can debug **dataviewjs**, or javascript by going into the inspector ( `Ctrl + Shift + I` ), and going to the console window.
 
-### 14.1 Writing Dataviewjs
+### 16.1 Writing Dataviewjs
 
 javascript for dataview can be written with:
 
 > ```dataviewjs                             ```
 
-### 14.2 inserting images into dataview
+### 16.2 inserting images into dataview
 (# ref::  [Obsidian Dataviewjs](https://www.jkoster.com/Obsidian-Dataviewjs-6f3e76cf455747fb9fa30de3e5dff197#d2d6f279cc634256b724b165672c3e03) ; https://www.reddit.com/r/ObsidianMD/comments/soapkd/dataview_plugin_help_how_to_display_images/)
 
 To insert local images into a Dataview table, a Dataviewjs query must be made:
@@ -344,9 +359,9 @@ where `img` is the field (i.e `img::`) on the note where the image should be loc
 img:: ![[picture.jpg]]
 ```
 
-## 15 Templater
+## 17 Templater
 
-### 15.1 Automating Titles
+### 17.1 Automating Titles
 
 > [!note] 
 > This is deprecated since Obsidian 1.0. Leaving in as a templater code example.
@@ -370,7 +385,7 @@ And then in the body call the title like:
 ```
 
 
-## 16 Excalidraw
+## 18 Excalidraw
 
 > [!tip]
 > excalidraw can be set to conform to light or dark theme by changing the settings:
@@ -379,12 +394,12 @@ And then in the body call the title like:
 * Drawing libraries can be found at [Excalidraw Libraries](https://libraries.excalidraw.com/)
 
 
-## 17 References
+## 19 References
 * [**Obsidian Hub**](https://publish.obsidian.md/hub)
 * [Obsidian Hub Showcases](https://publish.obsidian.md/hub/03+-+Showcases+%26+Templates/%F0%9F%97%82%EF%B8%8F+03+-+Showcases+%26+Templates)
 * [Linking Your Thinking](https://www.linkingyourthinking.com/)
 
-### 17.1 Obsidian Publish References
+### 19.1 Obsidian Publish References
 https://obsidian.md/publish
 https://workinginpublic.one/
 ----
@@ -394,20 +409,21 @@ https://workinginpublic.one/
 - [Alex Digital Garden](https://publish.obsidian.md/alexander/1_Home/%F0%9F%8F%A0+Home)
 
 
-### 17.2 Guides
+### 19.2 Guides
 
-#### 17.2.1 General Formatting
+#### 19.2.1 General Formatting
 
 [Format your notes](https://help.obsidian.md/How+to/Format+your+notes)
 
 
-#### 17.2.2 Dataview Guides
+#### 19.2.2 Dataview Guides
 
 * [Create Cards (Movie Database)](https://minimal.guide/Guides/Create+a+movie+database)
 * [Tutorial: How to Create a Bookshelf](https://thebuccaneersbounty.wordpress.com/2021/08/21/tutorial-how-to-create-a-bookshelf-in-obsidian/)
 * [Obsidian Dataviewjs](https://www.jkoster.com/Obsidian-Dataviewjs-6f3e76cf455747fb9fa30de3e5dff197#d2d6f279cc634256b724b165672c3e03)
+* [Data Annotations](https://blacksmithgu.github.io/obsidian-dataview/data-annotation/)
 
-#### 17.2.3 Setting up Obsidian for Papers and Research
+#### 19.2.3 Setting up Obsidian for Papers and Research
 
 - [How to Boost Your Productivity for Scientific Research Using Obsidian](https://universvm.medium.com/how-to-boost-your-productivity-for-scientific-research-using-obsidian-fe85c98c63c8)
 - [Obsidian Tutorial for Academic Writing](https://betterhumans.pub/obsidian-tutorial-for-academic-writing-87b038060522?gi=9664895fa2cc)
@@ -415,26 +431,26 @@ https://workinginpublic.one/
 - [Using Dataview with Charts in Obsidian](https://agileadam.com/2022/07/using-dataview-with-charts-in-obsidian/)
 - [The Beginner’s Guide to DATAVIEW Obsidian Plugin — 10 areas where things can go wrong and how to fix them](https://denisetodd.medium.com/obsidian-dataview-for-beginners-a-checklist-to-help-fix-your-dataview-queries-11acc57f1e48)
 
-#### 17.2.4 Johnny Decimal System
+#### 19.2.4 Johnny Decimal System
 - [Byran Jenks: Johnny Decimal](https://publish.obsidian.md/bryan-jenks/Z/Johnny+Decimal)
 - [Johnny Decimal-ising my life](https://colinwren.medium.com/johnny-decimal-ising-my-life-82ee453f79a4)
 
-#### 17.2.5 PARA Method
+#### 19.2.5 PARA Method
 [The PARA Method: A Universal System for Organizing Digital Information](https://fortelabs.co/blog/para/)
 
 
-### 17.3 Reddit Links
+### 19.3 Reddit Links
 [ObsidianMD Subreddit](https://www.reddit.com/r/ObsidianMD/)
 https://www.reddit.com/r/ObsidianMD/comments/wb6wwy/need_help_indexing_3d_print_files_see_comments/
 https://www.reddit.com/r/ObsidianMD/comments/we4b06/has_anyone_created_a_bookmarking_system_in/
 
-### 17.4 Discord Server
+### 19.4 Discord Server
 https://obsidian.md/community
 
 
-### 17.5 Youtube
+### 19.5 Youtube
 
-#### 17.5.1 Youtube Channels
+#### 19.5.1 Youtube Channels
 https://www.youtube.com/channel/UC85D7ERwhke7wVqskV_DZUA
 https://www.youtube.com/c/NicolevanderHoeven
 https://www.youtube.com/user/Peepnbrick
@@ -444,7 +460,7 @@ https://www.youtube.com/c/VisualPKM
 https://www.youtube.com/c/SantiYounger
 
 
-#### 17.5.2 Videos
+#### 19.5.2 Videos
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/E6ySG7xYgjY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
