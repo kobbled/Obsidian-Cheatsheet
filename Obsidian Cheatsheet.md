@@ -23,7 +23,7 @@
 - Editor Syntax Highlight
 - [Excalibrain](https://github.com/zsviczian/excalibrain)
 - [Excalidraw](https://github.com/zsviczian/obsidian-excalidraw-plugin)          **ESSENTIAL**
-- [Functionplot]([GitHub - leonhma/obsidian-functionplot: A obsidian.md plugin for rendering maths graphs.](https://github.com/leonhma/obsidian-functionplot))
+- [Functionplot](https://github.com/leonhma/obsidian-functionplot)
 - [Highlightr](https://github.com/chetachiezikeuzor/Highlightr-Plugin)
 - Hotkeys++
 - [Icon Folder](https://github.com/FlorianWoelki/obsidian-icon-folder)
