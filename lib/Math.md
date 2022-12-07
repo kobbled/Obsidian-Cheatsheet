@@ -33,6 +33,16 @@ $$\frac{\partial{T}}{\partial{r}} = -\frac{q}{2\pi r k d} \qquad\qquad\qquad\qqu
 >
 
 
+$$
+f(x):=1/(sqrt(1)*sqrt(2*3.14159))*exp(-1/2*((x-0)/sqrt(1))^2)
+$$
+$$
+g(x):=1/(sqrt(5)*sqrt(2*3.14159))*exp(-1/2*((x-0)/sqrt(5))^2) \\
+$$
+$$
+h(x):=1/(sqrt(0.5)*sqrt(2*3.14159))*exp(-1/2*((x+2)/sqrt(0.5))^2)
+$$
+
 ```mathpad
 $1:=100*e^((-1/2)*x^2)*sqrt(314159)^(-1)*sqrt(5)-
 $2:=100*e^((-1/10)*x^2)*sqrt(314159)^(-1)-
