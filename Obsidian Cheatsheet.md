@@ -64,9 +64,36 @@
 > [!note]
 > Install the `Minimal Theme Settings` plugin for custimization
 
+> [!important]
+> Any Theme can be configured using the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) package. Go to the `Style Settings` settings to configure.
+
 **Minimal Theme** can be used in conjunction with **Contextual Typography** to produce _image_grids_ (See [Docs](https://minimal.guide/Block+types/Image+grids), and ).
 
 * [Minimal Block Types](https://minimal.guide/Block+types/Cards)
+
+#### Current Minimal Settings
+
+The Current `Style Settings` configuration for the **Minimal Theme** are:
+
+```json
+{
+  "minimal-style@@h1-size": "2em",
+  "minimal-style@@h2-size": "1.6em",
+  "minimal-style@@h3-size": "1.3em",
+  "minimal-style@@h4-size": "1em",
+  "minimal-style@@tag-background@@light": "#541D69",
+  "minimal-style@@tag-background-hover@@light": "#623287D9",
+  "minimal-style@@minimal-unstyled-tags": false,
+  "minimal-style@@tag-background@@dark": "#541D69",
+  "minimal-style@@tag-background-hover@@dark": "#623287D9",
+  "minimal-style@@tag-color@@dark": "#E7E7E7",
+  "minimal-style@@tag-color@@light": "#E7E7E7",
+  "minimal-style@@tag-border-width": "2px"
+}
+```
+ 
+To load, goto `style settings` settings, and click the import button at the top right. Paste the above code block into the text field.
+
 
 ## 3 Terminology
 
@@ -309,6 +336,9 @@ mjx-math {
 
 ## 15 Dataview
 
+* In **Dataview** settings enable `Enable Javascript Queries`
+* * In **Dataview** settings enable `Enable Inline Javascript Queries`
+
 Dataview table can be viewed as cards if using the **Minimal Theme** and placing in the yaml frontmatter of a note:
 
 ```yaml
@@ -362,6 +392,12 @@ img:: ![[picture.jpg]]
 ```
 
 ## 17 Templater
+
+* In **Templater** settings set the _template folder directory_ to where your templates are being stored.
+* Select **Trigger Templater on new file creation**
+* To make a new note from a template:
+	- Open command panel `Ctrl+P`, and select `Templater: Create new note from template`
+	- Use shortcut `Alt+n`
 
 ### 17.1 Automating Titles
 
