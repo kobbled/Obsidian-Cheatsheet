@@ -45,6 +45,7 @@
 - Search on Internet
 - [Sortable](https://github.com/alexandru-dinu/obsidian-sortable) **ESSENTIAL**
 - [Sort & Permute lines](https://github.com/Vinzent03/obsidian-sort-and-permute-lines)
+- [Style Settings](https://github.com/mgmeyers/obsidian-style-settings)  **ESSENTIAL**
 - [Tag Wrangler](https://github.com/pjeby/tag-wrangler)
 - [Tasks](https://github.com/obsidian-tasks-group/obsidian-tasks)
 - [Templater](https://github.com/SilentVoid13/Templater)           **ESSENTIAL**
