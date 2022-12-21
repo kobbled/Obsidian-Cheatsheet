@@ -71,7 +71,7 @@
 
 * [Minimal Block Types](https://minimal.guide/Block+types/Cards)
 
-#### Current Minimal Settings
+#### 2.1.1 Current Minimal Settings
 
 The Current `Style Settings` configuration for the **Minimal Theme** are:
 
@@ -431,13 +431,23 @@ And then in the body call the title like:
 
 * Drawing libraries can be found at [Excalidraw Libraries](https://libraries.excalidraw.com/)
 
+## 19 Zotero Integration
+(ref: https://dannyhatcher.com/zotero-obsidian-integration/)
 
-## 19 References
+* [Templater Guide for Zotero](https://github.com/mgmeyers/obsidian-zotero-integration/blob/main/docs/Templating.md)
+
+>[!note]
+> In order to link zotero tags use this code:
+> ```
+> {% for t in tags %}#{{t.tag|replace(" ", "-")}}{% if not loop.last %}, {% endif %}{% endfor %}
+>```
+
+## 20 References
 * [**Obsidian Hub**](https://publish.obsidian.md/hub)
 * [Obsidian Hub Showcases](https://publish.obsidian.md/hub/03+-+Showcases+%26+Templates/%F0%9F%97%82%EF%B8%8F+03+-+Showcases+%26+Templates)
 * [Linking Your Thinking](https://www.linkingyourthinking.com/)
 
-### 19.1 Obsidian Publish References
+### 20.1 Obsidian Publish References
 https://obsidian.md/publish
 https://workinginpublic.one/
 ----
@@ -447,48 +457,49 @@ https://workinginpublic.one/
 - [Alex Digital Garden](https://publish.obsidian.md/alexander/1_Home/%F0%9F%8F%A0+Home)
 
 
-### 19.2 Guides
+### 20.2 Guides
 
-#### 19.2.1 General Formatting
+#### 20.2.1 General Formatting
 
 [Format your notes](https://help.obsidian.md/How+to/Format+your+notes)
 
 
-#### 19.2.2 Dataview Guides
+#### 20.2.2 Dataview Guides
 
 * [Create Cards (Movie Database)](https://minimal.guide/Guides/Create+a+movie+database)
 * [Tutorial: How to Create a Bookshelf](https://thebuccaneersbounty.wordpress.com/2021/08/21/tutorial-how-to-create-a-bookshelf-in-obsidian/)
 * [Obsidian Dataviewjs](https://www.jkoster.com/Obsidian-Dataviewjs-6f3e76cf455747fb9fa30de3e5dff197#d2d6f279cc634256b724b165672c3e03)
 * [Data Annotations](https://blacksmithgu.github.io/obsidian-dataview/data-annotation/)
 
-#### 19.2.3 Setting up Obsidian for Papers and Research
+#### 20.2.3 Setting up Obsidian for Papers and Research
 
 - [How to Boost Your Productivity for Scientific Research Using Obsidian](https://universvm.medium.com/how-to-boost-your-productivity-for-scientific-research-using-obsidian-fe85c98c63c8)
 - [Obsidian Tutorial for Academic Writing](https://betterhumans.pub/obsidian-tutorial-for-academic-writing-87b038060522?gi=9664895fa2cc)
+- [Notetaking for Historians](https://publish.obsidian.md/history-notes/01+Notetaking+for+Historians)
 
 - [Using Dataview with Charts in Obsidian](https://agileadam.com/2022/07/using-dataview-with-charts-in-obsidian/)
 - [The Beginner’s Guide to DATAVIEW Obsidian Plugin — 10 areas where things can go wrong and how to fix them](https://denisetodd.medium.com/obsidian-dataview-for-beginners-a-checklist-to-help-fix-your-dataview-queries-11acc57f1e48)
 
-#### 19.2.4 Johnny Decimal System
+#### 20.2.4 Johnny Decimal System
 - [Byran Jenks: Johnny Decimal](https://publish.obsidian.md/bryan-jenks/Z/Johnny+Decimal)
 - [Johnny Decimal-ising my life](https://colinwren.medium.com/johnny-decimal-ising-my-life-82ee453f79a4)
 
-#### 19.2.5 PARA Method
+#### 20.2.5 PARA Method
 [The PARA Method: A Universal System for Organizing Digital Information](https://fortelabs.co/blog/para/)
 
 
-### 19.3 Reddit Links
+### 20.3 Reddit Links
 [ObsidianMD Subreddit](https://www.reddit.com/r/ObsidianMD/)
 https://www.reddit.com/r/ObsidianMD/comments/wb6wwy/need_help_indexing_3d_print_files_see_comments/
 https://www.reddit.com/r/ObsidianMD/comments/we4b06/has_anyone_created_a_bookmarking_system_in/
 
-### 19.4 Discord Server
+### 20.4 Discord Server
 https://obsidian.md/community
 
 
-### 19.5 Youtube
+### 20.5 Youtube
 
-#### 19.5.1 Youtube Channels
+#### 20.5.1 Youtube Channels
 https://www.youtube.com/channel/UC85D7ERwhke7wVqskV_DZUA
 https://www.youtube.com/c/NicolevanderHoeven
 https://www.youtube.com/user/Peepnbrick
@@ -498,7 +509,7 @@ https://www.youtube.com/c/VisualPKM
 https://www.youtube.com/c/SantiYounger
 
 
-#### 19.5.2 Videos
+#### 20.5.2 Videos
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/E6ySG7xYgjY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
