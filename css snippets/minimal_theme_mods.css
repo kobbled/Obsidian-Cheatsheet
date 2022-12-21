@@ -1,30 +1,11 @@
-
-:root {
-  --h1: 2em;
-  --h2: 1.7em;
-  --h3: 1.4em;
-  --h4: 1.2em;
-}
-
-strong {
-   color: pink ;
-}
-
-body .frontmatter-container .tag, body a.tag {
-    background-color: rgb(29, 105, 75) !important ;  
-    color: #ffffff !important ; 
-}
-
-
 /* for preview */
  .markdown-preview-view blockquote {
-    background-color: #1b1f2b;
+    background-color: #26272b;
     border: 0px solid;
-    border-color: #d80048 !important;
+    border-color: #0065d8 !important;
     border-left-width: 5px !important;
     border-radius: 0 8px 8px 0;
     line-height: 1.5em;
-    font-weight: bold;
     margin: 10 10px;
     padding-top: 10px;
     padding-bottom: 10px;
