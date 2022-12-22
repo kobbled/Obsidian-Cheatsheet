@@ -311,7 +311,7 @@ cssclass: img-grid
 <dt>Center tables</dt>
 
 ```css
-table {
+table:not(.table-view-table) {
   table-layout: fixed;
   margin-left: auto;
   margin-right: auto;
@@ -362,7 +362,7 @@ cssClasses: [cards, cards-cover, cards-2-3]
 ```
 
 
-### 15.1 Annotations
+### 15.1 Annotations/Metadata
 (ref: https://blacksmithgu.github.io/obsidian-dataview/data-annotation/)
 
 ## 16 Javascript/DataviewJS
@@ -478,6 +478,7 @@ https://workinginpublic.one/
 
 [Format your notes](https://help.obsidian.md/How+to/Format+your+notes)
 
+[Adding Metadata](https://blacksmithgu.github.io/obsidian-dataview/annotation/add-metadata/)
 
 #### 20.2.2 Dataview Guides
 
