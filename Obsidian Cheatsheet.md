@@ -400,10 +400,100 @@ dv.table(["File", "Image"],
 );
 ```
 
+The note where the table resides must have cards activated with this yaml frontmatter
+
+```yaml
+---
+cssClasses: [cards, cards-cover, cards-2-3]
+---
+```
+
 where `img` is the field (i.e `img::`) on the note where the image should be located
 
 ```
 img:: ![[picture.jpg]]
+```
+
+`searchterm` must be specified as a field in the note where the table resides.  This field will specify the tag it will search for in each note in the vault. If it finds it, it will include it in the dataview.
+
+The `.where` clause will further filter the results, and exclude pages where the `img::` field is absent
+```javascript
+.where(p => p.img != undefined)
+```
+
+The first column (or card row) is specified as an image by
+```javascript
+.map(p => [ 
+	`<img class="myTableImg" src="${this.app.vault.adapter.basePath}/${p.img.path}">`
+	])
+```
+
+The `src` finds the root folder of the vault, and then the relative location of the image on the harddrive with `p.img.path`
+
+If you want to show an image from the web simply replace `src` with the url. For the cards example, include a field say `url::` in your note with the value set to the url. Then change to:
+
+```javascript
+.map(p => [ 
+	`<img class="myTableImg" src="${p.url}">`
+	])
+```
+
+### 16.3 Creating multiple tables from one query
+(ref: https://blacksmithgu.github.io/obsidian-dataview/api/code-examples/)
+
+Multiple tables can be created at once by designating a field in the requested pages, and iterating over this field.
+
+```javascript
+for (let group of dv.pages('#paper').groupBy(p => p.status)) {
+	dv.header(3, group.key);
+	dv.table(["Name", "Year"],
+    group.rows
+      .map(k => [
+        k.file.link, 
+        k.year
+      ]
+    )
+  );
+}
+```
+
+In the above examples we will gather all the pages with the tag `#paper`, and group them in seperate tables by the keys in the field `status::`. The next line:
+
+```javascript
+dv.header(3, group.key);
+```
+
+will take the keys from the `status::` and print them as a level `3` header above each of the tables
+
+### 16.4 Column is a list of data
+
+If the column data in the table is in a list/array it may be displayed in a list format ie
+
+* item1
+* item2
+
+with dataviewjs you can reformat the list into a string with the `join` method:
+
+```javascript
+dv.table(["Tags"],
+    group.rows
+      .map(k => [
+        k.tags.join(', ')
+      ]
+    )
+  );
+```
+
+If only a certain number of item can be displayed without being cutoff by the table column you can split them like this:
+
+```javascript
+dv.table(["Tags"],
+    group.rows
+      .map(k => [
+        k.tags.slice(0,3).join(', ').concat('\n', k.tags.slice(3,6).join(', '))
+      ]
+    )
+  );
 ```
 
 ## 17 Templater
