@@ -539,13 +539,96 @@ And then in the body call the title like:
 ## 19 Zotero Integration
 (ref: https://dannyhatcher.com/zotero-obsidian-integration/)
 
-* [Templater Guide for Zotero](https://github.com/mgmeyers/obsidian-zotero-integration/blob/main/docs/Templating.md)
+>[!important]
+> You must install the [Better Bibtex](https://retorque.re/zotero-better-bibtex/installation/)  plugin into Zotero for Zotero Integration to work.
+
+* In The `Zotero Integration` settings:
+	* **Download** the **PDF Utility**
+	* **Enable Annotion Concatenation**
+	* In **Note Import Location** specify the folder to put the Zotero notes into
+* **Add Import Format**
+	* In **Output Path** put the folder for Zotero to export to
+	* In **Image Output Path** put the folder for Zotero to put images. Images will be in a subfolder named as `{{citekey}}`.
+	* **Template File** is the relative path of the template _.md_ file. 
+* Goto _settings->Hotkeys_, type _zotero_, and find `Zotero Integration: Import #1`. Type the hotkey you want to use (e.g. `Ctrl+Alt+L`)
+
+### 19.1 Zotero Import Template Example
+(ref: [Templater Guide for Zotero](https://github.com/mgmeyers/obsidian-zotero-integration/blob/main/docs/Templating.md))
+
+Below is an example template for import items from Zotero:
+
+```markdown
+---
+title: {{title|replace(":", " –")}}
+tag: [paper]
+alias: {{citekey}}
+---
+
+[[Papers MOC]]
+
+**Authors**:: {{authors}}{{directors}}
+**Year**:: {{date | format("YYYY")}}
+**Link**:: {{URL}}
+**DOI**:: {{DOI}}
+**Links**:: 
+**Status**:: #to-read
+**Tags**:: {% for t in tags %}#{{t.tag|replace(" ", "-")}}{% if not loop.last %}, {% endif %}{% endfor %}
+**Zotero**:: {{pdfZoteroLink}}
+
+## Abstract
+
+{{abstractNote}}
+## Notes  
+
+{% for ant in annotations -%}
+	{%- if ant.annotatedText -%}
+		> "_{{ant.annotatedText}}_"
+		> [Page {{ant.page}}](zotero://open-pdf/library/items/{{ant.attachment.itemKey}}?page={{ant.page}}&annotation={{ant.id}})
+	{%- endif %}
+	
+	{%- if ant.imageRelativePath -%}
+		![[{{ant.imageRelativePath}}]]
+	{%-endif %}
+
+	{%if ant.comment %}
+		{{ant.comment}}
+	{% endif %}
+{% endfor -%}
+```
+
 
 >[!note]
 > In order to link zotero tags use this code:
 > ```
 > {% for t in tags %}#{{t.tag|replace(" ", "-")}}{% if not loop.last %}, {% endif %}{% endfor %}
 >```
+
+The [Nunjucks](https://mozilla.github.io/nunjucks/templating.html#variables) for loop (`{% for ant in annotations -%}`) will gather all of the highlights, notes, and clipped images from the pdf in Zotero.
+
+This block will take all of the highlights, and put them in a quoteblock with the reference page below:
+
+```nunjucks
+{%- if ant.annotatedText -%}
+	> "_{{ant.annotatedText}}_"
+	> [Page {{ant.page}}](zotero://open-pdf/library/items/{{ant.attachment.itemKey}}?page={{ant.page}}&annotation={{ant.id}})
+{%- endif %}
+```
+
+This block will gather all of the clipped images:
+
+```nunjucks
+{%- if ant.imageRelativePath -%}
+	![[{{ant.imageRelativePath}}]]
+{%-endif %}
+```
+
+This block will gather all of the notes:
+
+```nunjucks
+{%if ant.comment %}
+	{{ant.comment}}
+{% endif %}
+```
 
 ## 20 References
 * [**Obsidian Hub**](https://publish.obsidian.md/hub)
