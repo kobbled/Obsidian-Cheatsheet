@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "792fd906b7e72f00",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "lib/Diagrams.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Obsidian Cheatsheet.md",
+                "file": "lib/Diagrams.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Obsidian Cheatsheet.md",
+                "file": "lib/Diagrams.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Obsidian Cheatsheet.md"
+                "file": "lib/Diagrams.md"
               }
             }
           },
@@ -157,17 +170,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "307651f201ef43d6",
+  "active": "792fd906b7e72f00",
   "lastOpenFiles": [
-    "Untitled.md",
     "Obsidian Cheatsheet.md",
-    "lib/Math.md",
+    "lib/Diagrams.md",
     "lib/Charts.md",
+    "Untitled.md",
+    "lib/Math.md",
     "Excalidraw/Heat Transfer of Point Source on Plate.md",
     "Images/Obsidian-mini-graph.gif",
     "__TOC__.md",
     "Excalidraw/Drawing 2022-12-06 13.45.26.excalidraw.md",
-    "publish.obsidian.md/hub.md",
-    "IMG-20220922-WA0000.jpg"
+    "publish.obsidian.md/hub.md"
   ]
 }

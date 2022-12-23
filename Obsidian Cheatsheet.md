@@ -139,6 +139,12 @@ view [[Math]] for examples.
 
 view [[Charts]] for examples.
 
+## Mermaid
+
+Guides for the various diagrams can be found [here](https://mermaid.js.org/intro/n00b-syntaxReference.html).
+
+view [[Diagrams]] for examples.
+
 ## 8 Hotkeys
 > [!note]
 > Set **Commands** to **Hotkeys** by going to `Settings -> Hotkeys`
@@ -336,10 +342,14 @@ mjx-math {
 
 ```css
 .mermaid {
-  max-width: 100%;
   overflow: auto;
   text-align: center;
   justify-content: center;
+}
+
+.mermaid svg {
+  max-width: 100%;
+  height: auto;
 }
 ```
 
