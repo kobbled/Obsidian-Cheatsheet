@@ -303,7 +303,9 @@ To center grid on page use
 To use for individual pages put this in the notes frontmatter:
 
 ```yaml
+---
 cssclass: img-grid
+---
 ```
 
 ### 13.3 Tables
@@ -357,8 +359,9 @@ mjx-math {
 Dataview table can be viewed as cards if using the **Minimal Theme** and placing in the yaml frontmatter of a note:
 
 ```yaml
+---
 cssClasses: [cards, cards-cover, cards-2-3]
-
+---
 ```
 
 

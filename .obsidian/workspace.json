@@ -18,16 +18,6 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "08e91e6b948098ef",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.1.8"
-              }
-            }
           }
         ]
       }
@@ -171,8 +161,8 @@
   "lastOpenFiles": [
     "lib/Math.md",
     "Obsidian Cheatsheet.md",
-    "Excalidraw/Heat Transfer of Point Source on Plate.md",
     "lib/Charts.md",
+    "Excalidraw/Heat Transfer of Point Source on Plate.md",
     "Images/Obsidian-mini-graph.gif",
     "__TOC__.md",
     "Untitled.md",
