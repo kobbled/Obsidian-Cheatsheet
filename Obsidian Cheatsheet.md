@@ -507,7 +507,25 @@ dv.table(["Tags"],
 	- Open command panel `Ctrl+P`, and select `Templater: Create new note from template`
 	- Use shortcut `Alt+n`
 
-### 17.1 Automating Titles
+Templater documentation can be found at, https://silentvoid13.github.io/Templater/
+
+### 17.1 Making User Prompts
+(ref: https://silentvoid13.github.io/Templater/internal-functions/internal-modules/system-module.html)
+
+```javascript
+Clipboard content: <% tp.system.clipboard() %> 
+
+Entered value: <% tp.system.prompt("Please enter a value") %> 
+Mood today: <% tp.system.prompt("What is your mood today ?", "happy") %> 
+
+Mood today: <% tp.system.suggester(["Happy", "Sad", "Confused"], ["Happy", "Sad", "Confused"]) %> 
+Picked file: [[<% (await tp.system.suggester((item) => item.basename, app.vault.getMarkdownFiles())).basename %>]] 
+
+<%* const execution_value = await tp.system.suggester(["Yes", "No"], ["true", "false"]) %> 
+Are you using Execution Commands: <%* tR + execution_value %>
+```
+
+### 17.2 Automating Titles
 
 > [!note] 
 > This is deprecated since Obsidian 1.0. Leaving in as a templater code example.
