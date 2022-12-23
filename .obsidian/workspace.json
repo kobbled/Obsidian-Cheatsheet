@@ -18,21 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "792fd906b7e72f00",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "lib/Diagrams.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "lib/Diagrams.md",
+                "file": "Obsidian Cheatsheet.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "lib/Diagrams.md",
+                "file": "Obsidian Cheatsheet.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "lib/Diagrams.md"
+                "file": "Obsidian Cheatsheet.md"
               }
             }
           },
@@ -170,10 +157,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "792fd906b7e72f00",
+  "active": "e3cfd518821c4d1d",
   "lastOpenFiles": [
-    "Obsidian Cheatsheet.md",
     "lib/Diagrams.md",
+    "Obsidian Cheatsheet.md",
     "lib/Charts.md",
     "Untitled.md",
     "lib/Math.md",
