@@ -9,7 +9,6 @@
 
 ## 1 Plugins
 
-- ~~Admonition~~            **USE BUILTIN CALLOUTS**
 - ~~Sliding Panes (Andy Matuschak Mode)~~      **SLIDING PANES IN NATIVE OBSIDIAN 1.0**
 - [Advanced Tables](https://github.com/tgrosinger/advanced-tables-obsidian) **ESSENTIAL**
 - Buttons
@@ -34,6 +33,7 @@
 -  [Math+](https://github.com/ocapraro/obsidian-math-plus) 
 - [Mathpad](https://github.com/Canna71/obsidian-mathpad) **ESSENTIAL** -> jupytr like support for math and plotting. uses [nerdamer](https://nerdamer.com/documentation.html)
 - [Minimal Theme Settings](https://minimal.guide/Plugins/Minimal+Theme+Settings)
+- [Modular CSS Layout](https://github.com/efemkay/obsidian-modular-css-layout) **ESSENTIAL** For multi-column/text justifying/cards/and image grids
 - [Numerals](https://github.com/gtg922r/obsidian-numerals)
 - Open Vault in VS Code
 - [Outliner](https://github.com/vslinko/obsidian-outliner)
@@ -43,6 +43,7 @@
 - [Quick Add](https://github.com/chhoumann/quickadd)                **ESSENTIAL** ([watch demo](https://www.youtube.com/watch?v=gYK3VDQsZJo&ab_channel=ChristianB.B.Houmann))
 - Quick Latex
 - Search on Internet
+- [Snippet Downloader](https://github.com/Lisandra-dev/obsidian-snippet-downloader) **ESSENTIAL** needed for [Modular CSS Layout](https://github.com/efemkay/obsidian-modular-css-layout) 
 - [Sortable](https://github.com/alexandru-dinu/obsidian-sortable) **ESSENTIAL**
 - [Sort & Permute lines](https://github.com/Vinzent03/obsidian-sort-and-permute-lines)
 - [Style Settings](https://github.com/mgmeyers/obsidian-style-settings)  **ESSENTIAL**
@@ -125,34 +126,66 @@ To load, goto `style settings` settings, and click the import button at the top 
 - [Markdown Extended Syntax](https://www.markdownguide.org/extended-syntax/)
 - [Markdown Extended for VScode](https://marketplace.visualstudio.com/items?itemName=jebbs.markdown-extended) -> This shows some of the extra features that can be achieved with markdown. This is for VSCode but most of the features can be achieved in Obsidian with various community plugins (Just have to search for them).
 
-## 5 Latex
+## 5 Callouts
+
+Callouts can be generated with:
+
+```
+> [!note]
+> This is a note
+```
+
+Adding a Plus sign after the callout `[!note]+` will make is collapsible.
+
+> [!note]+
+> This is a note
+
+**Types of callouts:**
+
+(ref:https://notes.nicolevanderhoeven.com/Obsidian+Callouts)
+
+* note
+* abstract/summary/tldr
+* info/todo
+* tip/hint/important
+* success/check/done
+* question/help/faq
+* warning/caution/attention
+* failure/fail/missing
+* danger/error
+* bug
+* example
+* quote/cite
+
+
+## 6 Latex
 
 - [MathJax-demos-web](https://github.com/mathjax/MathJax-demos-web#samples-of-mathjax-v3)
 - [LATEX Math for Undergrads](http://tug.ctan.org/info/undergradmath/undergradmath.pdf)
 - [LATEX Math Cheatsheet](https://c-tan.com/download/latex_math_cheatsheet_2018-01-13.pdf)
 
-## 6 Math
+## 7 Math
 
 view [[Math]] for examples.
 
-## 7 Charts
+## 8 Charts
 
 view [[Charts]] for examples.
 
-## 8 Mermaid
+## 9 Mermaid
 
 Guides for the various diagrams can be found [here](https://mermaid.js.org/intro/n00b-syntaxReference.html).
 
 view [[Diagrams]] for examples.
 
-## 9 Hotkeys
+## 10 Hotkeys
 > [!note]
 > Set **Commands** to **Hotkeys** by going to `Settings -> Hotkeys`
 
 - https://keycombiner.com/collections/obsidian/
  - [Obsidian Hotkeys: Favorites and best practices](https://forum.obsidian.md/t/obsidian-hotkeys-favorites-and-best-practices/12125)
 
-## 10 Linking
+## 11 Linking
 
 * To link files and folder use:
 ```
@@ -162,13 +195,13 @@ view [[Diagrams]] for examples.
 > [!important] 
 > Any _SPACES_ in the file address **MUST** be replaces with `\%20`, or else it will say it cannot find the file
 
-## 11 Tips
-### 11.1 how to put the graphs in the sidebar
+## 12 Tips
+### 12.1 how to put the graphs in the sidebar
 
 ![[Obsidian-mini-graph.gif]]
 
 
-## 12 Commands (CNTRL+P)
+## 13 Commands (CNTRL+P)
 
 | **Command**                                  | **Action**                                                               |
 | -------------------------------------------- | ------------------------------------------------------------------------ |
@@ -180,9 +213,9 @@ view [[Diagrams]] for examples.
 | Templater: Create Note from Template         | Initialize note from template                                            |
 | Tempalter: Replace Templates in current file | Update note that was created from a template                                                                          |
 
-## 13 Images
+## 14 Images
 
-### 13.1 Resize Images
+### 14.1 Resize Images
 
 > [!important] 
 
@@ -192,7 +225,7 @@ Add width in pixels after image name:
 ![[image.png|500]]
 ```
 
-### 13.2 Image Size Codes
+### 14.2 Image Size Codes
 (ref: https://forum.obsidian.md/t/resize-image/6517/17)
 To set standard images sizes use this css:
 
@@ -208,7 +241,7 @@ and show images like this:
 ![lg](image.png)
 ```
 
-### Image slideshow
+### 14.3 Image slideshow
 
 Currently there is no internal support for image carousels/slideshows. You will have to use pure **HTML**/**CSS** to get this to work.
 
@@ -251,20 +284,50 @@ And change the image by changing `<img src"{image-location}">`
 
 The CSS can be found in *Obsidian-Cheatsheet/css snippets/slideshow.css* of this repository.
 
-## 14 CSS
+### 14.4 Image Grids
+
+Image grids can be made with the [Modular CSS Layout](https://github.com/efemkay/obsidian-modular-css-layout) css package. making an image grid can be done by grouping the images you want in the grid together, and seperating out the ones you want on the next row by a space:
+```
+---
+cssClass: image-gallery
+---
+
+![[path/to/pic1.jpg]]
+![[path/to/pic2.jpg]]
+
+![[path/to/pic3.png]]
+![[path/to/pic4.png]]
+![[path/to/pic5.png]]
+```
+
+![](https://raw.githubusercontent.com/efemkay/obsidian-modular-css-layout/main/docs/assets/gallery-cssclass-langkawi.png)
+
+>[!imporant]
+>Image Height is important, in order for the image grid not to overflow. I am unsure if the markdown height setting method, `![[|500]]`, works in this case.
+
+>[!note]
+> In order for a single iamge to take up the full width of the page you may have to go to the `Style Settings` settings, goto `Modular CSS Layout - Gallery Cards`, and increase _Max Height for Images_ to **400px**
+
+## 15 CSS
 
 Goto `settings->appearance->css snippets`. Click the `Open snippets folder` button. Make a CSS file, and copy the css into a single or multiple file.
 
 > [!tip] 
 > To see the CSS that is running open up the Inspector with `Ctrl + Shift + I`
 
-### 14.1 CSS Templates
+### 15.1 CSS Templates
 
 | type | url |
 | ---- | --- |
 |   Box-Shadow   |   https://getcssscan.com/css-box-shadow-examples  |
 
-### 14.2 Images
+### 15.2 Modular CSS template
+
+The [Modular CSS Layout](https://github.com/efemkay/obsidian-modular-css-layout) can be installed with [Snippet Downloader](https://github.com/Mara-Li/obsidian-snippet-downloader) plugin, accessing the command palette, typing _Snippet Downloader_, and adding https://github.com/efemkay/obsidian-modular-css-layout. Go to the _Appearance_ in settings, and enable all of the added CSS.
+
+This will give access to multi column lists/callouts/images, the ability to justify images, and make cards. See the [documentation](https://efemkay.github.io/obsidian-modular-css-layout/) for more details.
+
+### 15.3 Images
 
 <dt>Center images at max width of page</dt>
 
@@ -297,7 +360,10 @@ img {
 }
 ```
 
-#### 14.2.1 img-grid
+#### 15.3.1 img-grid
+
+>[!Note]
+>A more robust package for using image grids can be found in the section for [Modular CSS Layout](https://github.com/efemkay/obsidian-modular-css-layout)
 
 If using **Minimal Theme** with `Minimal Theme Settings` and `Contextual Typography` plugins you will have access to the _img-grid_ class. Use this CSS as a default template:
 
@@ -358,7 +424,7 @@ cssclass: img-grid
 ---
 ```
 
-### 14.3 Tables
+### 15.4 Tables
 
 <dt>Center tables</dt>
 
@@ -370,7 +436,7 @@ table:not(.table-view-table) {
 }
 ```
 
-### 14.4 Math
+### 15.5 Math
 
 <dt> Increase sie of Latex Math </dt>
 
@@ -380,7 +446,7 @@ mjx-math {
 }
 ```
 
-### 14.5 Mermaid
+### 15.6 Mermaid
 
 <dt>Get mermaid charts to not overflow</dt>
 
@@ -397,7 +463,7 @@ mjx-math {
 }
 ```
 
-## 15 Update Settings
+## 16 Update Settings
 
 - `settings->editor->display->readable line length`
 - `excaidraw->display->new drawing to match obsidian theme`
@@ -405,7 +471,7 @@ mjx-math {
 - `core plugins -> Templates`
 * `core plugins -> Outgoing Links`  **Optional**
 
-## 16 Dataview
+## 17 Dataview
 
 * In **Dataview** settings enable `Enable Javascript Queries`
 * * In **Dataview** settings enable `Enable Inline Javascript Queries`
@@ -419,10 +485,10 @@ cssClasses: [cards, cards-cover, cards-2-3]
 ```
 
 
-### 16.1 Annotations/Metadata
+### 17.1 Annotations/Metadata
 (ref: https://blacksmithgu.github.io/obsidian-dataview/data-annotation/)
 
-## 17 Javascript/DataviewJS
+## 18 Javascript/DataviewJS
 
 The root directory of the vault can be accessed with:
 ```javascript
@@ -432,13 +498,13 @@ this.app.vault.adapter.basePath
 > [!tip]
 > You can debug **dataviewjs**, or javascript by going into the inspector ( `Ctrl + Shift + I` ), and going to the console window.
 
-### 17.1 Writing Dataviewjs
+### 18.1 Writing Dataviewjs
 
 javascript for dataview can be written with:
 
 > ```dataviewjs                             ```
 
-### 17.2 inserting images into dataview
+### 18.2 inserting images into dataview
 (# ref::  [Obsidian Dataviewjs](https://www.jkoster.com/Obsidian-Dataviewjs-6f3e76cf455747fb9fa30de3e5dff197#d2d6f279cc634256b724b165672c3e03) ; https://www.reddit.com/r/ObsidianMD/comments/soapkd/dataview_plugin_help_how_to_display_images/)
 
 To insert local images into a Dataview table, a Dataviewjs query must be made:
@@ -495,7 +561,7 @@ If you want to show an image from the web simply replace `src` with the url. For
 	])
 ```
 
-### 17.3 Creating multiple tables from one query
+### 18.3 Creating multiple tables from one query
 (ref: https://blacksmithgu.github.io/obsidian-dataview/api/code-examples/)
 
 Multiple tables can be created at once by designating a field in the requested pages, and iterating over this field.
@@ -522,7 +588,7 @@ dv.header(3, group.key);
 
 will take the keys from the `status::` and print them as a level `3` header above each of the tables
 
-### 17.4 Column is a list of data
+### 18.4 Column is a list of data
 
 If the column data in the table is in a list/array it may be displayed in a list format ie
 
@@ -553,7 +619,7 @@ dv.table(["Tags"],
   );
 ```
 
-## 18 Templater
+## 19 Templater
 
 * In **Templater** settings set the _template folder directory_ to where your templates are being stored.
 * Select **Trigger Templater on new file creation**
@@ -563,7 +629,7 @@ dv.table(["Tags"],
 
 Templater documentation can be found at, https://silentvoid13.github.io/Templater/
 
-### 18.1 Making User Prompts
+### 19.1 Making User Prompts
 (ref: https://silentvoid13.github.io/Templater/internal-functions/internal-modules/system-module.html)
 
 ```javascript
@@ -579,7 +645,7 @@ Picked file: [[<% (await tp.system.suggester((item) => item.basename, app.vault.
 Are you using Execution Commands: <%* tR + execution_value %>
 ```
 
-### 18.2 Automating Titles
+### 19.2 Automating Titles
 
 > [!note] 
 > This is deprecated since Obsidian 1.0. Leaving in as a templater code example.
@@ -603,7 +669,7 @@ And then in the body call the title like:
 ```
 
 
-## 19 Excalidraw
+## 20 Excalidraw
 
 > [!tip]
 > excalidraw can be set to conform to light or dark theme by changing the settings:
@@ -611,7 +677,7 @@ And then in the body call the title like:
 
 * Drawing libraries can be found at [Excalidraw Libraries](https://libraries.excalidraw.com/)
 
-## 20 Zotero Integration
+## 21 Zotero Integration
 (ref: https://dannyhatcher.com/zotero-obsidian-integration/)
 
 >[!important]
@@ -627,7 +693,7 @@ And then in the body call the title like:
 	* **Template File** is the relative path of the template _.md_ file. 
 * Goto _settings->Hotkeys_, type _zotero_, and find `Zotero Integration: Import #1`. Type the hotkey you want to use (e.g. `Ctrl+Alt+L`)
 
-### 20.1 Zotero Import Template Example
+### 21.1 Zotero Import Template Example
 (ref: [Templater Guide for Zotero](https://github.com/mgmeyers/obsidian-zotero-integration/blob/main/docs/Templating.md))
 
 Below is an example template for import items from Zotero:
@@ -705,12 +771,12 @@ This block will gather all of the notes:
 {% endif %}
 ```
 
-## 21 References
+## 22 References
 * [**Obsidian Hub**](https://publish.obsidian.md/hub)
 * [Obsidian Hub Showcases](https://publish.obsidian.md/hub/03+-+Showcases+%26+Templates/%F0%9F%97%82%EF%B8%8F+03+-+Showcases+%26+Templates)
 * [Linking Your Thinking](https://www.linkingyourthinking.com/)
 
-### 21.1 Obsidian Publish References
+### 22.1 Obsidian Publish References
 https://obsidian.md/publish
 https://workinginpublic.one/
 ----
@@ -720,22 +786,22 @@ https://workinginpublic.one/
 - [Alex Digital Garden](https://publish.obsidian.md/alexander/1_Home/%F0%9F%8F%A0+Home)
 
 
-### 21.2 Guides
+### 22.2 Guides
 
-#### 21.2.1 General Formatting
+#### 22.2.1 General Formatting
 
 [Format your notes](https://help.obsidian.md/How+to/Format+your+notes)
 
 [Adding Metadata](https://blacksmithgu.github.io/obsidian-dataview/annotation/add-metadata/)
 
-#### 21.2.2 Dataview Guides
+#### 22.2.2 Dataview Guides
 
 * [Create Cards (Movie Database)](https://minimal.guide/Guides/Create+a+movie+database)
 * [Tutorial: How to Create a Bookshelf](https://thebuccaneersbounty.wordpress.com/2021/08/21/tutorial-how-to-create-a-bookshelf-in-obsidian/)
 * [Obsidian Dataviewjs](https://www.jkoster.com/Obsidian-Dataviewjs-6f3e76cf455747fb9fa30de3e5dff197#d2d6f279cc634256b724b165672c3e03)
 * [Data Annotations](https://blacksmithgu.github.io/obsidian-dataview/data-annotation/)
 
-#### 21.2.3 Setting up Obsidian for Papers and Research
+#### 22.2.3 Setting up Obsidian for Papers and Research
 
 - [How to Boost Your Productivity for Scientific Research Using Obsidian](https://universvm.medium.com/how-to-boost-your-productivity-for-scientific-research-using-obsidian-fe85c98c63c8)
 - [Obsidian Tutorial for Academic Writing](https://betterhumans.pub/obsidian-tutorial-for-academic-writing-87b038060522?gi=9664895fa2cc)
@@ -744,26 +810,26 @@ https://workinginpublic.one/
 - [Using Dataview with Charts in Obsidian](https://agileadam.com/2022/07/using-dataview-with-charts-in-obsidian/)
 - [The Beginner’s Guide to DATAVIEW Obsidian Plugin — 10 areas where things can go wrong and how to fix them](https://denisetodd.medium.com/obsidian-dataview-for-beginners-a-checklist-to-help-fix-your-dataview-queries-11acc57f1e48)
 
-#### 21.2.4 Johnny Decimal System
+#### 22.2.4 Johnny Decimal System
 - [Byran Jenks: Johnny Decimal](https://publish.obsidian.md/bryan-jenks/Z/Johnny+Decimal)
 - [Johnny Decimal-ising my life](https://colinwren.medium.com/johnny-decimal-ising-my-life-82ee453f79a4)
 
-#### 21.2.5 PARA Method
+#### 22.2.5 PARA Method
 [The PARA Method: A Universal System for Organizing Digital Information](https://fortelabs.co/blog/para/)
 
 
-### 21.3 Reddit Links
+### 22.3 Reddit Links
 [ObsidianMD Subreddit](https://www.reddit.com/r/ObsidianMD/)
 https://www.reddit.com/r/ObsidianMD/comments/wb6wwy/need_help_indexing_3d_print_files_see_comments/
 https://www.reddit.com/r/ObsidianMD/comments/we4b06/has_anyone_created_a_bookmarking_system_in/
 
-### 21.4 Discord Server
+### 22.4 Discord Server
 https://obsidian.md/community
 
 
-### 21.5 Youtube
+### 22.5 Youtube
 
-#### 21.5.1 Youtube Channels
+#### 22.5.1 Youtube Channels
 https://www.youtube.com/channel/UC85D7ERwhke7wVqskV_DZUA
 https://www.youtube.com/c/NicolevanderHoeven
 https://www.youtube.com/user/Peepnbrick
@@ -773,7 +839,7 @@ https://www.youtube.com/c/VisualPKM
 https://www.youtube.com/c/SantiYounger
 
 
-#### 21.5.2 Videos
+#### 22.5.2 Videos
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/E6ySG7xYgjY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
