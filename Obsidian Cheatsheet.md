@@ -332,12 +332,18 @@ This will give access to multi column lists/callouts/images, the ability to just
 <dt>Center images at max width of page</dt>
 
 ```css
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 50%;
+.centerImg img {
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
+```
+
+Use class with Yaml frontmatter
+```yaml
+---
+cssclass: centerImg
+---
 ```
 
 <dt>Hover over images in preview mode</dt>
