@@ -94,6 +94,12 @@
   padding: 4px;
   margin: 1px;
 }
+.mathpad-container .mathpad-scroller .mathpad-slots-container .slot-container .slot-content .mathpad-slider {
+  margin-right: 20px;
+}
+.mathpad-container .mathpad-scroller .mathpad-slots-container .slot-container .slot-content .mathpad-slider input[type=range] {
+  width: 100%;
+}
 .mathpad-container .mathpad-scroller .mathpad-slots-container .slot-container .slot-content .slot-result {
   overflow-y: auto;
 }
@@ -128,6 +134,9 @@
   padding: 4px;
   width: 100%;
   font-family: monospace;
+}
+.mathpad-plot {
+  cursor: pointer;
 }
 .mathpad-plot .function-plot path.x.origin {
   stroke: var(--text-normal);
