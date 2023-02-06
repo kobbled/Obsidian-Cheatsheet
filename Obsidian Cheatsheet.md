@@ -731,7 +731,14 @@ And then in the body call the title like:
 	* **Template File** is the relative path of the template _.md_ file. 
 * Goto _settings->Hotkeys_, type _zotero_, and find `Zotero Integration: Import #1`. Type the hotkey you want to use (e.g. `Ctrl+Alt+L`)
 
-### 21.1 Zotero Import Template Example
+### 21.1 Zotero Import Settings
+
+For `Import Formats` settings use the following:
+
+ **Output_Path** : `my_folder/{{title|replace(":", " –")|replace("^", "")|replace("%", "")}}.md`
+ **Img Output Path**: `img/my_folder/{{citekey}}/`
+
+### 21.2 Zotero Import Template Example
 (ref: [Templater Guide for Zotero](https://github.com/mgmeyers/obsidian-zotero-integration/blob/main/docs/Templating.md))
 
 Below is an example template for import items from Zotero:
@@ -743,14 +750,16 @@ tag: [paperitem]
 alias: {{citekey}}
 ---
 
-[[Papers MOC]]
+[[MOC - Papers]]
 
 **Authors**:: {{authors}}{{directors}}
 **Year**:: {{date | format("YYYY")}}
-**Link**:: {{URL}}
+**Link**:: {{url}}
 **DOI**:: {{DOI}}
-**Links**:: 
-**Status**:: #to-read
+**Ref-Links**:: 
+**Status**::  {% set regExp = r/Status:\s*([^\n]+)(?=\n)/g %}{% set status = regExp.exec(extra) %}{{status[1]}}
+**Priority**:: {% set regExp = r/Priority:\s*([^\n]+)(?=\n)/g %}{% set priority = regExp.exec(extra) %}{{priority[1]}}
+**Importance**:: {% set regExp = r/Importance:\s*([^\n]+)/g %}{% set importance = regExp.exec(extra) %}{{importance[1]}}
 **Tags**:: {% for t in tags %}#{{t.tag|replace(" ", "-")}}{% if not loop.last %}, {% endif %}{% endfor %}
 **Zotero**:: {{pdfZoteroLink}}
 
@@ -807,6 +816,19 @@ This block will gather all of the notes:
 {%if ant.comment %}
 	{{ant.comment}}
 {% endif %}
+```
+
+### 21.3 Adding extra fields in Zotero
+
+In the extra field for an item in zotero, user specified fields can be added:
+![[zotero-extra.PNG | center]]
+
+These custom fields can be accessed by parsing the `extra` field with some regex, i.e.:
+
+```nunjucks
+{% set regExp = r/Status:\s*([^\n]+)(?=\n)/g %}
+{% set status = regExp.exec(extra) %}
+{{status[1]}}
 ```
 
 ## 22 References
