@@ -230,15 +230,17 @@ Add width in pixels after image name:
 To set standard images sizes use this css:
 
 ```css
-.markdown-preview-view img[alt="sm"] { width: max(300px,30%); max-height:auto; } .markdown-preview-view img[alt="md"] { width: max(500px,50%); max-height:auto; } .markdown-preview-view img[alt="lg"] { width: max(1080px,70%); max-height:auto; }
+img[alt="sm"] { width: max(300px,30%); max-height:auto; }
+img[alt="md"] { width: max(500px,50%); max-height:auto; }
+img[alt="lg"] { width: max(1080px,70%); max-height:auto; }
 ```
 
 and show images like this:
 
 ```
-![sm](image.png) 
-![md](image.png) 
-![lg](image.png)
+![|sm](image.png) 
+![|md](image.png) 
+![|lg](image.png)
 ```
 
 ### 14.3 Image slideshow
@@ -329,8 +331,12 @@ This will give access to multi column lists/callouts/images, the ability to just
 
 ### 15.3 Images
 
-<dt>Center images at max width of page</dt>
+#### 15.3.1 Image Centering
 
+##### 15.3.1.1 Page Level
+Centering can be done at the page level, centering all images on the page with the following:
+
+Enter this CSS into a `.css` file in the code snippets folder:
 ```css
 .centerImg img {
   display: block !important;
@@ -339,34 +345,60 @@ This will give access to multi column lists/callouts/images, the ability to just
 }
 ```
 
-Use class with Yaml frontmatter
+For each page you would like the css calss to apply add this into the yaml frontmatter at the to pof the page:
 ```yaml
 ---
 cssclass: centerImg
 ---
 ```
 
-<dt>Hover over images in preview mode</dt>
+##### 15.3.1.2 Individual images
 
+Add this css snippet:
 ```css
-/* Enlarge image on hover */
-.markdown-preview-view img {
-  display: block;
-  margin-top: 20pt;
-  margin-bottom: 20pt;
-  margin-left: auto;
-  margin-right: auto;
-  width: 30%; /*experiment with values*/
-  transition: transform 0.25s ease;
-}
-
-.markdown-preview-view img:hover {
-  -webkit-transform: scale(2); /* experiment with values */
-  transform: scale(2);
+img[alt*="center"] {  
+display: block;  
+margin-left: auto;  
+margin-right: auto;  
 }
 ```
 
-#### 15.3.1 img-grid
+Now use the alt code as an image modifier:
+
+```
+![[image.png | center | 256]]
+or
+![Photo | center | 256](image.png)
+```
+
+example:
+
+![[star-wars-maul.gif| center | 256]]
+
+
+
+#### 15.3.2 Image Enlarging
+
+>[!note] 
+> This can also be achieved with a better effect using the [the Modular CSS Layout](https://github.com/efemkay/obsidian-modular-css-layout)
+
+```css
+/* Enlarge image on hover */
+.markdown-source-view img {
+  transition: transform 0.25s ease;
+}
+
+.markdown-source-view img:active {
+  -webkit-transform: scale(2); /* experiment with values */
+  transform: scale(2);
+  z-index: -1;
+}
+```
+
+>[!Info]
+> Enlarging an image can be done when hovering over the image replacing `img:active` with `img:hover`
+
+#### 15.3.3 img-grid
 
 >[!Note]
 >A more robust package for using image grids can be found in the section for [Modular CSS Layout](https://github.com/efemkay/obsidian-modular-css-layout)
@@ -706,8 +738,8 @@ Below is an example template for import items from Zotero:
 
 ```markdown
 ---
-title: {{title|replace(":", " –")}}
-tag: [paper]
+title: {{title|replace(":", " –")|replace("^", "")|replace("%", "")}}
+tag: [paperitem]
 alias: {{citekey}}
 ---
 

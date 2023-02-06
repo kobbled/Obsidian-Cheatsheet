@@ -2,6 +2,7 @@
   "accentColor": "",
   "baseFontSize": 16,
   "enabledCssSnippets": [
-    "mermaid"
+    "mermaid",
+    "images"
   ]
 }

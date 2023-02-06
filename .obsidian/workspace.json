@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Obsidian Cheatsheet.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               }
             }
@@ -138,7 +138,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -157,13 +157,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "de6eb52be8548a9e",
+  "active": "021305964eaae37e",
   "lastOpenFiles": [
-    "Untitled.md",
-    "Obsidian Cheatsheet.md",
+    "lib/Math.md",
     "lib/Diagrams.md",
     "lib/Charts.md",
-    "lib/Math.md",
+    "Obsidian Cheatsheet.md",
+    "Untitled.md",
     "Excalidraw/Heat Transfer of Point Source on Plate.md",
     "Images/Obsidian-mini-graph.gif",
     "__TOC__.md",
