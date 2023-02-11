@@ -1,3 +1,7 @@
+---
+number headings: first-level 1, max 6, _.1.1
+---
+
 
 > [!warning]
 > Open in Obsidian to view correctly.
@@ -11,6 +15,7 @@
 
 - ~~Sliding Panes (Andy Matuschak Mode)~~      **SLIDING PANES IN NATIVE OBSIDIAN 1.0**
 - [Advanced Tables](https://github.com/tgrosinger/advanced-tables-obsidian) **ESSENTIAL**
+- [Banners](https://github.com/noatpad/obsidian-banners)
 - Buttons
 - [Calendar](https://github.com/liamcain/obsidian-calendar-plugin)
 - [Charts View](https://github.com/caronchen/obsidian-chartsview-plugin)
@@ -157,6 +162,9 @@ Adding a Plus sign after the callout `[!note]+` will make is collapsible.
 * example
 * quote/cite
 
+### 5.1 Callout Style
+
+Built-in callout style (as of V1.1.9) may not be desired. To ge the old admonition style of callout. See [[#15.4 Callouts]]
 
 ## 6 Latex
 
@@ -187,6 +195,20 @@ view [[Diagrams]] for examples.
 
 ## 11 Linking
 
+### 11.1 Linking to Headers
+
+Headers can be referenced by the heading name in the same file like:
+```
+[[#heading]]
+```
+
+or in a different file like:
+```
+[[other_file#heading]]
+```
+
+### 11.2 Linking to external file
+
 * To link files and folder use:
 ```
 [statswords.csv](file:///C:/Users/bruno/Dropbox/Obsidian/Vaults/ClippingContents/statswords.csv)
@@ -194,6 +216,12 @@ view [[Diagrams]] for examples.
 
 > [!important] 
 > Any _SPACES_ in the file address **MUST** be replaces with `\%20`, or else it will say it cannot find the file
+
+### 11.3 Linking on images
+
+```
+[![[pictures.jpg]]](<Note Name>)
+```
 
 ## 12 Tips
 ### 12.1 how to put the graphs in the sidebar
@@ -309,6 +337,17 @@ cssClass: image-gallery
 
 >[!note]
 > In order for a single iamge to take up the full width of the page you may have to go to the `Style Settings` settings, goto `Modular CSS Layout - Gallery Cards`, and increase _Max Height for Images_ to **400px**
+
+### 14.5 Banners
+
+When using banners with **image-grids**, or **modular-css** you will have to override the image CSS with:
+
+```css
+.banner-image {
+  border-radius: 0px !important;
+  opacity : 1 !important;
+}
+```
 
 ## 15 CSS
 
@@ -462,7 +501,48 @@ cssclass: img-grid
 ---
 ```
 
-### 15.4 Tables
+### 15.4 Light/Dark Mode
+
+CSS between light and dark mode can be distinguished with `:is(.theme-light)`, or `:is(.theme-dark)`.
+
+(e.g.)
+```
+:is(.theme-light) .callout-content {
+  background-color: var(--background-primary-alt);
+}
+
+:is(.theme-dark) .callout-content {
+  background-color: rgba(0, 0, 0, 1);
+}
+```
+
+### 15.5 Callouts
+
+(ref: https://gist.github.com/kepano/cde61ac7db1afd3f173a16157c627f93)
+
+Built-in callouts as of V1.1.9 do not look very good. In order to get the CSS of the old admonition callouts back use the file `callouts.css` in the *css snippets* folder
+
+```css
+body {
+  --callout-border-width:  0 0 0 4px;
+  --callout-border-opacity:  1;
+  --callout-radius: 0;
+  --callout-padding: 0;
+  --callout-title-padding:  var(--size-4-4) var(--size-4-4);
+  --callout-content-padding:  var(--size-4-2) var(--size-4-4);
+}
+.callout {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 9px;
+}
+.callout-title-inner {
+  color: var(--text-normal);
+}
+.callout-content {
+  background-color: var(--background-primary-alt);
+}
+```
+
+### 15.6 Tables
 
 <dt>Center tables</dt>
 
@@ -474,7 +554,7 @@ table:not(.table-view-table) {
 }
 ```
 
-### 15.5 Math
+### 15.7 Math
 
 <dt> Increase sie of Latex Math </dt>
 
@@ -484,7 +564,7 @@ mjx-math {
 }
 ```
 
-### 15.6 Mermaid
+### 15.8 Mermaid
 
 <dt>Get mermaid charts to not overflow</dt>
 
@@ -492,12 +572,29 @@ mjx-math {
 .mermaid {
   overflow: auto;
   text-align: center;
-  justify-content: center;
+  justify-content: center; 
 }
 
 .mermaid svg {
   max-width: 100%;
   height: auto;
+}
+```
+
+### 15.9 Exporting to PDF
+
+(ref: https://github.com/phibr0/obsidian-latex-css)
+
+Exporting to PDF you will want to change the css to fit in the format of pages, and a pdf. An example CSS can be found in `css snippets/pdf.css`. Enable this CSS in order to use it. CSS just for PDF export can be made by enclosing it in:
+
+```css
+@media print {
+}
+```
+
+To modify the page use:
+```css
+@page {
 }
 ```
 
@@ -924,3 +1021,5 @@ https://www.youtube.com/c/SantiYounger
 <iframe width="560" height="315" src="https://www.youtube.com/embed/iU60ItemuDo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/zIh1S7ra3aI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AatZl1Z_n-g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

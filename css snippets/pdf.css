@@ -1,0 +1,103 @@
+@media print {
+  @page {
+    margin-top: 3.15cm;
+    margin-bottom: 2.54cm;
+  }
+
+  body {
+    text-align: justify;
+    line-height: 1.8;
+  }
+  
+  h1,h2,h3,h4,h5,h6 {
+    font-family: "Calibri",sans-serif !important;
+  }
+
+  h1 {
+    color: #538135 !important;
+    font-size: 24pt !important;
+  }
+
+  h2 {
+    color: #71AF47 !important;
+    font-size: 18pt !important;
+  }
+
+  h3, h4, h5 {
+    color: #5E913B !important;
+  }
+
+  h3 {
+    font-size: 14pt !important;
+  }
+
+  h4 {
+    font-size: 12pt !important;
+  }
+
+  h5 {
+    font-size: 10pt !important;
+  }
+
+  .callout {
+    page-break-inside: avoid;
+  }
+
+  /* Page Break Stuff */
+  hr {
+    page-break-after: always;
+  }
+  .markdown-preview-view hr {
+    border: none;
+    border-top: 2px solid;
+    border-color: transparent;
+  }
+  .image-embed,
+  img {
+    page-break-inside: avoid !important;
+  }
+  blockquote,
+  table,
+  pre {
+    page-break-inside: avoid;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    page-break-after: avoid;
+  }
+
+  /* Codeblock Stuff */
+  .enhanced-codeblocks.numbered-codeblocks pre::after {
+    content: "Codeblock " counter(codeblock) " (" attr(class) " )";
+    font-size: 0.8em;
+    color: gray;
+    text-align: right;
+  }
+  .enhanced-codeblocks pre {
+    font-family: var(--pdf-mono-font) !important;
+    counter-increment: codeblock;
+    background-color: var(--codeblock-background) !important;
+    margin: 1rem 0.2rem !important;
+    border-top: 1pt solid black !important;
+    border-bottom: 1pt solid black !important;
+    border-radius: 0 !important;
+  }
+  .enhanced-codeblocks pre code {
+    font-family: var(--pdf-mono-font) !important;
+    opacity: 100% !important;
+    background-color: transparent;
+  }
+  .enhanced-codeblocks p code {
+    padding: 0;
+    font-family: var(--pdf-mono-font) !important;
+    background-color: transparent;
+  }
+  body {
+    counter-reset: codeblock;
+  }
+
+}

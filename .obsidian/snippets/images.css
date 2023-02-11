@@ -13,14 +13,3 @@ display: block;
 margin-left: auto;  
 margin-right: auto;  
 }
-
-/* Enlarge image on hover */
-.markdown-source-view img {
-  transition: transform 0.25s ease;
-}
-
-.markdown-source-view img:active {
-  -webkit-transform: scale(2); /* experiment with values */
-  transform: scale(2);
-  z-index: -1;
-}

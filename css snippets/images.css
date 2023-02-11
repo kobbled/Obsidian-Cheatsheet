@@ -24,3 +24,8 @@ margin-right: auto;
   transform: scale(2);
   z-index: -1;
 }
+
+.banner-image {
+  border-radius: 0px !important;
+  opacity : 1 !important;
+}
