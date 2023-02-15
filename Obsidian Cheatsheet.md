@@ -842,8 +842,62 @@ And then in the body call the title like:
 # <% `${title}`%>
 ```
 
+## 20 Tasks
 
-## 20 Excalidraw
+(ref:  https://forum.obsidian.md/t/dashboard-and-workflow-for-obsidian-at-work-sales/34794, https://github.com/Gnopps/ObsidianScripts)
+
+Using the [Tasks](https://github.com/obsidian-tasks-group/obsidian-tasks) package you can wrangle markdown lists. Below are some examples
+
+**Do Today**:
+```
+	```tasks
+	not done
+	due before in 1 day
+	hide start date
+	hide due date
+	hide scheduled date
+	hide edit button
+	```
+```
+
+**Upcoming**:
+```
+	```tasks
+	not done
+	due before in 3 days
+	due after in 0 days
+	hide start date
+	hide scheduled date
+	hide edit button
+	limit 5
+	```
+```
+
+**Scheduled before**:
+```
+	```tasks
+	not done
+	scheduled before in 7 days
+	scheduled after in 1 days
+	hide start date
+	hide due date
+	hide scheduled date
+	hide edit button
+	limit 5
+	```
+```
+
+**All Tasks with due date**:
+```
+	```tasks
+	not done
+	due after 1999-01-01
+	hide edit button
+	hide start date
+	```
+```
+
+## 21 Excalidraw
 
 > [!tip]
 > excalidraw can be set to conform to light or dark theme by changing the settings:
@@ -851,7 +905,7 @@ And then in the body call the title like:
 
 * Drawing libraries can be found at [Excalidraw Libraries](https://libraries.excalidraw.com/)
 
-## 21 Zotero Integration
+## 22 Zotero Integration
 (ref: https://dannyhatcher.com/zotero-obsidian-integration/)
 
 >[!important]
@@ -867,14 +921,14 @@ And then in the body call the title like:
 	* **Template File** is the relative path of the template _.md_ file. 
 * Goto _settings->Hotkeys_, type _zotero_, and find `Zotero Integration: Import #1`. Type the hotkey you want to use (e.g. `Ctrl+Alt+L`)
 
-### 21.1 Zotero Import Settings
+### 22.1 Zotero Import Settings
 
 For `Import Formats` settings use the following:
 
  **Output_Path** : `my_folder/{{title|replace(":", " –")|replace("^", "")|replace("%", "")}}.md`
  **Img Output Path**: `img/my_folder/{{citekey}}/`
 
-### 21.2 Zotero Import Template Example
+### 22.2 Zotero Import Template Example
 (ref: [Templater Guide for Zotero](https://github.com/mgmeyers/obsidian-zotero-integration/blob/main/docs/Templating.md))
 
 Below is an example template for import items from Zotero:
@@ -954,7 +1008,7 @@ This block will gather all of the notes:
 {% endif %}
 ```
 
-### 21.3 Adding extra fields in Zotero
+### 22.3 Adding extra fields in Zotero
 
 In the extra field for an item in zotero, user specified fields can be added:
 ![[zotero-extra.PNG | center]]
@@ -967,12 +1021,12 @@ These custom fields can be accessed by parsing the `extra` field with some regex
 {{status[1]}}
 ```
 
-## 22 References
+## 23 References
 * [**Obsidian Hub**](https://publish.obsidian.md/hub)
 * [Obsidian Hub Showcases](https://publish.obsidian.md/hub/03+-+Showcases+%26+Templates/%F0%9F%97%82%EF%B8%8F+03+-+Showcases+%26+Templates)
 * [Linking Your Thinking](https://www.linkingyourthinking.com/)
 
-### 22.1 Obsidian Publish References
+### 23.1 Obsidian Publish References
 https://obsidian.md/publish
 https://workinginpublic.one/
 ----
