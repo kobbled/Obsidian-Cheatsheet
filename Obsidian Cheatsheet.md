@@ -647,8 +647,19 @@ cssClasses: [cards, cards-cover, cards-2-3]
 ---
 ```
 
+### 17.1 File Accessors
 
-### 17.1 Annotations/Metadata
+Below is a table of file accessor members that can be used in dataview tables
+
+| Accessor      | Descriptions                          |
+| ------------- | ------------------------------------- |
+| file.ctime    | Time file was created                 |
+| file.mtime    | Time file was last modified           |
+| file.inlinks  | All the inlink references to the file |
+| file.outlinks | All outlink references in the file    |
+
+
+### 17.2 Annotations/Metadata
 (ref: https://blacksmithgu.github.io/obsidian-dataview/data-annotation/)
 
 ## 18 Javascript/DataviewJS
