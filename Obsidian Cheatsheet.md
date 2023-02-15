@@ -195,7 +195,15 @@ view [[Diagrams]] for examples.
 
 ## 11 Linking
 
-### 11.1 Linking to Headers
+### 11.1 Embed an image from a URL
+
+```
+[![|160](https://source.unsplash.com/3IzKtuKdGuE/160)]
+```
+
+[![|160](https://source.unsplash.com/3IzKtuKdGuE/160)]
+
+### 11.2 Linking to Headers
 
 Headers can be referenced by the heading name in the same file like:
 ```
@@ -207,7 +215,7 @@ or in a different file like:
 [[other_file#heading]]
 ```
 
-### 11.2 Linking to external file
+### 11.3 Linking to external file
 
 * To link files and folder use:
 ```
@@ -217,7 +225,7 @@ or in a different file like:
 > [!important] 
 > Any _SPACES_ in the file address **MUST** be replaces with `\%20`, or else it will say it cannot find the file
 
-### 11.3 Linking on images
+### 11.4 Linking on images
 
 ```
 [![[pictures.jpg]]](<Note Name>)
