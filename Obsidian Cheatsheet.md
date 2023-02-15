@@ -376,6 +376,26 @@ The [Modular CSS Layout](https://github.com/efemkay/obsidian-modular-css-layout)
 
 This will give access to multi column lists/callouts/images, the ability to justify images, and make cards. See the [documentation](https://efemkay.github.io/obsidian-modular-css-layout/) for more details.
 
+### Page specific CSS
+
+If you would like to write CSS that only applies to a specified file, pick a name for the specialized class add prepend it to all css that will use it:
+
+```css
+:is(div[class*="new-page-class"]) .markdown-preview-section .el-lang-dataviewjs {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+```
+
+Then in the note you want to add it, in the frontmatter you would put:
+
+```
+---
+cssClass: new-page-class
+---
+```
+
 ### 15.3 Images
 
 #### 15.3.1 Image Centering
