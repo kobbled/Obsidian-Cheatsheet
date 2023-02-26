@@ -1032,6 +1032,30 @@ Using the [Tasks](https://github.com/obsidian-tasks-group/obsidian-tasks) packag
 	```
 ```
 
+### 20.2 Buttons
+
+Using the [Buttons](https://github.com/shabegom/buttons) package you can format push buttons for various tasks.
+
+For Example a **New Daily Note** button can be created with:
+
+```
+	```button
+	name New Daily Note
+	type command
+	action Periodic Notes: Open daily note
+	class button-new-daily-note
+	```
+```
+
+Where the command **Periodic Notes: Open daily note** is called on clicking.
+
+Custom css can be used to sytle the button by giving it a css class `.button-new-daily-note`.
+
+> [!note]
+> See _Obsidian-Cheatsheet/css snippets/buttons.css_ for the css for formatting a **daily**, and **weekly** note to be used in a header or banner.
+
+
+
 ## 21 Excalidraw
 
 > [!tip]
