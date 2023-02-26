@@ -452,9 +452,9 @@ Then add that family to the classes you would like to use it in:
 
 ### 15.2 Images
 
-#### 15.3.1 Image Centering
+#### 15.2.1 Image Centering
 
-##### 15.3.1.1 Page Level
+##### 15.2.1.1 Page Level
 Centering can be done at the page level, centering all images on the page with the following:
 
 Enter this CSS into a `.css` file in the code snippets folder:
@@ -473,7 +473,7 @@ cssclass: centerImg
 ---
 ```
 
-##### 15.3.1.2 Individual images
+##### 15.2.1.2 Individual images
 
 Add this css snippet:
 ```css
@@ -498,7 +498,7 @@ example:
 
 
 
-#### 15.3.2 Image Enlarging
+#### 15.2.2 Image Enlarging
 
 >[!note] 
 > This can also be achieved with a better effect using the [the Modular CSS Layout](https://github.com/efemkay/obsidian-modular-css-layout)
@@ -519,7 +519,7 @@ example:
 >[!Info]
 > Enlarging an image can be done when hovering over the image replacing `img:active` with `img:hover`
 
-#### 15.3.3 img-grid
+#### 15.2.3 img-grid
 
 >[!Note]
 >A more robust package for using image grids can be found in the section for [Modular CSS Layout](https://github.com/efemkay/obsidian-modular-css-layout)
@@ -583,7 +583,7 @@ cssclass: img-grid
 ---
 ```
 
-### 15.4 Light/Dark Mode
+### 15.3 Light/Dark Mode
 
 CSS between light and dark mode can be distinguished with `:is(.theme-light)`, or `:is(.theme-dark)`.
 
@@ -598,7 +598,7 @@ CSS between light and dark mode can be distinguished with `:is(.theme-light)`, o
 }
 ```
 
-### 15.5 Callouts
+### 15.4 Callouts
 
 (ref: https://gist.github.com/kepano/cde61ac7db1afd3f173a16157c627f93)
 
@@ -624,7 +624,7 @@ body {
 }
 ```
 
-### 15.6 Tables
+### 15.5 Tables
 
 <dt>Center tables</dt>
 
@@ -636,7 +636,7 @@ table:not(.table-view-table) {
 }
 ```
 
-### 15.7 Math
+### 15.6 Math
 
 <dt> Increase sie of Latex Math </dt>
 
@@ -646,7 +646,7 @@ mjx-math {
 }
 ```
 
-### 15.8 Mermaid
+### 15.7 Mermaid
 
 <dt>Get mermaid charts to not overflow</dt>
 
@@ -663,7 +663,7 @@ mjx-math {
 }
 ```
 
-### 15.9 Exporting to PDF
+### 15.8 Exporting to PDF
 
 (ref: https://github.com/phibr0/obsidian-latex-css)
 
@@ -1316,38 +1316,38 @@ https://obsidian.md/publish
 https://workinginpublic.one/
 
 
-### Online Vault Examples
+### 23.2 Online Vault Examples
 - [Welcome+to+The+Quantum+Well!](https://publish.obsidian.md/myquantumwell/Welcome+to+The+Quantum+Well!)
 - [chromatically/nutrition](https://publish.obsidian.md/chromatically/nutrition)
 - [Notes on AI](https://notesonai.com)
 - [Alex Digital Garden](https://publish.obsidian.md/alexander/1_Home/%F0%9F%8F%A0+Home)
 
-### Downloadable Vault Examples
+### 23.3 Downloadable Vault Examples
 - https://github.com/faroukx/obsidian-homepage
 - https://github.com/Rainbell129/Obsidian-Homepage
 - 
 
-### 23.2 Snippets
+### 23.4 Snippets
 
 * https://obsidian-snippets.pages.dev/
 
 
-### 23.3 Guides
+### 23.5 Guides
 
-#### 23.3.1 General Formatting
+#### 23.5.1 General Formatting
 
 [Format your notes](https://help.obsidian.md/How+to/Format+your+notes)
 
 [Adding Metadata](https://blacksmithgu.github.io/obsidian-dataview/annotation/add-metadata/)
 
-#### 23.3.2 Dataview Guides
+#### 23.5.2 Dataview Guides
 
 * [Create Cards (Movie Database)](https://minimal.guide/Guides/Create+a+movie+database)
 * [Tutorial: How to Create a Bookshelf](https://thebuccaneersbounty.wordpress.com/2021/08/21/tutorial-how-to-create-a-bookshelf-in-obsidian/)
 * [Obsidian Dataviewjs](https://www.jkoster.com/Obsidian-Dataviewjs-6f3e76cf455747fb9fa30de3e5dff197#d2d6f279cc634256b724b165672c3e03)
 * [Data Annotations](https://blacksmithgu.github.io/obsidian-dataview/data-annotation/)
 
-#### 23.3.3 Setting up Obsidian for Papers and Research
+#### 23.5.3 Setting up Obsidian for Papers and Research
 
 - [How to Boost Your Productivity for Scientific Research Using Obsidian](https://universvm.medium.com/how-to-boost-your-productivity-for-scientific-research-using-obsidian-fe85c98c63c8)
 - [Obsidian Tutorial for Academic Writing](https://betterhumans.pub/obsidian-tutorial-for-academic-writing-87b038060522?gi=9664895fa2cc)
@@ -1356,26 +1356,26 @@ https://workinginpublic.one/
 - [Using Dataview with Charts in Obsidian](https://agileadam.com/2022/07/using-dataview-with-charts-in-obsidian/)
 - [The Beginner’s Guide to DATAVIEW Obsidian Plugin — 10 areas where things can go wrong and how to fix them](https://denisetodd.medium.com/obsidian-dataview-for-beginners-a-checklist-to-help-fix-your-dataview-queries-11acc57f1e48)
 
-#### 23.3.4 Johnny Decimal System
+#### 23.5.4 Johnny Decimal System
 - [Byran Jenks: Johnny Decimal](https://publish.obsidian.md/bryan-jenks/Z/Johnny+Decimal)
 - [Johnny Decimal-ising my life](https://colinwren.medium.com/johnny-decimal-ising-my-life-82ee453f79a4)
 
-#### 23.3.5 PARA Method
+#### 23.5.5 PARA Method
 [The PARA Method: A Universal System for Organizing Digital Information](https://fortelabs.co/blog/para/)
 
 
-### 23.4 Reddit Links
+### 23.6 Reddit Links
 [ObsidianMD Subreddit](https://www.reddit.com/r/ObsidianMD/)
 https://www.reddit.com/r/ObsidianMD/comments/wb6wwy/need_help_indexing_3d_print_files_see_comments/
 https://www.reddit.com/r/ObsidianMD/comments/we4b06/has_anyone_created_a_bookmarking_system_in/
 
-### 23.5 Discord Server
+### 23.7 Discord Server
 https://obsidian.md/community
 
 
-### 23.6 Youtube
+### 23.8 Youtube
 
-#### 23.6.1 Youtube Channels
+#### 23.8.1 Youtube Channels
 https://www.youtube.com/channel/UC85D7ERwhke7wVqskV_DZUA
 https://www.youtube.com/c/NicolevanderHoeven
 https://www.youtube.com/user/Peepnbrick
