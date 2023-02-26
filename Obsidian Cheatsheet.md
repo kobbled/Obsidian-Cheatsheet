@@ -364,19 +364,38 @@ Goto `settings->appearance->css snippets`. Click the `Open snippets folder` butt
 > [!tip] 
 > To see the CSS that is running open up the Inspector with `Ctrl + Shift + I`
 
-### 15.1 CSS Templates
+### 15.1 Custom CSS Styling
+
+#### 15.1.1 Glass panels
+(ref: https://css.glass/)
+
+Glass panel effect can be made by going to https://css.glass/, and copying the custom CSS to be used in a CSS snippet
+
+```css
+.my_class{
+	/* From https://css.glass */
+	background: rgba(255, 255, 255, 0.32);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(8.7px);
+	-webkit-backdrop-filter: blur(8.7px);
+	border: 1px solid rgba(255, 255, 255, 0.74);
+}
+```
+
+#### 15.1.2 CSS Templates
 
 | type | url |
 | ---- | --- |
 |   Box-Shadow   |   https://getcssscan.com/css-box-shadow-examples  |
 
-### 15.2 Modular CSS template
+#### 15.1.3 Modular CSS template
 
 The [Modular CSS Layout](https://github.com/efemkay/obsidian-modular-css-layout) can be installed with [Snippet Downloader](https://github.com/Mara-Li/obsidian-snippet-downloader) plugin, accessing the command palette, typing _Snippet Downloader_, and adding https://github.com/efemkay/obsidian-modular-css-layout. Go to the _Appearance_ in settings, and enable all of the added CSS.
 
 This will give access to multi column lists/callouts/images, the ability to justify images, and make cards. See the [documentation](https://efemkay.github.io/obsidian-modular-css-layout/) for more details.
 
-### Page specific CSS
+#### 15.1.4 Page specific CSS
 
 If you would like to write CSS that only applies to a specified file, pick a name for the specialized class add prepend it to all css that will use it:
 
