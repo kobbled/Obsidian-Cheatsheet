@@ -1126,6 +1126,21 @@ banner_y: 0.38
 
 ```
 
+### 20.4 Kanban
+
+[Kanban](https://github.com/mgmeyers/obsidian-kanban) boards  are useful for visualizing tasks in a board format.
+
+- To make a kanban board type the command `Kanban - Create New Board`.
+- You can toggle between the markdown and the board with `Kanban - Toggle between kanban and markdown mode`
+- To add sub-items to a list, they need to be on the same line but seperated with `<br>` tags
+
+```
+## Todo
+- [ ] **Item 1** <br> <br> - [ ] Sub Item 1 <br> - [ ] Sub Item 2
+```
+
+
+
 ### 20.5 Clock
 (ref: https://dayspedia.com/widgets/digit/)
 
