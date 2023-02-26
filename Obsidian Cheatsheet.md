@@ -957,11 +957,17 @@ And then in the body call the title like:
 # <% `${title}`%>
 ```
 
-## 20 Tasks
+## 20 Applets
 
-(ref:  https://forum.obsidian.md/t/dashboard-and-workflow-for-obsidian-at-work-sales/34794, https://github.com/Gnopps/ObsidianScripts)
+### 20.1 Tasks
 
-Using the [Tasks](https://github.com/obsidian-tasks-group/obsidian-tasks) package you can wrangle markdown lists. Below are some examples
+**Refs**: 
+- https://forum.obsidian.md/t/dashboard-and-workflow-for-obsidian-at-work-sales/34794
+- https://obsidian-tasks-group.github.io/obsidian-tasks/
+- https://github.com/Gnopps/ObsidianScripts
+- https://benenewton.medium.com/my-obsidian-daily-note-template-a4bdab53dc62
+
+Using the [Tasks](https://github.com/obsidian-tasks-group/obsidian-tasks) package you can wrangle markdown lists. You can Track a task by starting a todo item in a note, and a popup menu should give you some options like _Due Date_, _Start Before_, _High Priority_. Follow this readme docs linked above for syntax. These can then be summarazied by using a query where they can be filtered, grouped, and sorted. Below are some examples:
 
 **Do Today**:
 ```
