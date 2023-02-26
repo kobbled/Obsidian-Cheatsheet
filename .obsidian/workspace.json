@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Obsidian Cheatsheet.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": true
               }
             }
@@ -147,25 +147,34 @@
   "left-ribbon": {
     "hiddenItems": {
       "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "obsidian-excalidraw-plugin:Create new drawing": false,
       "mathpad:Open Mathpad": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "open-vscode:VSCode": false
     }
   },
   "active": "021305964eaae37e",
   "lastOpenFiles": [
+    "Images/zotero-classic-mode-select-papers.PNG",
+    "Images/zotero-classic-mode-multiple-sources.PNG",
+    "Images/zotero-classic-mode.PNG",
+    "Images/zotero-extra.PNG",
+    "Images/periodic_note_settings.png",
+    "Images/star-wars-maul.gif",
+    "Images/Obsidian-mini-graph.gif",
+    "Images/background_style_settings.png",
+    "Obsidian Cheatsheet.md",
+    "lib/Charts.md",
+    "css snippets/workspace-background.css",
     "lib/Math.md",
     "lib/Diagrams.md",
-    "lib/Charts.md",
-    "Obsidian Cheatsheet.md",
     "Untitled.md",
     "Excalidraw/Heat Transfer of Point Source on Plate.md",
-    "Images/Obsidian-mini-graph.gif",
     "__TOC__.md",
     "Excalidraw/Drawing 2022-12-06 13.45.26.excalidraw.md",
     "publish.obsidian.md/hub.md"

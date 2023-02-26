@@ -4,5 +4,6 @@
   "enabledCssSnippets": [
     "mermaid",
     "images"
-  ]
+  ],
+  "translucency": false
 }

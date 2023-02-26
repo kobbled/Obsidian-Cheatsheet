@@ -167,6 +167,7 @@ li[data-testid] {
 
 .workspace-leaf-content .excalidraw-view {
   padding: 0px 1px; /*1px so on ipad swipe in from left and right still works*/
+  overflow: hidden;
 }
 
 .excalidraw-videoWrapper {
@@ -287,7 +288,7 @@ textarea.excalidraw-wysiwyg {
 }
 
 label.color-input-container > input {
-  max-width: 7rem;
+  max-width: 5rem;
 }
 
 .excalidraw .FixedSideContainer_side_top {
@@ -307,4 +308,22 @@ label.color-input-container > input {
 
 .excalidraw button {
   width: initial;
+}
+
+.excalidraw input[type="color"] {
+  width: 1.65rem;
+  height: 1.65rem;
+}
+
+.excalidraw input[type="color"]::-webkit-color-swatch {
+    height: 1.65rem;
+}
+
+
+.excalidraw input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+.excalidraw-settings input {
+  min-width: 10em;
 }
