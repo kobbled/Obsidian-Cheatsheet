@@ -28,6 +28,7 @@ number headings: first-level 1, max 6, _.1.1
 - [Excalibrain](https://github.com/zsviczian/excalibrain)
 - [Excalidraw](https://github.com/zsviczian/obsidian-excalidraw-plugin)          **ESSENTIAL**
 - [Functionplot](https://github.com/leonhma/obsidian-functionplot)
+- [Heatmap Calendar](https://github.com/Richardsl/heatmap-calendar-obsidian)
 - [Highlightr](https://github.com/chetachiezikeuzor/Highlightr-Plugin)
 - Hotkeys++
 - [Icon Folder](https://github.com/FlorianWoelki/obsidian-icon-folder)
@@ -1165,6 +1166,52 @@ iframe[name="Digiclock1"] {
     left: 2em;
     opacity: 0.85; } 
 ```
+
+### Heatmap
+
+Using the [Heatmap Calendar](https://github.com/Richardsl/heatmap-calendar-obsidian) plugin we can track progess in a github style heatmap.
+
+See the [Examples](https://github.com/Richardsl/heatmap-calendar-obsidian/tree/master/EXAMPLE_VAULT) for a good place to start.
+
+A calendar data hash must be specified to define the heat map:
+
+```js
+const calendarData = {
+    year: 2022,  // (optional) defaults to current year
+    colors: {    // (optional) defaults to green
+        blue:        ["#8cb9ff", "#69a3ff", "#428bff", "#1872ff", "#0058e2"], // first entry is considered default if supplied
+        green:       ["#c6e48b", "#7bc96f", "#49af5d", "#2e8840", "#196127"],
+        red:         ["#ff9e82", "#ff7b55", "#ff4d1a", "#e73400", "#bd2a00"],
+        orange:      ["#ffa244", "#fd7f00", "#dd6f00", "#bf6000", "#9b4e00"],
+        pink:        ["#ff96cb", "#ff70b8", "#ff3a9d", "#ee0077", "#c30062"],
+        orangeToRed: ["#ffdf04", "#ffbe04", "#ff9a03", "#ff6d02", "#ff2c01"]
+    },
+    showCurrentDayBorder: true, // (optional) defaults to true
+    defaultEntryIntensity: 10,   // (optional) defaults to 4
+    intensityScaleStart: 10,    // (optional) defaults to lowest value passed to entries.intensity
+    intensityScaleEnd: 100,     // (optional) defaults to highest value passed to entries.intensity
+    entries: [],                // (required) populated in the DataviewJS loop below
+}
+```
+
+In your dataviewjs loop over the data you want to track and push the necessary data to `calendarData.entries`:
+
+```js
+//DataviewJS loop
+for (let page of dv.pages("#paperitem").where(p => p.status === "#paper/status/read")) {
+	// dv.span("<br>" + page.file.name) // uncomment for troubleshooting
+    calendarData.entries.push({
+        date: convertDate(page.date_read),
+        intensity: countRead(page.status),
+        content: await dv.span(`[[${page.file.name}|]]`),
+    })
+}
+```
+
+You must use the specified fields of `date`, `intensity`, `content`, and `color` in the **calendarData.entries** list.
+
+>[!information] Adding up multiple entries per day
+>To count multiple entries per day in the heat map, you need to use a `groupBy` query, and then count the entries or rows. See this issue for more details, https://github.com/Richardsl/heatmap-calendar-obsidian/issues/21
 
 
 ## 21 Excalidraw
