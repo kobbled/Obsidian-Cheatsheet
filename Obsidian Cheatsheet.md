@@ -1056,6 +1056,76 @@ Custom css can be used to sytle the button by giving it a css class `.button-new
 
 
 
+### 20.3 Calendar / Periodic Notes
+
+[Calendar](https://github.com/liamcain/obsidian-calendar-plugin), and [Periodic Notes](https://github.com/liamcain/obsidian-periodic-notes) can be used to track time sensitive tasks, as well as summarize blocks of time.
+
+Templates can be configured for generating Daily/Weekly/Monthly/Yearly notes here is an example:
+![[periodic_note_settings.png]]
+
+Current Daily Template is:
+
+```
+---
+type: daily
+date: <%tp.date.now("YYYY-MM-DD")%>
+week: <% tp.date.now("YYYY-WW") %>
+banner: "![[Eho0_vuU0AEXqt4.jpg]]"
+banner_y: 0.55
+---
+## <% tp.file.title %>
+
+<< [[<% tp.date.now("YYYY-MM-DD", -1, tp.file.title, "YYYY-MM-DD") %>]] | [[<% tp.date.now("YYYY-MM-DD", 1, tp.file.title, "YYYY-MM-DD") %>]]>>
+
+**[[<% tp.date.now("YYYY-MM-DD", 0, tp.file.title, "YYYY-MM-DD") %>]]**
+
+---
+### Tags/Links
+
+<!-- UNCOMMENT TO ADD TAGS **Tags**:: <!-- Add any tags for this note -->
+<!-- UNCOMMENT TO ADD LINKS **Links**:: <!-- Add any links for this note -->
+^2
+---
+### Tasks/Todo
+ <!-- UNCOMMENT TO ADD TASKS - [ ] Dummy Task -->
+^1
+---
+```
+
+Current Weekly Template is:
+
+```
+---
+type: weekly
+week: <% tp.date.now("YYYY-WW") %>
+banner: "![[daily-note-banner.gif]]"
+banner_y: 0.38
+---
+
+## Week: **{{sunday:gggg-MM-DD}} ** - **{{saturday:gggg-MM-DD}}**
+
+### Tasks
+
+![[{{sunday:gggg-MM-DD}}#^1]]
+![[{{monday:gggg-MM-DD}}#^1]]
+![[{{tuesday:gggg-MM-DD}}#^1]]
+![[{{wednesday:gggg-MM-DD}}#^1]]
+![[{{thursday:gggg-MM-DD}}#^1]]
+![[{{friday:gggg-MM-DD}}#^1]]
+![[{{saturday:gggg-MM-DD}}#^1]]
+
+### Tags/Links
+
+![[{{sunday:gggg-MM-DD}}#^2]]
+![[{{monday:gggg-MM-DD}}#^2]]
+![[{{tuesday:gggg-MM-DD}}#^2]]
+![[{{wednesday:gggg-MM-DD}}#^2]]
+![[{{thursday:gggg-MM-DD}}#^2]]
+![[{{friday:gggg-MM-DD}}#^2]]
+![[{{saturday:gggg-MM-DD}}#^2]]
+
+```
+
 ## 21 Excalidraw
 
 > [!tip]
