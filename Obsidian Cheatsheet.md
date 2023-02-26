@@ -944,12 +944,14 @@ alias: {{citekey}}
 
 **Authors**:: {{authors}}{{directors}}
 **Year**:: {{date | format("YYYY")}}
+**Date_Added**:: {{dateAdded| format("YYYY-MM-DD") }}
+**Date_Read**:: {% set regExp = r/Dateread:\s(.*)(?=[\n]*)/g %}{% set dateread = regExp.exec(extra) %}{{dateread[1]}}
 **Link**:: {{url}}
 **DOI**:: {{DOI}}
-**Ref-Links**:: 
-**Status**::  {% set regExp = r/Status:\s*([^\n]+)(?=\n)/g %}{% set status = regExp.exec(extra) %}{{status[1]}}
-**Priority**:: {% set regExp = r/Priority:\s*([^\n]+)(?=\n)/g %}{% set priority = regExp.exec(extra) %}{{priority[1]}}
-**Importance**:: {% set regExp = r/Importance:\s*([^\n]+)/g %}{% set importance = regExp.exec(extra) %}{{importance[1]}}
+**Ref_Links**:: 
+**Status**::  {% set regExp = r/Status:\s(.*)(?=[\n]*)/g %}{% set status = regExp.exec(extra) %}{{status[1]}}
+**Priority**:: {% set regExp = r/Priority:\s(.*)(?=[\n]*)/g %}{% set priority = regExp.exec(extra) %}{{priority[1]}}
+**Importance**:: {% set regExp = r/Importance:\s(.*)(?=[\n]*)/g %}{% set importance = regExp.exec(extra) %}{{importance[1]}}
 **Tags**:: {% for t in tags %}#{{t.tag|replace(" ", "-")}}{% if not loop.last %}, {% endif %}{% endfor %}
 **Zotero**:: {{pdfZoteroLink}}
 
@@ -1016,10 +1018,23 @@ In the extra field for an item in zotero, user specified fields can be added:
 These custom fields can be accessed by parsing the `extra` field with some regex, i.e.:
 
 ```nunjucks
-{% set regExp = r/Status:\s*([^\n]+)(?=\n)/g %}
+{% set regExp = r/Status:\s(.*)(?=[\n]*)/g %}
 {% set status = regExp.exec(extra) %}
 {{status[1]}}
 ```
+
+>[!important]
+> This regex Requires a space after the colon, even if there is not value set in the value field.
+
+### 22.4 Load Multiple Papers or Collections
+
+To load multiple papers at once you first need to switch to _classic mode_:
+![[zotero-classic-mode.PNG| center| 500]]
+
+Then select _multiple sources_. From here you can select multiple papers, or select a collection of papers:
+![[zotero-classic-mode-multiple-sources.PNG| center| 800]]
+![[zotero-classic-mode-select-papers.PNG| center| 800]]
+
 
 ## 23 References
 * [**Obsidian Hub**](https://publish.obsidian.md/hub)
