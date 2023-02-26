@@ -675,6 +675,72 @@ To modify the page use:
 }
 ```
 
+### 15.9 Adding Backgrounds
+
+(ref: https://beingpax.medium.com/how-to-customize-obsidian-with-a-translucent-background-image-db6f95e5c533)
+
+>[!Note]
+> This requires the **Style Settings** Plugin
+
+1) Add _workspace_backgrounds.css_ from the **css snippets** folder included in this repo to you snippets folder in your vault.
+2) Goto Style Settings and configure _Obsidian Background_
+![[background_style_settings.png]]
+
+Some useful extra CSS:
+- Add extra background selections
+	-  Add new item to list here:
+	```css
+	-
+	    id: background-settings-workplace-theme-dark
+	    title: Dark Mode Background
+	    type: class-select
+	    allowEmpty: false
+	    default: background-settings-workplace-theme-dark-tokyo
+	    options:
+	      - 
+	        label: Cosmic sky
+	        value: background-settings-workplace-theme-dark-cosmic-sky
+	      - 
+	        label: Dark mountain 
+	        value: background-settings-workplace-theme-dark-dark-mountain
+	      - 
+	        label: Tokyo
+	        value: background-settings-workplace-theme-dark-tokyo
+	      - 
+	        label: Deer
+	        value: background-settings-workplace-theme-dark-deer
+	      - 
+	        label: Space
+	        value: background-settings-workplace-theme-dark-space
+	```
+
+	- Add with out _background-settings-workplace-theme-_'s
+
+	```css
+	body.background-settings-workplace-background-image.background-settings-workplace-theme-dark-river.theme-dark {
+	  background-image: url("https://getwallpapers.com/wallpaper/full/6/b/f/1215995-gorgerous-4k-sunset-wallpaper-3840x2160-smartphone.jpg") !important;
+	  background-size: cover;
+	}
+	```
+- Remove Transparency from popups, and obsidians menus
+```css
+.modal-container {
+  --background-primary: var(--bg1) !important;
+}
+
+.popover {
+  --background-primary: var(--bg1) !important;
+}
+```
+- Add blur to background
+```css
+body.background-settings-workplace-background-image {
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+```
+
+
 ## 16 Update Settings
 
 - `settings->editor->display->readable line length`
