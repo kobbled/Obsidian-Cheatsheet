@@ -779,6 +779,8 @@ Below is a table of file accessor members that can be used in dataview tables
 
 ## 18 Javascript/DataviewJS
 
+(ref: https://notes.nicolevanderhoeven.com/Dataviewjs)
+
 The root directory of the vault can be accessed with:
 ```javascript
 this.app.vault.adapter.basePath
@@ -907,6 +909,18 @@ dv.table(["Tags"],
     )
   );
 ```
+
+
+### 18.5 Style Dataviewjs with CSS class
+
+To add a CSS class to a dataview add this to the js:
+
+```js
+dv.container.className += " <custom-class-name>"
+```
+
+Where `<custom-class-name>` is the CSS class you want to use for styling
+
 
 ## 19 Templater
 
