@@ -415,7 +415,37 @@ cssClass: new-page-class
 ---
 ```
 
-### 15.3 Images
+#### 15.1.5 Adding Custom Fonts
+(ref: https://forum.obsidian.md/t/iframe-of-local-html-file-is-not-showing-anything/4648/6)
+
+If you want to add in new fonts download the fonts on your machine, then in a css snippet add a new font family:
+
+```css
+@font-face {
+    font-family: 'Reforma1918';
+    src: local("Reforma1918-BlancaItalica.ttf"),
+		 local("Reforma 1918 Blanca Italica");
+    font-style: italic;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+}
+```
+
+Then add that family to the classes you would like to use it in:
+
+```css
+/* isolate the area you need to modify, for me it was footers and references, 
+   the key is to specify the font-family from above */
+.cm-s-obsidian span.cm-footref, .cm-s-obsidian span.cm-blockid {
+	font-family: Reforma1918;
+	font-weight: 300;
+}
+```
+
+>[!important]
+> Reload Obsidian to take effect of newly installed fonts!
+
+### 15.2 Images
 
 #### 15.3.1 Image Centering
 
