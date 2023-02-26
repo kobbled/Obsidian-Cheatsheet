@@ -1126,6 +1126,27 @@ banner_y: 0.38
 
 ```
 
+### 20.5 Clock
+(ref: https://dayspedia.com/widgets/digit/)
+
+A running clock can be made by going to https://dayspedia.com/widgets/digit/, and styling it how you would like it. Then select **Code with Iframe Tag**, and copy the Code. Then paste the code in an obsidian note.
+
+You can style the iframe by adding a `name` field to it, i.e.:
+```html
+<iframe name= 'Digiclock1' width='300' height='200' class='DPDC' marginheight='0' marginwidth='0' frameborder='0' scrolling='no' allowtransparency = "true" comment='/*defined*/' ...
+```
+
+Then add the css in a css snippet like:
+
+```css
+iframe[name="Digiclock1"] {
+    position: absolute;
+    top: 10em;
+    left: 2em;
+    opacity: 0.85; } 
+```
+
+
 ## 21 Excalidraw
 
 > [!tip]
