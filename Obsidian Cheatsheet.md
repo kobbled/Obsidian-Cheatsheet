@@ -176,6 +176,11 @@ Built-in callout style (as of V1.1.9) may not be desired. To ge the old admoniti
 
 view [[Math]] for examples.
 
+### 7.1 MathPad Settings
+
+> [!note]
+> Turn **off** `Show Mathpad Sidebar` so that mathpad doesn't default open at startup
+
 ## 8 Charts
 
 view [[Charts]] for examples.
