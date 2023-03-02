@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Obsidian Cheatsheet.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": true
               }
             }
@@ -160,6 +160,7 @@
   },
   "active": "021305964eaae37e",
   "lastOpenFiles": [
+    "css snippets/headers.css",
     "Images/zotero-classic-mode-select-papers.PNG",
     "Images/zotero-classic-mode-multiple-sources.PNG",
     "Images/zotero-classic-mode.PNG",
