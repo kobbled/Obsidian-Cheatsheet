@@ -878,6 +878,7 @@ GROUP BY tags
 ## 18 Javascript/DataviewJS
 
 (ref: https://notes.nicolevanderhoeven.com/Dataviewjs)
+(Code References: https://blacksmithgu.github.io/obsidian-dataview/api/code-reference/)
 
 The root directory of the vault can be accessed with:
 ```javascript
@@ -1018,6 +1019,44 @@ dv.container.className += " <custom-class-name>"
 ```
 
 Where `<custom-class-name>` is the CSS class you want to use for styling
+
+### 18.6 Query Tasks with dataviewjs
+
+(ref: https://forum.obsidian.md/t/dataviewjs-snippet-showcase/17847/84?page=5)
+
+```js
+let dateFilter = dv.date("2023-03");
+let tasks = dv.pages()
+.where(p => p.type == "daily" && p.month.ts === dateFilter.ts).file.tasks;
+
+dv.taskList(tasks);
+```
+
+#### 18.6.1 Get Task Progress in Progress Bar
+
+```js
+// get all tasks for the month
+let dateFilter = dv.date("{{date:gggg-MM}}");
+let tasks = dv.pages().where(p => p.type == "daily" && p.month.ts === dateFilter.ts).file.tasks;
+
+//calculate total and completed tasks this month
+let totalMonth = tasks.length;
+let completedMonth = tasks.where(t => t.completed).length;
+
+//print progress bar
+function progress(value, total) {
+    let pct = value/total * 100;
+    return `<progress value="${parseInt(pct)}" max="100"></progress> | ${parseInt(pct)} %`
+}
+
+//print progress bars in table
+dv.span(`
+|     | Progress  | Percentage |
+| --- | --- |:---:|
+| **Tasks Completed**| ${progress(completedMonth, totalMonth)}  |
+`)
+
+```
 
 
 ## 19 Templater
