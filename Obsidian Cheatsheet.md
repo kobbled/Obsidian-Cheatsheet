@@ -760,6 +760,8 @@ body.background-settings-workplace-background-image {
 * In **Dataview** settings enable `Enable Javascript Queries`
 * * In **Dataview** settings enable `Enable Inline Javascript Queries`
 
+### 17.1 Styling
+
 Dataview table can be viewed as cards if using the **Minimal Theme** and placing in the yaml frontmatter of a note:
 
 ```yaml
@@ -768,7 +770,15 @@ cssClasses: [cards, cards-cover, cards-2-3]
 ---
 ```
 
-### 17.1 File Accessors
+To make a dataview table span 100% width use the helper [classes](https://minimal.guide/Block+types/Tables), `table-100`:
+
+```
+---
+cssClass: wide-page, table-100
+---
+```
+
+### 17.2 File Accessors
 
 Below is a table of file accessor members that can be used in dataview tables
 
@@ -779,8 +789,90 @@ Below is a table of file accessor members that can be used in dataview tables
 | file.inlinks  | All the inlink references to the file |
 | file.outlinks | All outlink references in the file    |
 
+### 17.3 Accessing Frontmatter fields
 
-### 17.2 Annotations/Metadata
+Frontmatter fields like :
+```
+---
+type: monthly
+month: 2023-02
+---
+```
+
+can be filtered in a query with:
+
+```sql
+TASK
+FROM "FolderName"
+WHERE type = "daily" AND month = date(2023-02)
+```
+
+
+### 17.4 Gathering Tasks
+
+Tasks can be gathered by using `TASK` keyword instead of `TABLE` i.e:
+
+```sql
+TASK
+FROM "MyFolderIfThereIsOne"
+WHERE myField = "dinner"
+```
+
+### 17.5 Gather Item lists
+
+To gather an item list like:
+* Item 1
+* Item 2
+* Item 3
+
+Use:
+
+```sql
+TABLE bullet.text AS Links
+FROM "Note"
+FLATTEN file.lists as bullet
+```
+
+Where `file.lists` will gather all lists in the file, FLATTEN will flatten them into one list, and *bullet* will alias `file.lists`
+
+To format the table as a list use `LIST` instead of `TABLE`:
+
+```sql
+LIST bullet.text
+FROM "Note"
+FLATTEN file.lists as bullet
+```
+
+### 17.6 Filter Based on Heading
+
+(ref: https://www.reddit.com/r/ObsidianMD/comments/w9bu1r/query_and_filter_items_under_a_heading/)
+
+dataviews can be filtered by heading. The follow example will get the items under a heading:
+
+```sql
+TABLE bullet.text AS References
+FROM #TagOfInterest
+FLATTEN file.lists as bullet
+WHERE meta(bullet.section).subpath = "References"
+```
+
+### 17.7 Group Unique Tags
+
+(refs: 
+- https://forum.obsidian.md/t/group-by-unique-inline-values-in-dataview/31101
+- https://forum.obsidian.md/t/dataview-query-to-return-all-the-unique-values-for-a-given-field/51700)
+
+In order to get all of the unique tags out of a collection of notes, but must use the `GROUP BY` clause.
+
+```sql
+TABLE WITHOUT ID tags
+FLATTEN file.tags AS tags
+WHERE type = "daily" AND month = date(2023-02) 
+GROUP BY tags
+```
+
+
+### 17.8 Annotations/Metadata
 (ref: https://blacksmithgu.github.io/obsidian-dataview/data-annotation/)
 
 ## 18 Javascript/DataviewJS
@@ -982,6 +1074,7 @@ And then in the body call the title like:
 ### 20.1 Tasks
 
 **Refs**: 
+- https://kevinquinn.fun/blog/get-started-with-obsidian-periodic-notes-and-templater/ (NEED TO READ)
 - https://forum.obsidian.md/t/dashboard-and-workflow-for-obsidian-at-work-sales/34794
 - https://obsidian-tasks-group.github.io/obsidian-tasks/
 - https://github.com/Gnopps/ObsidianScripts
@@ -1167,7 +1260,7 @@ iframe[name="Digiclock1"] {
     opacity: 0.85; } 
 ```
 
-### Heatmap
+### 20.6 Heatmap
 
 Using the [Heatmap Calendar](https://github.com/Richardsl/heatmap-calendar-obsidian) plugin we can track progess in a github style heatmap.
 
