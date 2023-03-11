@@ -1058,6 +1058,34 @@ dv.span(`
 
 ```
 
+### Make a quick MOC by grouping frontmatter fields
+
+```javascript
+for (let group of dv.pages('').filter(p => p.type == 'science-note').groupBy(p => p.category)) {
+  dv.header(3, group.key);
+  dv.list(group.rows.file.link);
+}
+```
+
+This query will gather all of the notes with the frontmatter query *'science-note'*, and group them by the name/tag assigned to the *'category'* field:
+
+```
+---
+type: science-note
+created: 2023-03-10
+
+---
+[[Science MOC]]
+
+
+---
+**Tags**:: 
+**Category**:: #physics
+**Links**:: 
+
+---
+```
+
 
 ## 19 Templater
 
