@@ -29,3 +29,13 @@ margin-right: auto;
   border-radius: 0px !important;
   opacity : 1 !important;
 }
+
+.image-captions-figure {
+  display: block;  
+  margin-left: auto;  
+  margin-right: auto;  
+}
+
+.image-captions-caption {
+  padding-top: 1em;
+}

@@ -32,6 +32,7 @@ number headings: first-level 1, max 6, _.1.1
 - [Highlightr](https://github.com/chetachiezikeuzor/Highlightr-Plugin)
 - Hotkeys++
 - [Icon Folder](https://github.com/FlorianWoelki/obsidian-icon-folder)
+- [Image Captions](https://github.com/alangrainger/obsidian-image-captions)
 - [Journey](https://github.com/akaalias/obsidian-journey-plugin)
 - [Kanban](https://github.com/mgmeyers/obsidian-kanban)
 - Kindle Highlights
@@ -362,6 +363,17 @@ When using banners with **image-grids**, or **modular-css** you will have to ove
   opacity : 1 !important;
 }
 ```
+
+### 14.6 Image Captions
+
+Install the [Image Captions](https://github.com/alangrainger/obsidian-image-captions) plugin. Captions are put into images like:
+
+```
+[[img.png|This is a Caption|500]]
+```
+
+CSS settings can be changes with `.image-captions-figure` and `.image-captions-caption` classes. See *images.css* for details.
+
 
 ## 15 CSS
 
@@ -1058,7 +1070,7 @@ dv.span(`
 
 ```
 
-### Make a quick MOC by grouping frontmatter fields
+### 18.7 Make a quick MOC by grouping frontmatter fields
 
 ```javascript
 for (let group of dv.pages('').filter(p => p.type == 'science-note').groupBy(p => p.category)) {
