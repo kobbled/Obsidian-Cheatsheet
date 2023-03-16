@@ -61,6 +61,11 @@ number headings: first-level 1, max 6, _.1.1
 - Vantage  ->  Advanced search builder
 - [Zotero Integration](https://github.com/mgmeyers/obsidian-zotero-integration) **ESSENTIAL**
 
+### 1.1 AI Tools
+
+- [Text Generator](https://github.com/nhaouari/obsidian-textgenerator-plugin)
+- [Smart Connections](https://github.com/brianpetro/obsidian-smart-connections)
+
 ## 2 Themes
 
 * [Things](https://github.com/colineckert/obsidian-things)
