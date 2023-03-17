@@ -27,6 +27,7 @@ number headings: first-level 1, max 6, _.1.1
 - Editor Syntax Highlight
 - [Excalibrain](https://github.com/zsviczian/excalibrain)
 - [Excalidraw](https://github.com/zsviczian/obsidian-excalidraw-plugin)          **ESSENTIAL**
+- [Excel to Markdown Table](https://github.com/ganesshkumar/obsidian-excel-to-markdown-table)
 - [Functionplot](https://github.com/leonhma/obsidian-functionplot)
 - [Heatmap Calendar](https://github.com/Richardsl/heatmap-calendar-obsidian)
 - [Highlightr](https://github.com/chetachiezikeuzor/Highlightr-Plugin)
@@ -180,6 +181,10 @@ Built-in callout style (as of V1.1.9) may not be desired. To ge the old admoniti
 - [LATEX Math Cheatsheet](https://c-tan.com/download/latex_math_cheatsheet_2018-01-13.pdf)
 
 ## 7 Math
+## 7 Tables
+
+Copy and paste tables into markdown using the [Excel to Markdown Table](https://github.com/ganesshkumar/obsidian-excel-to-markdown-table) plugin.
+
 
 view [[Math]] for examples.
 
