@@ -46,6 +46,7 @@ number headings: first-level 1, max 6, _.1.1
 - Open Vault in VS Code
 - [Outliner](https://github.com/vslinko/obsidian-outliner)
 - Ozan's image in editor plugin
+- [Pandoc Plugin](https://github.com/OliverBalfour/obsidian-pandoc)
 - [PDF Highlights](https://github.com/akaalias/obsidian-extract-pdf-highlights)
 - [Periodic Note](https://github.com/liamcain/obsidian-periodic-notes)
 - [Quick Add](https://github.com/chhoumann/quickadd)                **ESSENTIAL** ([watch demo](https://www.youtube.com/watch?v=gYK3VDQsZJo&ab_channel=ChristianB.B.Houmann))
@@ -384,17 +385,39 @@ Install the [Image Captions](https://github.com/alangrainger/obsidian-image-capt
 
 CSS settings can be changes with `.image-captions-figure` and `.image-captions-caption` classes. See *images.css* for details.
 
+## 16 Pandoc
 
-## 16 CSS
+-   [Install Pandoc](https://pandoc.org/installing.html) if you have not already (without Pandoc only the HTML export works)
+-   Download [Obsidian Pandoc](https://github.com/OliverBalfour/obsidian-pandoc) plugin
+
+> [!note]
+> In Pandoc Plugin settings change "Export Folder" to where you want to exports to save
+
+> [!warning]
+> Change Theme to `Light` scheme before exporting with pandoc, as you will be converting to a white background (pdf, word, etc...)
+
+>[!warning]
+> Pandoc will abort out if Images are not linked with their **Absolute Path**. Change link format to absolute path through `Settings->Files & Links->New Link Format`. Add update all of the images in the note with their absolute paths.
+
+### 16.1 Convert Word to Markdown
+
+```
+pandoc --wrap=none --extract-media ./img -f docx -t markdown "input.docx" -o "output.md"
+```
+
+where images are put into the root directory `./img` folder.
+
+
+## 17 CSS
 
 Goto `settings->appearance->css snippets`. Click the `Open snippets folder` button. Make a CSS file, and copy the css into a single or multiple file.
 
 > [!tip] 
 > To see the CSS that is running open up the Inspector with `Ctrl + Shift + I`
 
-### 16.1 Custom CSS Styling
+### 17.1 Custom CSS Styling
 
-#### 16.1.1 Glass panels
+#### 17.1.1 Glass panels
 (ref: https://css.glass/)
 
 Glass panel effect can be made by going to https://css.glass/, and copying the custom CSS to be used in a CSS snippet
@@ -411,19 +434,19 @@ Glass panel effect can be made by going to https://css.glass/, and copying the c
 }
 ```
 
-#### 16.1.2 CSS Templates
+#### 17.1.2 CSS Templates
 
 | type | url |
 | ---- | --- |
 |   Box-Shadow   |   https://getcssscan.com/css-box-shadow-examples  |
 
-#### 16.1.3 Modular CSS template
+#### 17.1.3 Modular CSS template
 
 The [Modular CSS Layout](https://github.com/efemkay/obsidian-modular-css-layout) can be installed with [Snippet Downloader](https://github.com/Mara-Li/obsidian-snippet-downloader) plugin, accessing the command palette, typing _Snippet Downloader_, and adding https://github.com/efemkay/obsidian-modular-css-layout. Go to the _Appearance_ in settings, and enable all of the added CSS.
 
 This will give access to multi column lists/callouts/images, the ability to justify images, and make cards. See the [documentation](https://efemkay.github.io/obsidian-modular-css-layout/) for more details.
 
-#### 16.1.4 Page specific CSS
+#### 17.1.4 Page specific CSS
 
 If you would like to write CSS that only applies to a specified file, pick a name for the specialized class add prepend it to all css that will use it:
 
@@ -443,7 +466,7 @@ cssClass: new-page-class
 ---
 ```
 
-#### 16.1.5 Adding Custom Fonts
+#### 17.1.5 Adding Custom Fonts
 (ref: https://forum.obsidian.md/t/iframe-of-local-html-file-is-not-showing-anything/4648/6)
 
 If you want to add in new fonts download the fonts on your machine, then in a css snippet add a new font family:
@@ -473,11 +496,11 @@ Then add that family to the classes you would like to use it in:
 >[!important]
 > Reload Obsidian to take effect of newly installed fonts!
 
-### 16.2 Images
+### 17.2 Images
 
-#### 16.2.1 Image Centering
+#### 17.2.1 Image Centering
 
-##### 16.2.1.1 Page Level
+##### 17.2.1.1 Page Level
 Centering can be done at the page level, centering all images on the page with the following:
 
 Enter this CSS into a `.css` file in the code snippets folder:
@@ -496,7 +519,7 @@ cssclass: centerImg
 ---
 ```
 
-##### 16.2.1.2 Individual images
+##### 17.2.1.2 Individual images
 
 Add this css snippet:
 ```css
@@ -521,7 +544,7 @@ example:
 
 
 
-#### 16.2.2 Image Enlarging
+#### 17.2.2 Image Enlarging
 
 >[!note] 
 > This can also be achieved with a better effect using the [the Modular CSS Layout](https://github.com/efemkay/obsidian-modular-css-layout)
@@ -542,7 +565,7 @@ example:
 >[!Info]
 > Enlarging an image can be done when hovering over the image replacing `img:active` with `img:hover`
 
-#### 16.2.3 img-grid
+#### 17.2.3 img-grid
 
 >[!Note]
 >A more robust package for using image grids can be found in the section for [Modular CSS Layout](https://github.com/efemkay/obsidian-modular-css-layout)
@@ -606,7 +629,7 @@ cssclass: img-grid
 ---
 ```
 
-### 16.3 Light/Dark Mode
+### 17.3 Light/Dark Mode
 
 CSS between light and dark mode can be distinguished with `:is(.theme-light)`, or `:is(.theme-dark)`.
 
@@ -621,7 +644,7 @@ CSS between light and dark mode can be distinguished with `:is(.theme-light)`, o
 }
 ```
 
-### 16.4 Callouts
+### 17.4 Callouts
 
 (ref: https://gist.github.com/kepano/cde61ac7db1afd3f173a16157c627f93)
 
@@ -647,7 +670,7 @@ body {
 }
 ```
 
-### 16.5 Tables
+### 17.5 Tables
 
 <dt>Center tables</dt>
 
@@ -659,7 +682,7 @@ table:not(.table-view-table) {
 }
 ```
 
-### 16.6 Math
+### 17.6 Math
 
 <dt> Increase sie of Latex Math </dt>
 
@@ -669,7 +692,7 @@ mjx-math {
 }
 ```
 
-### 16.7 Mermaid
+### 17.7 Mermaid
 
 <dt>Get mermaid charts to not overflow</dt>
 
@@ -686,7 +709,7 @@ mjx-math {
 }
 ```
 
-### 16.8 Exporting to PDF
+### 17.8 Exporting to PDF
 
 (ref: https://github.com/phibr0/obsidian-latex-css)
 
@@ -703,7 +726,7 @@ To modify the page use:
 }
 ```
 
-### 16.9 Adding Backgrounds
+### 17.9 Adding Backgrounds
 
 (ref: https://beingpax.medium.com/how-to-customize-obsidian-with-a-translucent-background-image-db6f95e5c533)
 
@@ -769,7 +792,7 @@ body.background-settings-workplace-background-image {
 ```
 
 
-## 17 Update Settings
+## 18 Update Settings
 
 - `settings->editor->display->readable line length`
 - `excaidraw->display->new drawing to match obsidian theme`
@@ -777,12 +800,12 @@ body.background-settings-workplace-background-image {
 - `core plugins -> Templates`
 * `core plugins -> Outgoing Links`  **Optional**
 
-## 18 Dataview
+## 19 Dataview
 
 * In **Dataview** settings enable `Enable Javascript Queries`
 * * In **Dataview** settings enable `Enable Inline Javascript Queries`
 
-### 18.1 Styling
+### 19.1 Styling
 
 Dataview table can be viewed as cards if using the **Minimal Theme** and placing in the yaml frontmatter of a note:
 
@@ -800,7 +823,7 @@ cssClass: wide-page, table-100
 ---
 ```
 
-### 18.2 File Accessors
+### 19.2 File Accessors
 
 Below is a table of file accessor members that can be used in dataview tables
 
@@ -811,7 +834,7 @@ Below is a table of file accessor members that can be used in dataview tables
 | file.inlinks  | All the inlink references to the file |
 | file.outlinks | All outlink references in the file    |
 
-### 18.3 Accessing Frontmatter fields
+### 19.3 Accessing Frontmatter fields
 
 Frontmatter fields like :
 ```
@@ -830,7 +853,7 @@ WHERE type = "daily" AND month = date(2023-02)
 ```
 
 
-### 18.4 Gathering Tasks
+### 19.4 Gathering Tasks
 
 Tasks can be gathered by using `TASK` keyword instead of `TABLE` i.e:
 
@@ -840,7 +863,7 @@ FROM "MyFolderIfThereIsOne"
 WHERE myField = "dinner"
 ```
 
-### 18.5 Gather Item lists
+### 19.5 Gather Item lists
 
 To gather an item list like:
 * Item 1
@@ -865,7 +888,7 @@ FROM "Note"
 FLATTEN file.lists as bullet
 ```
 
-### 18.6 Filter Based on Heading
+### 19.6 Filter Based on Heading
 
 (ref: https://www.reddit.com/r/ObsidianMD/comments/w9bu1r/query_and_filter_items_under_a_heading/)
 
@@ -878,7 +901,7 @@ FLATTEN file.lists as bullet
 WHERE meta(bullet.section).subpath = "References"
 ```
 
-### 18.7 Group Unique Tags
+### 19.7 Group Unique Tags
 
 (refs: 
 - https://forum.obsidian.md/t/group-by-unique-inline-values-in-dataview/31101
@@ -894,10 +917,10 @@ GROUP BY tags
 ```
 
 
-### 18.8 Annotations/Metadata
+### 19.8 Annotations/Metadata
 (ref: https://blacksmithgu.github.io/obsidian-dataview/data-annotation/)
 
-## 19 Javascript/DataviewJS
+## 20 Javascript/DataviewJS
 
 (ref: https://notes.nicolevanderhoeven.com/Dataviewjs)
 (Code References: https://blacksmithgu.github.io/obsidian-dataview/api/code-reference/)
@@ -910,13 +933,13 @@ this.app.vault.adapter.basePath
 > [!tip]
 > You can debug **dataviewjs**, or javascript by going into the inspector ( `Ctrl + Shift + I` ), and going to the console window.
 
-### 19.1 Writing Dataviewjs
+### 20.1 Writing Dataviewjs
 
 javascript for dataview can be written with:
 
 > ```dataviewjs                             ```
 
-### 19.2 inserting images into dataview
+### 20.2 inserting images into dataview
 (# ref::  [Obsidian Dataviewjs](https://www.jkoster.com/Obsidian-Dataviewjs-6f3e76cf455747fb9fa30de3e5dff197#d2d6f279cc634256b724b165672c3e03) ; https://www.reddit.com/r/ObsidianMD/comments/soapkd/dataview_plugin_help_how_to_display_images/)
 
 To insert local images into a Dataview table, a Dataviewjs query must be made:
@@ -973,7 +996,7 @@ If you want to show an image from the web simply replace `src` with the url. For
 	])
 ```
 
-### 19.3 Creating multiple tables from one query
+### 20.3 Creating multiple tables from one query
 (ref: https://blacksmithgu.github.io/obsidian-dataview/api/code-examples/)
 
 Multiple tables can be created at once by designating a field in the requested pages, and iterating over this field.
@@ -1000,7 +1023,7 @@ dv.header(3, group.key);
 
 will take the keys from the `status::` and print them as a level `3` header above each of the tables
 
-### 19.4 Column is a list of data
+### 20.4 Column is a list of data
 
 If the column data in the table is in a list/array it may be displayed in a list format ie
 
@@ -1032,7 +1055,7 @@ dv.table(["Tags"],
 ```
 
 
-### 19.5 Style Dataviewjs with CSS class
+### 20.5 Style Dataviewjs with CSS class
 
 To add a CSS class to a dataview add this to the js:
 
@@ -1042,7 +1065,7 @@ dv.container.className += " <custom-class-name>"
 
 Where `<custom-class-name>` is the CSS class you want to use for styling
 
-### 19.6 Query Tasks with dataviewjs
+### 20.6 Query Tasks with dataviewjs
 
 (ref: https://forum.obsidian.md/t/dataviewjs-snippet-showcase/17847/84?page=5)
 
@@ -1054,7 +1077,7 @@ let tasks = dv.pages()
 dv.taskList(tasks);
 ```
 
-#### 19.6.1 Get Task Progress in Progress Bar
+#### 20.6.1 Get Task Progress in Progress Bar
 
 ```js
 // get all tasks for the month
@@ -1080,7 +1103,7 @@ dv.span(`
 
 ```
 
-### 19.7 Make a quick MOC by grouping frontmatter fields
+### 20.7 Make a quick MOC by grouping frontmatter fields
 
 ```javascript
 for (let group of dv.pages('').filter(p => p.type == 'science-note').groupBy(p => p.category)) {
@@ -1109,7 +1132,7 @@ created: 2023-03-10
 ```
 
 
-## 20 Templater
+## 21 Templater
 
 * In **Templater** settings set the _template folder directory_ to where your templates are being stored.
 * Select **Trigger Templater on new file creation**
@@ -1119,7 +1142,7 @@ created: 2023-03-10
 
 Templater documentation can be found at, https://silentvoid13.github.io/Templater/
 
-### 20.1 Making User Prompts
+### 21.1 Making User Prompts
 (ref: https://silentvoid13.github.io/Templater/internal-functions/internal-modules/system-module.html)
 
 ```javascript
@@ -1135,7 +1158,7 @@ Picked file: [[<% (await tp.system.suggester((item) => item.basename, app.vault.
 Are you using Execution Commands: <%* tR + execution_value %>
 ```
 
-### 20.2 Automating Titles
+### 21.2 Automating Titles
 
 > [!note] 
 > This is deprecated since Obsidian 1.0. Leaving in as a templater code example.
@@ -1158,9 +1181,9 @@ And then in the body call the title like:
 # <% `${title}`%>
 ```
 
-## 21 Applets
+## 22 Applets
 
-### 21.1 Tasks
+### 22.1 Tasks
 
 **Refs**: 
 - https://kevinquinn.fun/blog/get-started-with-obsidian-periodic-notes-and-templater/ (NEED TO READ)
@@ -1220,7 +1243,7 @@ Using the [Tasks](https://github.com/obsidian-tasks-group/obsidian-tasks) packag
 	```
 ```
 
-### 21.2 Buttons
+### 22.2 Buttons
 
 Using the [Buttons](https://github.com/shabegom/buttons) package you can format push buttons for various tasks.
 
@@ -1244,7 +1267,7 @@ Custom css can be used to sytle the button by giving it a css class `.button-new
 
 
 
-### 21.3 Calendar / Periodic Notes
+### 22.3 Calendar / Periodic Notes
 
 [Calendar](https://github.com/liamcain/obsidian-calendar-plugin), and [Periodic Notes](https://github.com/liamcain/obsidian-periodic-notes) can be used to track time sensitive tasks, as well as summarize blocks of time.
 
@@ -1314,7 +1337,7 @@ banner_y: 0.38
 
 ```
 
-### 21.4 Kanban
+### 22.4 Kanban
 
 [Kanban](https://github.com/mgmeyers/obsidian-kanban) boards  are useful for visualizing tasks in a board format.
 
@@ -1329,7 +1352,7 @@ banner_y: 0.38
 
 
 
-### 21.5 Clock
+### 22.5 Clock
 (ref: https://dayspedia.com/widgets/digit/)
 
 A running clock can be made by going to https://dayspedia.com/widgets/digit/, and styling it how you would like it. Then select **Code with Iframe Tag**, and copy the Code. Then paste the code in an obsidian note.
@@ -1349,7 +1372,7 @@ iframe[name="Digiclock1"] {
     opacity: 0.85; } 
 ```
 
-### 21.6 Heatmap
+### 22.6 Heatmap
 
 Using the [Heatmap Calendar](https://github.com/Richardsl/heatmap-calendar-obsidian) plugin we can track progess in a github style heatmap.
 
@@ -1396,7 +1419,7 @@ You must use the specified fields of `date`, `intensity`, `content`, and `color`
 >To count multiple entries per day in the heat map, you need to use a `groupBy` query, and then count the entries or rows. See this issue for more details, https://github.com/Richardsl/heatmap-calendar-obsidian/issues/21
 
 
-## 22 Excalidraw
+## 23 Excalidraw
 
 > [!tip]
 > excalidraw can be set to conform to light or dark theme by changing the settings:
@@ -1404,7 +1427,7 @@ You must use the specified fields of `date`, `intensity`, `content`, and `color`
 
 * Drawing libraries can be found at [Excalidraw Libraries](https://libraries.excalidraw.com/)
 
-## 23 Zotero Integration
+## 24 Zotero Integration
 (ref: https://dannyhatcher.com/zotero-obsidian-integration/)
 
 >[!important]
@@ -1420,14 +1443,14 @@ You must use the specified fields of `date`, `intensity`, `content`, and `color`
 	* **Template File** is the relative path of the template _.md_ file. 
 * Goto _settings->Hotkeys_, type _zotero_, and find `Zotero Integration: Import #1`. Type the hotkey you want to use (e.g. `Ctrl+Alt+L`)
 
-### 23.1 Zotero Import Settings
+### 24.1 Zotero Import Settings
 
 For `Import Formats` settings use the following:
 
  **Output_Path** : `my_folder/{{title|replace(":", " –")|replace("^", "")|replace("%", "")}}.md`
  **Img Output Path**: `img/my_folder/{{citekey}}/`
 
-### 23.2 Zotero Import Template Example
+### 24.2 Zotero Import Template Example
 (ref: [Templater Guide for Zotero](https://github.com/mgmeyers/obsidian-zotero-integration/blob/main/docs/Templating.md))
 
 Below is an example template for import items from Zotero:
@@ -1509,7 +1532,7 @@ This block will gather all of the notes:
 {% endif %}
 ```
 
-### 23.3 Adding extra fields in Zotero
+### 24.3 Adding extra fields in Zotero
 
 In the extra field for an item in zotero, user specified fields can be added:
 ![[zotero-extra.PNG | center]]
@@ -1525,7 +1548,7 @@ These custom fields can be accessed by parsing the `extra` field with some regex
 >[!important]
 > This regex Requires a space after the colon, even if there is not value set in the value field.
 
-### 23.4 Load Multiple Papers or Collections
+### 24.4 Load Multiple Papers or Collections
 
 To load multiple papers at once you first need to switch to _classic mode_:
 ![[zotero-classic-mode.PNG| center| 500]]
@@ -1535,48 +1558,48 @@ Then select _multiple sources_. From here you can select multiple papers, or sel
 ![[zotero-classic-mode-select-papers.PNG| center| 800]]
 
 
-## 24 References
+## 25 References
 * [**Obsidian Hub**](https://publish.obsidian.md/hub)
 * [Obsidian Hub Showcases](https://publish.obsidian.md/hub/03+-+Showcases+%26+Templates/%F0%9F%97%82%EF%B8%8F+03+-+Showcases+%26+Templates)
 * [Linking Your Thinking](https://www.linkingyourthinking.com/)
 
-### 24.1 Obsidian Publish References
+### 25.1 Obsidian Publish References
 https://obsidian.md/publish
 https://workinginpublic.one/
 
 
-### 24.2 Online Vault Examples
+### 25.2 Online Vault Examples
 - [Welcome+to+The+Quantum+Well!](https://publish.obsidian.md/myquantumwell/Welcome+to+The+Quantum+Well!)
 - [chromatically/nutrition](https://publish.obsidian.md/chromatically/nutrition)
 - [Notes on AI](https://notesonai.com)
 - [Alex Digital Garden](https://publish.obsidian.md/alexander/1_Home/%F0%9F%8F%A0+Home)
 
-### 24.3 Downloadable Vault Examples
+### 25.3 Downloadable Vault Examples
 - https://github.com/faroukx/obsidian-homepage
 - https://github.com/Rainbell129/Obsidian-Homepage
 - 
 
-### 24.4 Snippets
+### 25.4 Snippets
 
 * https://obsidian-snippets.pages.dev/
 
 
-### 24.5 Guides
+### 25.5 Guides
 
-#### 24.5.1 General Formatting
+#### 25.5.1 General Formatting
 
 [Format your notes](https://help.obsidian.md/How+to/Format+your+notes)
 
 [Adding Metadata](https://blacksmithgu.github.io/obsidian-dataview/annotation/add-metadata/)
 
-#### 24.5.2 Dataview Guides
+#### 25.5.2 Dataview Guides
 
 * [Create Cards (Movie Database)](https://minimal.guide/Guides/Create+a+movie+database)
 * [Tutorial: How to Create a Bookshelf](https://thebuccaneersbounty.wordpress.com/2021/08/21/tutorial-how-to-create-a-bookshelf-in-obsidian/)
 * [Obsidian Dataviewjs](https://www.jkoster.com/Obsidian-Dataviewjs-6f3e76cf455747fb9fa30de3e5dff197#d2d6f279cc634256b724b165672c3e03)
 * [Data Annotations](https://blacksmithgu.github.io/obsidian-dataview/data-annotation/)
 
-#### 24.5.3 Setting up Obsidian for Papers and Research
+#### 25.5.3 Setting up Obsidian for Papers and Research
 
 - [How to Boost Your Productivity for Scientific Research Using Obsidian](https://universvm.medium.com/how-to-boost-your-productivity-for-scientific-research-using-obsidian-fe85c98c63c8)
 - [Obsidian Tutorial for Academic Writing](https://betterhumans.pub/obsidian-tutorial-for-academic-writing-87b038060522?gi=9664895fa2cc)
@@ -1585,26 +1608,26 @@ https://workinginpublic.one/
 - [Using Dataview with Charts in Obsidian](https://agileadam.com/2022/07/using-dataview-with-charts-in-obsidian/)
 - [The Beginner’s Guide to DATAVIEW Obsidian Plugin — 10 areas where things can go wrong and how to fix them](https://denisetodd.medium.com/obsidian-dataview-for-beginners-a-checklist-to-help-fix-your-dataview-queries-11acc57f1e48)
 
-#### 24.5.4 Johnny Decimal System
+#### 25.5.4 Johnny Decimal System
 - [Byran Jenks: Johnny Decimal](https://publish.obsidian.md/bryan-jenks/Z/Johnny+Decimal)
 - [Johnny Decimal-ising my life](https://colinwren.medium.com/johnny-decimal-ising-my-life-82ee453f79a4)
 
-#### 24.5.5 PARA Method
+#### 25.5.5 PARA Method
 [The PARA Method: A Universal System for Organizing Digital Information](https://fortelabs.co/blog/para/)
 
 
-### 24.6 Reddit Links
+### 25.6 Reddit Links
 [ObsidianMD Subreddit](https://www.reddit.com/r/ObsidianMD/)
 https://www.reddit.com/r/ObsidianMD/comments/wb6wwy/need_help_indexing_3d_print_files_see_comments/
 https://www.reddit.com/r/ObsidianMD/comments/we4b06/has_anyone_created_a_bookmarking_system_in/
 
-### 24.7 Discord Server
+### 25.7 Discord Server
 https://obsidian.md/community
 
 
-### 24.8 Youtube
+### 25.8 Youtube
 
-#### 24.8.1 Youtube Channels
+#### 25.8.1 Youtube Channels
 https://www.youtube.com/channel/UC85D7ERwhke7wVqskV_DZUA
 https://www.youtube.com/c/NicolevanderHoeven
 https://www.youtube.com/user/Peepnbrick
@@ -1614,7 +1637,7 @@ https://www.youtube.com/c/VisualPKM
 https://www.youtube.com/c/SantiYounger
 
 
-#### 24.8.2 Videos
+#### 25.8.2 Videos
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/E6ySG7xYgjY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
