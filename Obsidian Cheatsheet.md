@@ -1415,9 +1415,114 @@ for (let page of dv.pages("#paperitem").where(p => p.status === "#paper/status/r
 
 You must use the specified fields of `date`, `intensity`, `content`, and `color` in the **calendarData.entries** list.
 
->[!information] Adding up multiple entries per day
->To count multiple entries per day in the heat map, you need to use a `groupBy` query, and then count the entries or rows. See this issue for more details, https://github.com/Richardsl/heatmap-calendar-obsidian/issues/21
+#### 22.6.1 Grouping Entries
 
+> [!warning]
+> As of **2023-03-19**, this funtionality isnt added into the main [plugin](https://github.com/Richardsl/heatmap-calendar-obsidian). You will have to clone this [Repo](https://github.com/kobbled/heatmap-calendar-obsidian), and follow these instructions:
+> 1) Open a file explorer on the cloned repo and go into `/build`.
+> 2) Open another file explorer go to **your vault**, navigate to `.obsidian/plugins/heatmap-calendar`
+> 3) Replace the files from your vault with that of the cloned *heatmap-calendar-obsidian* repo.
+> 4) Custom CSS snippet for hover spans is in the "css snippets" folder of [Obsidian Cheatsheet](https://github.com/kobbled/Obsidian-Cheatsheet), of the file called **heatmap_custom_styling.css**. Copy this into the CSS Snippets of **your valut**. And Enable it in settings.
+> 5) Restart Obsidian
+
+> [!info]
+> for another grouped heatmap example look at [Test Span Content Hover.md](https://github.com/kobbled/heatmap-calendar-obsidian/blob/master/EXAMPLE_VAULT/Test%20Span%20Content%20Hover.md) in the EXAMPLE_VAULT.
+
+>[!important]
+>heatmap css can be changed in **heatmap_custom_styling.css** found in the *"css snippets"* folder here. You will need this file for  entry content **hover spans** to work.
+
+With the **heatmap_custom_styling.css** enabled copy this code to a note:
+
+```javascript
+dv.span("** Notes Addded 📝**")
+const calendarData = {
+    year: 2023,  // (optional) defaults to current year
+    colors: {    // first entry is considered default if supplied
+        blue:        ["#8cb9ff", "#69a3ff", "#428bff", "#1872ff", "#0058e2"], 
+        green:       ["#c6e48b", "#7bc96f", "#49af5d", "#2e8840", "#196127"],
+        red:         ["#ff9e82", "#ff7b55", "#ff4d1a", "#e73400", "#bd2a00"],
+        orange:      ["#ffa244", "#fd7f00", "#dd6f00", "#bf6000", "#9b4e00"],
+        pink:        ["#ff96cb", "#ff70b8", "#ff3a9d", "#ee0077", "#c30062"],
+        orangeToRed: ["#ffdf04", "#ffbe04", "#ff9a03", "#ff6d02", "#ff2c01"]
+    },
+    showCurrentDayBorder: true, // (optional) defaults to true
+    defaultEntryIntensity: 10,   // (optional) defaults to 4
+    intensityScaleStart: 10,    // (optional) defaults to lowest value passed to entries.intensity
+    intensityScaleEnd: 100,     // (optional) defaults to highest value passed to entries.intensity
+    entries: [],                // (required) populated in the DataviewJS loop below
+}
+
+const countRead = (status)=>{
+	return status ? 10 : 0;
+}
+
+const convertDate = (date)=>{
+	var dateformat = "YYYY-MM-DD";
+	if (date === null) {
+		return "";
+	}
+	return moment(date.toString()).format(dateformat);
+}
+
+const getYear = (date)=>{
+	var dateformat = "YYYY";
+	if (date === null) {
+		return "";
+	}
+	return moment(date.toString()).format(dateformat);
+}
+
+//DataviewJS loop
+let groups = dv.pages("#paperitem").where(p => p.status === "#paper/status/read").groupBy(p => p.date_read);
+let max = Math.max.apply(Math, groups.map(function(o) { return o.rows.length; })); // calculates the maximum number of notes on a single day
+
+
+for (let group of groups) 
+{
+	if (group.key) {
+	
+		let str = "";
+		str += "<br>";
+		for (let row of group.rows) {
+			str += `<br> - [[${row.file.name}]]`;
+		}
+	
+		calendarData.entries.push({
+			date: convertDate(group.key), // (required) Format YYYY-MM-DD
+			intensity: (120 * group.rows.length / max),
+			// the line above normalizes the amount of notes throughout the heatmap
+			content: dv.span(`${group.rows.length} notes on ${convertDate(group.key)} ${str}`)
+		})
+	}
+}
+
+renderHeatmapCalendar(this.container, calendarData)
+```
+
+You will want to modify the line:
+```javascript
+let groups = dv.pages("#paperitem").where(p => p.status === "#paper/status/read").groupBy(p => p.date_read);
+```
+
+To be your custom dataview query. `groupBy` is relavent for how you want to group the notes on the heat map. It should be a date field.
+
+The variable `str` will gather all of the notes that occur on that day, and put them in a list.
+```javascript
+let str = "";
+str += "<br>";
+for (let row of group.rows) {
+	str += `<br> - [[${row.file.name}]]`;
+}
+```
+
+the `content` field of `calendarData.entries`, will be a hover span when you hover over a day.
+```javascript
+content: dv.span(`${group.rows.length} papers read on ${convertDate(group.key)} ${str}`)
+```
+
+You should get a heatmap that looks like this:
+
+![[heatmap_example.png]]
 
 ## 23 Excalidraw
 
