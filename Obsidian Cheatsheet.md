@@ -385,6 +385,26 @@ Install the [Image Captions](https://github.com/alangrainger/obsidian-image-capt
 
 CSS settings can be changes with `.image-captions-figure` and `.image-captions-caption` classes. See *images.css* for details.
 
+### 15.7 Cross Referencing
+
+Cross Referencing Figures, Tables, Sections, Paragraphs can be done with using the caret (\^) operator. Add `\^Fig1`, `\^table1`, etc... to the end of the thing you are trying to cross-reference
+
+```
+![Fig1: Spider-Man Pointing At Spider-Man](https://i.kym-cdn.com/entries/icons/original/000/023/397/C-658VsXoAo3ovC.jpg) ^Fig1
+```
+
+Then in the text reference it with:
+
+```
+[[#^Fig1|Fig1]]
+```
+
+>[!info] Example
+>![Fig1: Spider-Man Pointing At Spider-Man](https://i.kym-cdn.com/entries/icons/original/000/023/397/C-658VsXoAo3ovC.jpg) ^Fig1
+>
+> The meme in [[#^Fig1|Fig1]] was recreated in [Spider-Man: No Way Home](https://www.imdb.com/title/tt10872600/)
+
+
 ## 16 Pandoc
 
 -   [Install Pandoc](https://pandoc.org/installing.html) if you have not already (without Pandoc only the HTML export works)
