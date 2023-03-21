@@ -1,0 +1,20 @@
+.image-captions-figure {
+    margin: 0;
+    padding: 2px;
+    width: fit-content;
+    border-radius: 2px;
+}
+
+.image-captions-caption {
+    margin: -5px 0 0 0;
+    padding: 3px 5px;
+    text-align: center;
+}
+
+.theme-dark .image-captions-figure {
+    background: #303030;
+}
+
+.theme-light .image-captions-figure {
+    background: #ebebeb;
+}
