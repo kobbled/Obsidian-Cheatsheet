@@ -375,7 +375,7 @@ When using banners with **image-grids**, or **modular-css** you will have to ove
 }
 ```
 
-### 15.6 Image Captions
+### 15.7 Image Captions
 
 Install the [Image Captions](https://github.com/alangrainger/obsidian-image-captions) plugin. Captions are put into images like:
 
@@ -385,7 +385,29 @@ Install the [Image Captions](https://github.com/alangrainger/obsidian-image-capt
 
 CSS settings can be changes with `.image-captions-figure` and `.image-captions-caption` classes. See *images.css* for details.
 
-### 15.7 Cross Referencing
+>[!warning]
+> Enabling this package will override any css *alt* functionality, i.e. `|center|`. You can override the captions at a page level by doing the following:
+> 
+> >[!note]
+> > If you dont want captions to work use this *css*, found in *css snippets/images.css* of this repo:
+> > ```css
+> > .no-caption .image-captions-figure {
+> > 	 background: none !important;
+> > }
+> >
+> > .no-caption .image-captions-caption {
+> > 	display: none;
+> > }
+> > ```
+> > 
+> > simply add the `.no-caption` class in your yaml frontmatter
+> > ```yaml
+> > ---
+> >  cssClass: no-caption
+> > ---
+> > ```
+
+### 15.8 Cross Referencing
 
 Cross Referencing Figures, Tables, Sections, Paragraphs can be done with using the caret (\^) operator. Add `\^Fig1`, `\^table1`, etc... to the end of the thing you are trying to cross-reference
 

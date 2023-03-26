@@ -40,3 +40,11 @@ margin-right: auto;
   padding-top: 1em;
   line-height: 1.2;
 }
+
+.no-caption .image-captions-figure {
+  background: none !important;
+}
+
+.no-caption .image-captions-caption {
+  display: none;
+}
