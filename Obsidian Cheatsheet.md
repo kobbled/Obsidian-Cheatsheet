@@ -297,7 +297,34 @@ and show images like this:
 ![|lg](image.png)
 ```
 
-### 15.3 Image slideshow
+### 15.3 Centering Images
+
+Centering images can be done at a page level, or at an image level. Copy the `css snippets/image.css` file included in this repo to your own snippets folder, and enable the file. 
+
+At a page level include the `centerImg` class in your yaml frontmatter like:
+```yaml
+---
+cssclass: centerImg
+---
+```
+
+Centering individual images can be done with by including `|center` in the image like:
+
+```
+![[image.png | center | 256]]
+or
+![Photo | center | 256](image.png)
+```
+
+example:
+
+![[star-wars-maul.gif|center|256]]
+
+>[!info]
+> More info can be found in [[#17.2.1 Image Centering]]
+
+
+### 15.4 Image slideshow
 
 Currently there is no internal support for image carousels/slideshows. You will have to use pure **HTML**/**CSS** to get this to work.
 
@@ -340,7 +367,7 @@ And change the image by changing `<img src"{image-location}">`
 
 The CSS can be found in *Obsidian-Cheatsheet/css snippets/slideshow.css* of this repository.
 
-### 15.4 Image Grids
+### 15.5 Image Grids
 
 Image grids can be made with the [Modular CSS Layout](https://github.com/efemkay/obsidian-modular-css-layout) css package. making an image grid can be done by grouping the images you want in the grid together, and seperating out the ones you want on the next row by a space:
 ```
@@ -364,7 +391,7 @@ cssClass: image-gallery
 >[!note]
 > In order for a single iamge to take up the full width of the page you may have to go to the `Style Settings` settings, goto `Modular CSS Layout - Gallery Cards`, and increase _Max Height for Images_ to **400px**
 
-### 15.5 Banners
+### 15.6 Banners
 
 When using banners with **image-grids**, or **modular-css** you will have to override the image CSS with:
 
@@ -579,11 +606,6 @@ Now use the alt code as an image modifier:
 or
 ![Photo | center | 256](image.png)
 ```
-
-example:
-
-![[star-wars-maul.gif| center | 256]]
-
 
 
 #### 17.2.2 Image Enlarging

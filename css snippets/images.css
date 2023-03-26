@@ -14,6 +14,13 @@ margin-left: auto;
 margin-right: auto;  
 }
 
+/* Circle */
+img[src$="#circle"],
+span[src$="#circle"] img,
+span[src$="#round"] img {
+  border-radius: 50%;
+  aspect-ratio: 1/1; }
+
 /* Enlarge image on hover */
 .markdown-source-view img {
   transition: transform 0.25s ease;
