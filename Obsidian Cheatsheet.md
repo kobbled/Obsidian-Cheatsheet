@@ -233,7 +233,7 @@ or in a different file like:
 [[other_file#heading]]
 ```
 
-### 12.3 Linking to external file
+### 12.3 Linking to external file/folder
 
 * To link files and folder use:
 ```
@@ -242,6 +242,17 @@ or in a different file like:
 
 > [!important] 
 > Any _SPACES_ in the file address **MUST** be replaces with `\%20`, or else it will say it cannot find the file
+
+> [!important]
+> **Goto section** [[#20.8 Get Relative Links]] for programmbly setting external file/folder links. This is useful    for cross platform support of external file/folder links.
+
+#### 12.3.1 Symbolic Linking (Windows)
+
+(ref: [The Complete Guide to Creating Symbolic Links (aka Symlinks) on Windows (howtogeek.com)](https://www.howtogeek.com/16226/complete-guide-to-symbolic-links-symlinks-on-windows-or-linux/))
+
+1) Download and install the[Link Shell Extension](https://schinagl.priv.at/nt/hardlinkshellext/linkshellextension.html).
+2) Select `Pick Link Source`, from the right click dropdown menu, of the file or folder you want to symbolically link.
+3) Goto the folder in your vault where you want to create the symbolic link, right click in the blank folder area and select `Drop as..`, or `Drop as symbolic link`
 
 ### 12.4 Linking on images
 
@@ -1196,6 +1207,30 @@ created: 2023-03-10
 ```
 
 
+### 20.8 Get Relative Links
+
+[(17) Use environment variables as relative Links : ObsidianMD (reddit.com)](https://www.reddit.com/r/ObsidianMD/comments/q6jlan/use_environment_variables_as_relative_links/)
+
+Use the scripts `getCurrFolder.js`, and `getRelFileLink.js` found in the *scripts* folder of this vault. Move them into your vault under a *scripts* folder
+
+Then call from dataviewjs like this:
+
+```dataviewjs
+const getRelFileLink = require(app.vault.adapter.basePath + "/_Scripts/getRelFileLink.js");
+
+dv.paragraph(`${getRelFileLink(dv.current().file.path, 0, "Link Alias Name", "relative_path_to_file_or_folder.pdf")}`);
+```
+
+The require statement will import from the vaults root folder + "/scripts/getRelFileLink.js". You can then call the `getRelFileLink()` function, where `dv.current().file.path` returns the path of the current file.  The 2nd argument specifies how many parent directories to go back in the file path. Setting to `0` will set you in the current directory of the file. The 3rd argument is the alias name given to the link, as it will appear in reading mode. The 4th argument is the relative path to the file or folder from the path specified in the first two arguements.
+
+>[!note]
+> You could just specify going from the vault root directory by leaving the 1st arguement as a blank string. `getRelFileLink("", 0, alias, path/to/file.pdf)`
+
+>[!info]
+> The same can be done with **Templater**, found [[#21.3 Get Relative Links|here]].
+
+
+
 ## 21 Templater
 
 * In **Templater** settings set the _template folder directory_ to where your templates are being stored.
@@ -1244,6 +1279,20 @@ And then in the body call the title like:
 ```javascript
 # <% `${title}`%>
 ```
+
+
+### 21.3 Get Relative Links
+
+Use the scripts `getCurrFolder.js`, and `getRelFileLink.js` found in the *scripts* folder of this vault. Move them into your vault under a *scripts* folder you are using for Templater. The external file/folder link can be generated with:
+
+```javascript
+<%+ tp.user.getRelFileLink(tp.file.folder(true), 0, "alias", "path/to/file.pdf") %>
+```
+
+where the 2nd argument specifies how many parent directories you need to go back to access  the file.
+
+> [!warning]
+> Currently Templater does not support generating links. So this will not work. Use the [[#20.8 Get Relative Links|Dataview method]] for now.
 
 ## 22 Applets
 

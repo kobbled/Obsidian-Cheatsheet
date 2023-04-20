@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "39bfd5a15b89e7ce",
+        "id": "47b704273d1a2d33",
         "type": "tabs",
         "children": [
           {
-            "id": "021305964eaae37e",
+            "id": "cdb4e1a9b87d8711",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -142,7 +142,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 319.5
+    "width": 323.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -158,8 +158,11 @@
       "open-vscode:VSCode": false
     }
   },
-  "active": "021305964eaae37e",
+  "active": "cdb4e1a9b87d8711",
   "lastOpenFiles": [
+    "scripts/getCurrFolder.js",
+    "scripts",
+    "Obsidian Cheatsheet.md",
     "Images/heatmap_example.png",
     "css snippets/heatmap_custom_styling.css",
     "css snippets/headers.css",
@@ -171,7 +174,6 @@
     "Images/star-wars-maul.gif",
     "Images/Obsidian-mini-graph.gif",
     "Images/background_style_settings.png",
-    "Obsidian Cheatsheet.md",
     "lib/Charts.md",
     "css snippets/workspace-background.css",
     "lib/Math.md",
