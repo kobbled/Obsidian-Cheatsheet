@@ -1645,6 +1645,24 @@ You should get a heatmap that looks like this:
 
 * Drawing libraries can be found at [Excalidraw Libraries](https://libraries.excalidraw.com/)
 
+### 23.1 Exporting 
+
+#### 23.1.1 SVG & Powerpoint
+
+Export Excalidraw to an SVG by clicking the *three dots* in the top write and selecting *save to SVG*. This SVG can now be opened in Inkscape.
+
+>[!tip]
+> To convert to Powerpoint, Save as an SVG, then in Powerpoint go `Insert->Picture->This Device`, and select the SVG. 
+> Then Click the imported SVG, select *Right Click->Group->Ungroup*.
+
+#### 23.1.2 PNG
+
+Export Excalidraw to an PNG by clicking the *three dots* in the top write and selecting *save to SVG*.
+
+>[!important]
+> If the Resolution of the PNG is low, click the **equal sign** button (*top left*), and then *Export Image*. Increase the **PNG Scale**, and click the **PNG to File** Button at the bottom.
+
+
 ## 24 Zotero Integration
 (ref: https://dannyhatcher.com/zotero-obsidian-integration/)
 
