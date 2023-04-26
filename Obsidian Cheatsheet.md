@@ -1713,7 +1713,7 @@ cssclass: rot-20
 ---
 ```
 
-## 24 Zotero Integration
+## 25 Zotero Integration
 (ref: https://dannyhatcher.com/zotero-obsidian-integration/)
 
 >[!important]
@@ -1729,14 +1729,14 @@ cssclass: rot-20
 	* **Template File** is the relative path of the template _.md_ file. 
 * Goto _settings->Hotkeys_, type _zotero_, and find `Zotero Integration: Import #1`. Type the hotkey you want to use (e.g. `Ctrl+Alt+L`)
 
-### 24.1 Zotero Import Settings
+### 25.1 Zotero Import Settings
 
 For `Import Formats` settings use the following:
 
  **Output_Path** : `my_folder/{{title|replace(":", " –")|replace("^", "")|replace("%", "")}}.md`
  **Img Output Path**: `img/my_folder/{{citekey}}/`
 
-### 24.2 Zotero Import Template Example
+### 25.2 Zotero Import Template Example
 (ref: [Templater Guide for Zotero](https://github.com/mgmeyers/obsidian-zotero-integration/blob/main/docs/Templating.md))
 
 Below is an example template for import items from Zotero:
@@ -1818,7 +1818,7 @@ This block will gather all of the notes:
 {% endif %}
 ```
 
-### 24.3 Adding extra fields in Zotero
+### 25.3 Adding extra fields in Zotero
 
 In the extra field for an item in zotero, user specified fields can be added:
 ![[zotero-extra.PNG | center]]
@@ -1834,7 +1834,7 @@ These custom fields can be accessed by parsing the `extra` field with some regex
 >[!important]
 > This regex Requires a space after the colon, even if there is not value set in the value field.
 
-### 24.4 Load Multiple Papers or Collections
+### 25.4 Load Multiple Papers or Collections
 
 To load multiple papers at once you first need to switch to _classic mode_:
 ![[zotero-classic-mode.PNG| center| 500]]
@@ -1844,48 +1844,48 @@ Then select _multiple sources_. From here you can select multiple papers, or sel
 ![[zotero-classic-mode-select-papers.PNG| center| 800]]
 
 
-## 25 References
+## 26 References
 * [**Obsidian Hub**](https://publish.obsidian.md/hub)
 * [Obsidian Hub Showcases](https://publish.obsidian.md/hub/03+-+Showcases+%26+Templates/%F0%9F%97%82%EF%B8%8F+03+-+Showcases+%26+Templates)
 * [Linking Your Thinking](https://www.linkingyourthinking.com/)
 
-### 25.1 Obsidian Publish References
+### 26.1 Obsidian Publish References
 https://obsidian.md/publish
 https://workinginpublic.one/
 
 
-### 25.2 Online Vault Examples
+### 26.2 Online Vault Examples
 - [Welcome+to+The+Quantum+Well!](https://publish.obsidian.md/myquantumwell/Welcome+to+The+Quantum+Well!)
 - [chromatically/nutrition](https://publish.obsidian.md/chromatically/nutrition)
 - [Notes on AI](https://notesonai.com)
 - [Alex Digital Garden](https://publish.obsidian.md/alexander/1_Home/%F0%9F%8F%A0+Home)
 
-### 25.3 Downloadable Vault Examples
+### 26.3 Downloadable Vault Examples
 - https://github.com/faroukx/obsidian-homepage
 - https://github.com/Rainbell129/Obsidian-Homepage
 - 
 
-### 25.4 Snippets
+### 26.4 Snippets
 
 * https://obsidian-snippets.pages.dev/
 
 
-### 25.5 Guides
+### 26.5 Guides
 
-#### 25.5.1 General Formatting
+#### 26.5.1 General Formatting
 
 [Format your notes](https://help.obsidian.md/How+to/Format+your+notes)
 
 [Adding Metadata](https://blacksmithgu.github.io/obsidian-dataview/annotation/add-metadata/)
 
-#### 25.5.2 Dataview Guides
+#### 26.5.2 Dataview Guides
 
 * [Create Cards (Movie Database)](https://minimal.guide/Guides/Create+a+movie+database)
 * [Tutorial: How to Create a Bookshelf](https://thebuccaneersbounty.wordpress.com/2021/08/21/tutorial-how-to-create-a-bookshelf-in-obsidian/)
 * [Obsidian Dataviewjs](https://www.jkoster.com/Obsidian-Dataviewjs-6f3e76cf455747fb9fa30de3e5dff197#d2d6f279cc634256b724b165672c3e03)
 * [Data Annotations](https://blacksmithgu.github.io/obsidian-dataview/data-annotation/)
 
-#### 25.5.3 Setting up Obsidian for Papers and Research
+#### 26.5.3 Setting up Obsidian for Papers and Research
 
 - [How to Boost Your Productivity for Scientific Research Using Obsidian](https://universvm.medium.com/how-to-boost-your-productivity-for-scientific-research-using-obsidian-fe85c98c63c8)
 - [Obsidian Tutorial for Academic Writing](https://betterhumans.pub/obsidian-tutorial-for-academic-writing-87b038060522?gi=9664895fa2cc)
@@ -1894,26 +1894,26 @@ https://workinginpublic.one/
 - [Using Dataview with Charts in Obsidian](https://agileadam.com/2022/07/using-dataview-with-charts-in-obsidian/)
 - [The Beginner’s Guide to DATAVIEW Obsidian Plugin — 10 areas where things can go wrong and how to fix them](https://denisetodd.medium.com/obsidian-dataview-for-beginners-a-checklist-to-help-fix-your-dataview-queries-11acc57f1e48)
 
-#### 25.5.4 Johnny Decimal System
+#### 26.5.4 Johnny Decimal System
 - [Byran Jenks: Johnny Decimal](https://publish.obsidian.md/bryan-jenks/Z/Johnny+Decimal)
 - [Johnny Decimal-ising my life](https://colinwren.medium.com/johnny-decimal-ising-my-life-82ee453f79a4)
 
-#### 25.5.5 PARA Method
+#### 26.5.5 PARA Method
 [The PARA Method: A Universal System for Organizing Digital Information](https://fortelabs.co/blog/para/)
 
 
-### 25.6 Reddit Links
+### 26.6 Reddit Links
 [ObsidianMD Subreddit](https://www.reddit.com/r/ObsidianMD/)
 https://www.reddit.com/r/ObsidianMD/comments/wb6wwy/need_help_indexing_3d_print_files_see_comments/
 https://www.reddit.com/r/ObsidianMD/comments/we4b06/has_anyone_created_a_bookmarking_system_in/
 
-### 25.7 Discord Server
+### 26.7 Discord Server
 https://obsidian.md/community
 
 
-### 25.8 Youtube
+### 26.8 Youtube
 
-#### 25.8.1 Youtube Channels
+#### 26.8.1 Youtube Channels
 https://www.youtube.com/channel/UC85D7ERwhke7wVqskV_DZUA
 https://www.youtube.com/c/NicolevanderHoeven
 https://www.youtube.com/user/Peepnbrick
@@ -1923,7 +1923,7 @@ https://www.youtube.com/c/VisualPKM
 https://www.youtube.com/c/SantiYounger
 
 
-#### 25.8.2 Videos
+#### 26.8.2 Videos
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/E6ySG7xYgjY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
