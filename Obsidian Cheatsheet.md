@@ -1686,6 +1686,28 @@ Export Excalidraw to an PNG by clicking the *three dots* in the top write and se
 >[!important]
 > If the Resolution of the PNG is low, click the **equal sign** button (*top left*), and then *Export Image*. Increase the **PNG Scale**, and click the **PNG to File** Button at the bottom.
 
+## 24 Canvas
+
+### 24.1 Rotate Cards, Modify Borders, & Apply Backgrounds
+
+(ref: [Quick Guide: Customizing your canvas (rotating nodes, removing borders/backgrounds) - Share & showcase - Obsidian Forum](https://forum.obsidian.md/t/quick-guide-customizing-your-canvas-rotating-nodes-removing-borders-backgrounds/52125))
+
+To rotate cards add a css class like this:
+
+```css
+.canvas-node:has(.rot-20) {
+  z-index: 11 !important;
+  transform: rotate(-20deg)  !important;
+}
+```
+
+Then in the note for the card add the class:
+
+```
+---
+cssclass: rot-20
+---
+```
 
 ## 24 Zotero Integration
 (ref: https://dannyhatcher.com/zotero-obsidian-integration/)
