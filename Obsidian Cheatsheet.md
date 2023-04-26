@@ -1378,7 +1378,31 @@ Custom css can be used to sytle the button by giving it a css class `.button-new
 > [!note]
 > See _Obsidian-Cheatsheet/css snippets/buttons.css_ for the css for formatting a **daily**, and **weekly** note to be used in a header or banner.
 
+#### 22.2.1 Next/Previous Buttons
 
+Next/Previous buttons on the bottom of a page can be done with the following html:
+
+```html
+<div class = "button-container">  
+<div class = "footer-button"><a href="obsidian://open?file=path%20to%20previous%20note">⬅️ Previous </a></div>  
+<div class = "footer-button"><a href="obsidian://open?file=path%20to%20next%20note">Next ➡️</a></div>  
+</div>
+```
+
+Use the css classes `button-container`, and `footer-button` from the **buttons.css** file included in this repo.
+
+>[!important]
+>Make sure you uri the note name, replacing any whitespace, or special characters with there ASCII codes.
+
+>[!tip]
+>put a blank backlink reference above the `button-container` div to include a backlink reference in for this note, i.e.:
+> ```
+> [[name of note|]]
+> ```
+
+
+>[!info]
+>For more information on obsidian URI's goto [Using Obsidian URI - Obsidian Help](https://help.obsidian.md/Advanced+topics/Using+obsidian+URI)
 
 ### 22.3 Calendar / Periodic Notes
 
