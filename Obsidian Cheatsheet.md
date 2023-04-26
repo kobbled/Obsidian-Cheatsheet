@@ -175,6 +175,10 @@ Adding a Plus sign after the callout `[!note]+` will make is collapsible.
 
 Built-in callout style (as of V1.1.9) may not be desired. To ge the old admonition style of callout. See [[#15.4 Callouts]]
 
+### 5.2 Spellcheck
+
+You have to manually enable spellcheck by going to `settings->Editor->Behavior`, and turn on spell check.
+
 ## 6 Latex
 
 - [MathJax-demos-web](https://github.com/mathjax/MathJax-demos-web#samples-of-mathjax-v3)
