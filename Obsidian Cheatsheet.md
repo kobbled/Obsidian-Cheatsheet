@@ -34,6 +34,7 @@ number headings: first-level 1, max 6, _.1.1
 - Hotkeys++
 - [Icon Folder](https://github.com/FlorianWoelki/obsidian-icon-folder)
 - [Image Captions](https://github.com/alangrainger/obsidian-image-captions)
+- [Issue Tracker](https://github.com/ljavuras/obsidian-power-tools/tree/main/Issue%20Tracker)
 - [Journey](https://github.com/akaalias/obsidian-journey-plugin)
 - [Kanban](https://github.com/mgmeyers/obsidian-kanban)
 - Kindle Highlights
@@ -55,6 +56,7 @@ number headings: first-level 1, max 6, _.1.1
 - [Snippet Downloader](https://github.com/Lisandra-dev/obsidian-snippet-downloader) **ESSENTIAL** needed for [Modular CSS Layout](https://github.com/efemkay/obsidian-modular-css-layout) 
 - [Sortable](https://github.com/alexandru-dinu/obsidian-sortable) **ESSENTIAL**
 - [Sort & Permute lines](https://github.com/Vinzent03/obsidian-sort-and-permute-lines)
+- [Spaced-Repetition: Flashcard Plugin](https://github.com/st3v3nmw/obsidian-spaced-repetition)
 - [Style Settings](https://github.com/mgmeyers/obsidian-style-settings)  **ESSENTIAL**
 - [Tag Wrangler](https://github.com/pjeby/tag-wrangler)
 - [Tasks](https://github.com/obsidian-tasks-group/obsidian-tasks)
@@ -1844,48 +1846,48 @@ Then select _multiple sources_. From here you can select multiple papers, or sel
 ![[zotero-classic-mode-select-papers.PNG| center| 800]]
 
 
-## 26 References
+## 27 References
 * [**Obsidian Hub**](https://publish.obsidian.md/hub)
 * [Obsidian Hub Showcases](https://publish.obsidian.md/hub/03+-+Showcases+%26+Templates/%F0%9F%97%82%EF%B8%8F+03+-+Showcases+%26+Templates)
 * [Linking Your Thinking](https://www.linkingyourthinking.com/)
 
-### 26.1 Obsidian Publish References
+### 27.1 Obsidian Publish References
 https://obsidian.md/publish
 https://workinginpublic.one/
 
 
-### 26.2 Online Vault Examples
+### 27.2 Online Vault Examples
 - [Welcome+to+The+Quantum+Well!](https://publish.obsidian.md/myquantumwell/Welcome+to+The+Quantum+Well!)
 - [chromatically/nutrition](https://publish.obsidian.md/chromatically/nutrition)
 - [Notes on AI](https://notesonai.com)
 - [Alex Digital Garden](https://publish.obsidian.md/alexander/1_Home/%F0%9F%8F%A0+Home)
 
-### 26.3 Downloadable Vault Examples
+### 27.3 Downloadable Vault Examples
 - https://github.com/faroukx/obsidian-homepage
 - https://github.com/Rainbell129/Obsidian-Homepage
 - 
 
-### 26.4 Snippets
+### 27.4 Snippets
 
 * https://obsidian-snippets.pages.dev/
 
 
-### 26.5 Guides
+### 27.5 Guides
 
-#### 26.5.1 General Formatting
+#### 27.5.1 General Formatting
 
 [Format your notes](https://help.obsidian.md/How+to/Format+your+notes)
 
 [Adding Metadata](https://blacksmithgu.github.io/obsidian-dataview/annotation/add-metadata/)
 
-#### 26.5.2 Dataview Guides
+#### 27.5.2 Dataview Guides
 
 * [Create Cards (Movie Database)](https://minimal.guide/Guides/Create+a+movie+database)
 * [Tutorial: How to Create a Bookshelf](https://thebuccaneersbounty.wordpress.com/2021/08/21/tutorial-how-to-create-a-bookshelf-in-obsidian/)
 * [Obsidian Dataviewjs](https://www.jkoster.com/Obsidian-Dataviewjs-6f3e76cf455747fb9fa30de3e5dff197#d2d6f279cc634256b724b165672c3e03)
 * [Data Annotations](https://blacksmithgu.github.io/obsidian-dataview/data-annotation/)
 
-#### 26.5.3 Setting up Obsidian for Papers and Research
+#### 27.5.3 Setting up Obsidian for Papers and Research
 
 - [How to Boost Your Productivity for Scientific Research Using Obsidian](https://universvm.medium.com/how-to-boost-your-productivity-for-scientific-research-using-obsidian-fe85c98c63c8)
 - [Obsidian Tutorial for Academic Writing](https://betterhumans.pub/obsidian-tutorial-for-academic-writing-87b038060522?gi=9664895fa2cc)
@@ -1894,26 +1896,26 @@ https://workinginpublic.one/
 - [Using Dataview with Charts in Obsidian](https://agileadam.com/2022/07/using-dataview-with-charts-in-obsidian/)
 - [The Beginner’s Guide to DATAVIEW Obsidian Plugin — 10 areas where things can go wrong and how to fix them](https://denisetodd.medium.com/obsidian-dataview-for-beginners-a-checklist-to-help-fix-your-dataview-queries-11acc57f1e48)
 
-#### 26.5.4 Johnny Decimal System
+#### 27.5.4 Johnny Decimal System
 - [Byran Jenks: Johnny Decimal](https://publish.obsidian.md/bryan-jenks/Z/Johnny+Decimal)
 - [Johnny Decimal-ising my life](https://colinwren.medium.com/johnny-decimal-ising-my-life-82ee453f79a4)
 
-#### 26.5.5 PARA Method
+#### 27.5.5 PARA Method
 [The PARA Method: A Universal System for Organizing Digital Information](https://fortelabs.co/blog/para/)
 
 
-### 26.6 Reddit Links
+### 27.6 Reddit Links
 [ObsidianMD Subreddit](https://www.reddit.com/r/ObsidianMD/)
 https://www.reddit.com/r/ObsidianMD/comments/wb6wwy/need_help_indexing_3d_print_files_see_comments/
 https://www.reddit.com/r/ObsidianMD/comments/we4b06/has_anyone_created_a_bookmarking_system_in/
 
-### 26.7 Discord Server
+### 27.7 Discord Server
 https://obsidian.md/community
 
 
-### 26.8 Youtube
+### 27.8 Youtube
 
-#### 26.8.1 Youtube Channels
+#### 27.8.1 Youtube Channels
 https://www.youtube.com/channel/UC85D7ERwhke7wVqskV_DZUA
 https://www.youtube.com/c/NicolevanderHoeven
 https://www.youtube.com/user/Peepnbrick
@@ -1923,7 +1925,7 @@ https://www.youtube.com/c/VisualPKM
 https://www.youtube.com/c/SantiYounger
 
 
-#### 26.8.2 Videos
+#### 27.8.2 Videos
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/E6ySG7xYgjY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
