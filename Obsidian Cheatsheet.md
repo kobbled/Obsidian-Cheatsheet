@@ -1885,6 +1885,22 @@ Then select _multiple sources_. From here you can select multiple papers, or sel
 ![[zotero-classic-mode-multiple-sources.PNG| center| 800]]
 ![[zotero-classic-mode-select-papers.PNG| center| 800]]
 
+## 26 Cross Compile
+
+### 26.1 Sphinx
+
+(ref: 
+- [How to build documentation with Sphinx — Sphinx Quick Start Guide (cerodell.github.io)](https://cerodell.github.io/sphinx-quickstart-guide/build/html/index.html)
+- [🚀 Get Started (myst-parser.readthedocs.io)](https://myst-parser.readthedocs.io/en/latest/intro.html))
+
+I am using this as a **Sphnix**/**MyST** template -> [kobbled/wfrt-demo (github.com)](https://github.com/kobbled/wfrt-demo). Follow the [Install Instructions](https://cerodell.github.io/sphinx-quickstart-guide/build/html/install.html) to get started.
+
+1) install the conda environment 
+```
+conda env create -f wfrt.yml
+```
+2) 
+
 
 ## 27 References
 * [**Obsidian Hub**](https://publish.obsidian.md/hub)
