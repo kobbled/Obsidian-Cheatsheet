@@ -266,6 +266,19 @@ or in a different file like:
 [![[pictures.jpg]]](<Note Name>)
 ```
 
+### 12.5 Use Markdown Syntax for Images and links
+
+To use Markdown syntax (`![]()`, `[]()`) for images so that they render in other markdown programs, you can change the syntax in:
+```
+Settings->Files & Links-> Use [[Wikilinks]]
+```
+
+>[!tip]
+>Using regular markdown syntax for images can be easier for converting to other formats.
+
+>[!important]
+>Make sure you include a preceeding `/` to all links, so they can be found in VSCode Editor.
+
 ## 13 Tips
 ### 13.1 how to put the graphs in the sidebar
 
