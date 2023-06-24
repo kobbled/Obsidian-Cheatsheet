@@ -285,6 +285,14 @@ Settings->Files & Links-> Use [[Wikilinks]]
 
 ![[Obsidian-mini-graph.gif]]
 
+### 13.2 Linked Scroll Panes/Notes
+
+If you want a split pane (left/right) of the same note, one in edit mode, and one in view mode:
+
+- Press `CNTRL` and click the edit/view mode in the top right.
+- Change to edit mode in the left pane.
+
+Now when you scroll the view pane will keep in sync with the edit pane
 
 ## 14 Commands (CNTRL+P)
 
