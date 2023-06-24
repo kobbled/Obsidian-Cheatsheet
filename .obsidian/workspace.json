@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Obsidian Cheatsheet.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": true
               }
             }
@@ -168,9 +168,10 @@
   },
   "active": "cdb4e1a9b87d8711",
   "lastOpenFiles": [
+    "lib/Math.md",
+    "Obsidian Cheatsheet.md",
     "scripts/getCurrFolder.js",
     "scripts",
-    "Obsidian Cheatsheet.md",
     "Images/heatmap_example.png",
     "css snippets/heatmap_custom_styling.css",
     "css snippets/headers.css",
@@ -184,7 +185,6 @@
     "Images/background_style_settings.png",
     "lib/Charts.md",
     "css snippets/workspace-background.css",
-    "lib/Math.md",
     "lib/Diagrams.md",
     "Untitled.md",
     "Excalidraw/Heat Transfer of Point Source on Plate.md",

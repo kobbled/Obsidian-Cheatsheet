@@ -69,6 +69,7 @@ number headings: first-level 1, max 6, _.1.1
 
 - [Text Generator](https://github.com/nhaouari/obsidian-textgenerator-plugin)
 - [Smart Connections](https://github.com/brianpetro/obsidian-smart-connections)
+- [AI Assistant in QuickAdd](https://quickadd.obsidian.guide/docs/AIAssistant)
 
 ## 2 Themes
 
