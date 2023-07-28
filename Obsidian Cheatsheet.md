@@ -492,6 +492,35 @@ Then in the text reference it with:
 >
 > The meme in [[#^Fig1|Fig1]] was recreated in [Spider-Man: No Way Home](https://www.imdb.com/title/tt10872600/)
 
+### Inlining Images
+
+(ref: [(22) How can I place an image and text side by side? In Notion, I can simply drag the text to the side of the image, and it automatically adjusts. Additionally, I can adjust the gap between them to make the image smaller or larger. : ObsidianMD (reddit.com)](https://www.reddit.com/r/ObsidianMD/comments/15b1r4e/how_can_i_place_an_image_and_text_side_by_side_in/))
+
+inlining images can be done *with some* themes using this syntax:
+
+```
+![[danny_devito.jpg|inlL|300]]
+
+![[danny_devito_2.jpg|inlR|400]]
+```
+
+where `inlL` will inline left, and `inlR` will inline right.
+
+If your theme does not support this syntax, you can add the following css snippets, found in *css snippets/images.css*:
+
+```css
+.media-embed:has([alt="inlL"]) {
+  margin: 0 10px 0 0 !important;
+  float: left;
+  }
+
+.media-embed:has([alt="inlR"]) {
+  margin: 0 0 0 10px !important;
+  float: right;
+  }
+```
+
+An example note has been added to illustrate this -> [[Inline Images]]
 
 ## 16 Pandoc
 

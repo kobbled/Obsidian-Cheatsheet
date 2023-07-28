@@ -19,3 +19,21 @@ margin-right: auto;
   margin-left: auto !important;
   margin-right: auto !important;
 }
+
+.no-caption .image-captions-figure {
+  background: none !important;
+}
+
+.no-caption .image-captions-caption {
+  display: none;
+}
+
+.media-embed:has([alt="inlL"]) {
+  margin: 0 10px 0 0 !important;
+  float: left;
+  }
+
+.media-embed:has([alt="inlR"]) {
+  margin: 0 0 0 10px !important;
+  float: right;
+  }
