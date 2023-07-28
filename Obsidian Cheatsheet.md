@@ -280,6 +280,15 @@ Settings->Files & Links-> Use [[Wikilinks]]
 >[!important]
 >Make sure you include a preceeding `/` to all links, so they can be found in VSCode Editor.
 
+
+### 12.6 Linking to PDFs
+
+You can link to the **Specific page number** of the pdf with appending `#page=x` to the link:
+
+```
+[[mydoc.pdf#page=115]]
+```
+
 ## 13 Tips
 ### 13.1 how to put the graphs in the sidebar
 
@@ -492,7 +501,7 @@ Then in the text reference it with:
 >
 > The meme in [[#^Fig1|Fig1]] was recreated in [Spider-Man: No Way Home](https://www.imdb.com/title/tt10872600/)
 
-### Inlining Images
+### 15.9 Inlining Images
 
 (ref: [(22) How can I place an image and text side by side? In Notion, I can simply drag the text to the side of the image, and it automatically adjusts. Additionally, I can adjust the gap between them to make the image smaller or larger. : ObsidianMD (reddit.com)](https://www.reddit.com/r/ObsidianMD/comments/15b1r4e/how_can_i_place_an_image_and_text_side_by_side_in/))
 
