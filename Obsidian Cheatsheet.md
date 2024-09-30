@@ -1857,7 +1857,7 @@ You must use the specified fields of `date`, `intensity`, `content`, and `color`
 With the **heatmap_custom_styling.css** enabled copy this code to a note:
 
 ```javascript
-dv.span("** Notes Addded 📝**")
+dv.span("** Papers Read 📝**")
 const calendarData = {
     year: 2023,  // (optional) defaults to current year
     colors: {    // first entry is considered default if supplied
@@ -1895,26 +1895,27 @@ const getYear = (date)=>{
 	return moment(date.toString()).format(dateformat);
 }
 
+
+
 //DataviewJS loop
-let groups = dv.pages("#paperitem").where(p => p.status === "#paper/status/read").groupBy(p => p.date_read);
+let groups = dv.pages("#paperitem").where(p => p.status === "paper/status/read").groupBy(p => p.date_read);
 let max = Math.max.apply(Math, groups.map(function(o) { return o.rows.length; })); // calculates the maximum number of notes on a single day
 
 
 for (let group of groups) 
 {
-	if (group.key) {
-	
+	if (calendarData.year == getYear(group.key)) {
 		let str = "";
 		str += "<br>";
 		for (let row of group.rows) {
 			str += `<br> - [[${row.file.name}]]`;
 		}
-	
+		
 		calendarData.entries.push({
 			date: convertDate(group.key), // (required) Format YYYY-MM-DD
 			intensity: (120 * group.rows.length / max),
 			// the line above normalizes the amount of notes throughout the heatmap
-			content: dv.span(`${group.rows.length} notes on ${convertDate(group.key)} ${str}`)
+			content: dv.span(`${group.rows.length} papers read on ${convertDate(group.key)} ${str}`)
 		})
 	}
 }
@@ -1947,7 +1948,14 @@ You should get a heatmap that looks like this:
 
 ![[heatmap_example.png]]
 
-## 23 Excalidraw
+#### 26.6.2 Filter by Time Range
+
+In the query add the time range:
+```
+for(let page of dv.pages('"daily notes"').where(p=>p.exercise && p.file.day.month == 1))
+```
+
+## 27 Excalidraw
 
 > [!tip]
 > excalidraw can be set to conform to light or dark theme by changing the settings:
@@ -2025,26 +2033,23 @@ Below is an example template for import items from Zotero:
 
 ```markdown
 ---
-title: {{title|replace(":", " –")|replace("^", "")|replace("%", "")}}
-tag: [paperitem]
+title: {{title|replace(":", " –")}}
+tags: [paperitem, {% for t in tags %}{{t.tag|replace(" ", "-")}}{% if not loop.last %}, {% endif %}{% endfor %}]
 alias: {{citekey}}
+DOI: {{DOI}}
+Ref_Links: 
+Status: {% set regExp = r/Status:\s(.*)(?=[\n]*)/g %}{% set status = regExp.exec(extra) %}{{status[1].replace("#", "")}}
+Priority: {% set regExp = r/Priority:\s(.*)(?=[\n]*)/g %}{% set priority = regExp.exec(extra) %}{{priority[1]}}
+Importance: {% set regExp = r/Importance:\s(.*)(?=[\n]*)/g %}{% set importance = regExp.exec(extra) %}{{importance[1]}}
+Authors: [{{authors}}{{directors}}]
+Year: {{date | format("YYYY")}}
+Date_Added: {{dateAdded| format("YYYY-MM-DD") }}
+Date_Read: {% set regExp = r/DateRead:\s(.*)(?=[\n]*)/g %}{% set dateread = regExp.exec(extra) %}{{dateread[1]}}
+Link: {{url}}
+Zotero: {% set regExp = r/\(([^)]+)\)/g %}{% set zotero = regExp.exec(pdfZoteroLink) %}{{zotero[1]}}
 ---
 
-[[MOC - Papers]]
-
-**Authors**:: {{authors}}{{directors}}
-**Year**:: {{date | format("YYYY")}}
-**Date_Added**:: {{dateAdded| format("YYYY-MM-DD") }}
-**Date_Read**:: {% set regExp = r/Dateread:\s(.*)(?=[\n]*)/g %}{% set dateread = regExp.exec(extra) %}{{dateread[1]}}
-**Link**:: {{url}}
-**DOI**:: {{DOI}}
-**Ref_Links**:: 
-**Status**::  {% set regExp = r/Status:\s(.*)(?=[\n]*)/g %}{% set status = regExp.exec(extra) %}{{status[1]}}
-**Priority**:: {% set regExp = r/Priority:\s(.*)(?=[\n]*)/g %}{% set priority = regExp.exec(extra) %}{{priority[1]}}
-**Importance**:: {% set regExp = r/Importance:\s(.*)(?=[\n]*)/g %}{% set importance = regExp.exec(extra) %}{{importance[1]}}
-**Tags**:: {% for t in tags %}#{{t.tag|replace(" ", "-")}}{% if not loop.last %}, {% endif %}{% endfor %}
-**Zotero**:: {{pdfZoteroLink}}
-
+[[Papers Management Centre]]
 ## Abstract
 
 {{abstractNote}}
