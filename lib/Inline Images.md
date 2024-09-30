@@ -1,5 +1,5 @@
 ---
-cssClass: no-caption
+cssClasses: no-caption, hide-properties
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam cursus sapien ut est rutrum pretium. Integer vitae bibendum odio, quis varius mi. Nunc consectetur laoreet arcu, sed bibendum diam iaculis sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget dui vel lorem blandit condimentum sed sed quam. Nam laoreet nibh turpis, at blandit mauris semper ut. Sed a varius leo. Suspendisse potenti. Nam viverra tempor odio, id fermentum tortor laoreet ut. Fusce suscipit pellentesque pellentesque. Sed non dui non ex pellentesque egestas ut vitae augue.
