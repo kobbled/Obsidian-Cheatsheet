@@ -2227,7 +2227,15 @@ conda env create -f wfrt.yml
 * [Obsidian Hub Showcases](https://publish.obsidian.md/hub/03+-+Showcases+%26+Templates/%F0%9F%97%82%EF%B8%8F+03+-+Showcases+%26+Templates)
 * [Linking Your Thinking](https://www.linkingyourthinking.com/)
 
-### 27.1 Obsidian Publish References
+### 32.1 Tutorials
+
+* [Obsidian Meeting Notes Template & Workflow - Prakash Joshi Pax](https://prakashjoshipax.com/obsidian-meeting-notes-template/)
+* [Creating a Life OS Dashboard Setup in Obsidian for 2024(Part 1) - Prakash Joshi Pax](https://prakashjoshipax.com/obsidian-dashboard-setup/)
+* [Cards - Minimal Documentation](https://minimal.guide/cards)
+* [Create Cards (Movie Database)](https://minimal.guide/Guides/Create+a+movie+database)
+* [Tutorial: How to Create a Bookshelf](https://thebuccaneersbounty.wordpress.com/2021/08/21/tutorial-how-to-create-a-bookshelf-in-obsidian/)
+
+### 32.2 Obsidian Publish References
 https://obsidian.md/publish
 https://workinginpublic.one/
 
