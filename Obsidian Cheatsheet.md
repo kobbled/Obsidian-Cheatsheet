@@ -1135,7 +1135,28 @@ GROUP BY tags
 ### 19.8 Annotations/Metadata
 (ref: https://blacksmithgu.github.io/obsidian-dataview/data-annotation/)
 
-## 20 Javascript/DataviewJS
+### 20.9 Contains Filter
+
+Filtering is done with `WHERE contains(<column>, <filter>)`
+
+For links use *\[\[Link\]\]* format without quotations
+
+```sql
+ TABLE rating, ratingImdb, year, genre
+ FROM "Personal/Media/libraries/movies"
+ WHERE contains(genre, [[Animation]])
+```
+
+## 21 Database Folder
+
+### 21.1 Filtering
+
+To filter out the database: 
+1) press `CTRL+F` to open. 
+2) Select the checkbox item on the right. 
+3) Select *Add Filter*, and create the filter.
+4) Make sure the Filter icon is not checked off.
+
 
 (ref: https://notes.nicolevanderhoeven.com/Dataviewjs)
 (Code References: https://blacksmithgu.github.io/obsidian-dataview/api/code-reference/)
@@ -1318,7 +1339,24 @@ dv.span(`
 
 ```
 
-### 20.7 Make a quick MOC by grouping frontmatter fields
+### 22.7 Make a quick MOC by grouping frontmatter fields
+
+This query will gather all of the notes with the frontmatter query *'science-note'*, and group them by the name/tag assigned to the *'category'* field:
+
+```
+---
+type: science-note
+created: 2023-03-10
+category: physics
+links: 
+tags: 
+- physics
+
+---
+[[Science MOC]]
+
+```
+
 
 ```javascript
 for (let group of dv.pages('').filter(p => p.type == 'science-note').groupBy(p => p.category)) {
@@ -1327,25 +1365,25 @@ for (let group of dv.pages('').filter(p => p.type == 'science-note').groupBy(p =
 }
 ```
 
-This query will gather all of the notes with the frontmatter query *'science-note'*, and group them by the name/tag assigned to the *'category'* field:
-
+### 22.8 Querying multiple tags in frontmatter
 ```
 ---
 type: science-note
 created: 2023-03-10
-
----
-[[Science MOC]]
-
-
----
-**Tags**:: 
-**Category**:: #physics
-**Links**:: 
-
+category: physics
+links: 
+tags: 
+  - tag1
+  - tag2
 ---
 ```
 
+```javascript
+for (let group of dv.pages("#tag1&#tag2").groupBy(p => p.category)) {
+  dv.header(3, group.key);
+  dv.list(group.rows.file.link);
+}
+```
 
 ### 20.8 Get Relative Links
 
@@ -1365,6 +1403,9 @@ The require statement will import from the vaults root folder + "/scripts/getRel
 
 >[!note]
 > You could just specify going from the vault root directory by leaving the 1st arguement as a blank string. `getRelFileLink("", 0, alias, path/to/file.pdf)`
+
+>[!note]
+> To specify an absolute path use `getRelFileLink("", -1, alias, C:/Users/username/AppData)`
 
 >[!info]
 > The same can be done with **Templater**, found [[#21.3 Get Relative Links|here]].
@@ -1396,6 +1437,29 @@ dv.table(['Note', 'Contents'], rows)
 ```
 
 Any Regex can be replaced in this query, keeping in mind the `match` index, and what you want to retrieve. 
+
+>[!note]
+> For a single file use:
+
+```dataviewjs
+// This regex will find the contents of a specifically formatted callout
+const regex = />\[!todo\]\n>([\s\S]*?)(?=>\s*\n|>\[|$)/g
+
+const rows = []
+
+const page = dv.pages().where(page => page.file.name == "The Elder Scrolls V Skyrim VR")
+const file = app.vault.getAbstractFileByPath(page[0].file.path)
+
+// Read the file contents
+const contents = await app.vault.read(file)
+// Extract the summary via regex
+for (const callout of contents.match(new RegExp(regex, 'sg')) || []) {
+	const match = callout.match(new RegExp(regex, 's')) 
+	rows.push([page.file.link, match[0]])
+}
+
+dv.list(rows)
+```
 
 
 ## 21 Templater
