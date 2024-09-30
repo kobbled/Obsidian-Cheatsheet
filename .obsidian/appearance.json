@@ -3,7 +3,9 @@
   "baseFontSize": 15,
   "enabledCssSnippets": [
     "mermaid",
-    "images"
+    "images",
+    "properties"
   ],
-  "translucency": false
+  "translucency": false,
+  "theme": "obsidian"
 }

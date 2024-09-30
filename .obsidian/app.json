@@ -1,6 +1,6 @@
 {
   "legacyEditor": false,
-  "livePreview": false,
+  "livePreview": true,
   "defaultViewMode": "preview",
   "pdfExportSettings": {
     "includeName": true,
