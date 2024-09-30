@@ -21,6 +21,7 @@ number headings: first-level 1, max 6, _.1.1
 - [Charts View](https://github.com/caronchen/obsidian-chartsview-plugin)
 - [Citations](https://github.com/hans/obsidian-citation-plugin)
 - Contextual Typography   ->  (Useful with Minimal Theme Settings for using img-grid)
+- [Commander](https://github.com/phibr0/obsidian-commander) **ESSENTIAL** -> Add quick UI buttons
 - [Dataview](https://github.com/blacksmithgu/obsidian-dataview)   **ESSENTIAL** -> Data querying, and databasing, and data visualizer
 - dictionary
 - [Dynamic Table of Contents](https://github.com/Aidurber/obsidian-plugin-dynamic-toc)
@@ -43,6 +44,8 @@ number headings: first-level 1, max 6, _.1.1
 - Link Favicons
 -  [Math+](https://github.com/ocapraro/obsidian-math-plus) 
 - [Mathpad](https://github.com/Canna71/obsidian-mathpad) **ESSENTIAL** -> jupytr like support for math and plotting. uses [nerdamer](https://nerdamer.com/documentation.html)
+- [Metadata Menu](https://github.com/mdelobelle/metadatamenu) Change metadata from a menu (needed for Mobile)
+- [Meta Bind](https://github.com/mProjectsCode/obsidian-meta-bind-plugin) Add interactive widgets to notes that control meta data
 - [Minimal Theme Settings](https://minimal.guide/Plugins/Minimal+Theme+Settings)
 - [Modular CSS Layout](https://github.com/efemkay/obsidian-modular-css-layout) **ESSENTIAL** For multi-column/text justifying/cards/and image grids
 - [Numerals](https://github.com/gtg922r/obsidian-numerals)
@@ -1525,9 +1528,58 @@ where the 2nd argument specifies how many parent directories you need to go back
 > [!warning]
 > Currently Templater does not support generating links. So this will not work. Use the [[#20.8 Get Relative Links|Dataview method]] for now.
 
-## 22 Applets
+### 23.4 Select List
 
-### 22.1 Tasks
+A Select list can be called with this:
+
+```javascript
+  let usage = await tp.system.suggester(["Never", "Infrequently", "Occasionally", "Frequently", "Everyday"], ["0", "1", "2", "3", "4"], false, "Usage")
+```
+
+### 23.5 Multi-Select List
+
+Add the `multiSelector.js` scripts from the *scripts* folder. Move them into your vault under a *scripts* folder you are using for Templater. It can be envoked with:
+
+```javascript
+let os = await tp.user.multiSuggester(tp, ["windows", "mac", "linux"], ["\"windows\"", "\"mac\"", "\"linux\""], false, "Operating System")
+```
+
+
+
+
+## 24 Quick Add
+
+> [!tip]
+> Example scripts for Quick Add can be found [Here](https://github.com/chhoumann/quickadd/tree/master/docs/docs/Examples).
+
+### 24.1 Creating New Macro
+
+![[quickAdd_new_macro.png]]
+
+![[quickAdd_add_macro.excalidraw|400]]
+![[quickAdd_condifure_macro.png|400]]
+
+- The Javascript script must already be present in the preselected folder to keeps scripts
+![[quickAdd_add_script.png|400]]
+
+>[!important]
+>Make Sure the Template comes after the Script
+
+![[quickAdd_add_template.png|400]]
+
+![[quickAdd_template_options.png|400]]
+
+![[quickAdd_add_macro_command.png]]
+![[quickAdd_set_macro_command.png]]
+![[quickAdd_set_macro.png]]
+
+## 25 Metabind Menu
+
+![[metabind_menu_make_folder_with_notes_of_tags_to_track.png]]
+![[metabind_menu_link_folder_of_tags.png]]
+![[metabind_menu_make_sure_note_is_tracked.png|500]]
+![[matabind_menu_add_properties_to_track.png|500]]
+
 
 **Refs**: 
 - https://kevinquinn.fun/blog/get-started-with-obsidian-periodic-notes-and-templater/ (NEED TO READ)
@@ -1609,7 +1661,10 @@ Custom css can be used to sytle the button by giving it a css class `.button-new
 > [!note]
 > See _Obsidian-Cheatsheet/css snippets/buttons.css_ for the css for formatting a **daily**, and **weekly** note to be used in a header or banner.
 
-#### 22.2.1 Next/Previous Buttons
+#### 26.2.1 Commander Buttons
+
+Buttons can also be added to the UI of obsidian through the [Commander](https://github.com/phibr0/obsidian-commander)  plugin. Once installed a *plus* icon will be available on the each UI bar to add commands.
+
 
 Next/Previous buttons on the bottom of a page can be done with the following html:
 
