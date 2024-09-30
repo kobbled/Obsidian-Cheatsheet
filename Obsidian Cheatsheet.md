@@ -33,7 +33,9 @@ number headings: first-level 1, max 6, _.1.1
 - [Highlightr](https://github.com/chetachiezikeuzor/Highlightr-Plugin)
 - Hotkeys++
 - [Icon Folder](https://github.com/FlorianWoelki/obsidian-icon-folder)
-- [Image Captions](https://github.com/alangrainger/obsidian-image-captions)
+- [Image Captions](https://github.com/alangrainger/obsidian-image-captions) - **Currently Broken**
+- [Image Converter](https://github.com/xRyul/obsidian-image-converter) - Resize, and convert image types/sizes
+- [sissilab/obsidian-image-toolkit](https://github.com/sissilab/obsidian-image-toolkit) - Manipulate Images
 - [Issue Tracker](https://github.com/ljavuras/obsidian-power-tools/tree/main/Issue%20Tracker)
 - [Journey](https://github.com/akaalias/obsidian-journey-plugin)
 - [Kanban](https://github.com/mgmeyers/obsidian-kanban)
@@ -315,9 +317,19 @@ Now when you scroll the view pane will keep in sync with the edit pane
 | Templater: Create Note from Template         | Initialize note from template                                            |
 | Tempalter: Replace Templates in current file | Update note that was created from a template                                                                          |
 
-## 15 Images
+## 16 Images
 
-### 15.1 Resize Images
+### 16.1 Image Plugins
+
+Currently am using [xRyul/obsidian-image-converter](https://github.com/xryul/obsidian-image-converter), and [sissilab/obsidian-image-toolkit](https://github.com/sissilab/obsidian-image-toolkit)
+
+In *Image Toolkit* settings scroll to the bottom and Set Hotkey for triggering viewing the image
+
+>[!important]
+> Deselect Image Zoom by going to  `Style Settings` settings, goto `Modular CSS Layout - Gallery Cards` and deselecting `Enable Image Zoom via CSS`
+>[!important]
+>In `Style Settings->Minimal->Images` Click `Disable image zoom`
+### 16.2 Resize Images
 
 > [!important] 
 
@@ -327,7 +339,9 @@ Add width in pixels after image name:
 ![[image.png|500]]
 ```
 
-### 15.2 Image Size Codes
+>[!tip]
+> Use [xRyul/obsidian-image-converter](https://github.com/xryul/obsidian-image-converter) to do this dynamically
+### 16.3 Image Size Codes
 (ref: https://forum.obsidian.md/t/resize-image/6517/17)
 To set standard images sizes use this css:
 
@@ -345,7 +359,7 @@ and show images like this:
 ![|lg](image.png)
 ```
 
-### 15.3 Centering Images
+### 16.4 Centering Images
 
 Centering images can be done at a page level, or at an image level. Copy the `css snippets/image.css` file included in this repo to your own snippets folder, and enable the file. 
 
@@ -366,13 +380,13 @@ or
 
 example:
 
-![[star-wars-maul.gif|center|256]]
+![[star-wars-maul.gif|256]]
 
 >[!info]
 > More info can be found in [[#17.2.1 Image Centering]]
 
 
-### 15.4 Image slideshow
+### 16.5 Image slideshow
 
 Currently there is no internal support for image carousels/slideshows. You will have to use pure **HTML**/**CSS** to get this to work.
 
@@ -415,7 +429,7 @@ And change the image by changing `<img src"{image-location}">`
 
 The CSS can be found in *Obsidian-Cheatsheet/css snippets/slideshow.css* of this repository.
 
-### 15.5 Image Grids
+### 16.6 Image Grids
 
 Image grids can be made with the [Modular CSS Layout](https://github.com/efemkay/obsidian-modular-css-layout) css package. making an image grid can be done by grouping the images you want in the grid together, and seperating out the ones you want on the next row by a space:
 ```
@@ -439,7 +453,10 @@ cssClass: image-gallery
 >[!note]
 > In order for a single iamge to take up the full width of the page you may have to go to the `Style Settings` settings, goto `Modular CSS Layout - Gallery Cards`, and increase _Max Height for Images_ to **400px**
 
-### 15.6 Banners
+>[!important]
+> Deselect Image Zoom by going to  `Style Settings` settings, goto `Modular CSS Layout - Gallery Cards` and deselecting `Enable Image Zoom via CSS`
+
+### 16.7 Banners
 
 When using banners with **image-grids**, or **modular-css** you will have to override the image CSS with:
 
@@ -450,7 +467,10 @@ When using banners with **image-grids**, or **modular-css** you will have to ove
 }
 ```
 
-### 15.7 Image Captions
+### 16.8 Image Captions
+
+>[!danger]
+> This is currently broken
 
 Install the [Image Captions](https://github.com/alangrainger/obsidian-image-captions) plugin. Captions are put into images like:
 
