@@ -291,8 +291,62 @@ You can link to the **Specific page number** of the pdf with appending `#page=x`
 [[mydoc.pdf#page=115]]
 ```
 
-## 13 Tips
-### 13.1 how to put the graphs in the sidebar
+## 13 Sync
+
+### 13.1 Sync vault settings (i.e. community plugins and themes)
+
+(Ref: [Select files and settings to sync - Obsidian Help](https://help.obsidian.md/Obsidian+Sync/Select+files+and+settings+to+sync))
+
+**Primary device**
+
+The primary device is your source-of-truth device. It can also mean the device you make the new change on, that you wish to sync across your other devices.
+
+1.  Access **Settings** → **Sync**.
+2.  Activate the desired settings under **Vault configuration sync**.
+3.  Restart Obsidian. On mobile or tablet, this may require a force quit.
+4.  Allow time for the settings to synchronize with your remote vault.
+
+**Secondary device(s)**
+
+The secondary device is your other devices. It can also mean the devices you wish to receive an updated change on.
+
+1.  Navigate to **Settings** → **Sync**.
+2.  Enable the desired settings under **Vault configuration sync**.
+3.  Wait for the changes to be downloaded from your remote vault.
+4.  Restart the application to ensure that your synchronized settings take effect. On mobile or tablet, this may require a force quit.
+
+#### 13.1.1 Select file types to sync
+
+1.  Open **Settings → Sync**.
+2.  Under **Selective sync**, enable the file types you want to sync.
+3.  Restart the application to ensure that your new settings take effect. On mobile or tablet, this may require a force quit.
+
+#### 13.1.2 Exclude folder from being synced
+
+By default, Obsidian syncs all files and folders in your vault. If you don't want Obsidian to sync a certain folder, you can exclude it.
+
+1.  Open **Settings → Sync**.
+2.  Under **Selective sync**, next to **Excluded folders**, select **Manage**.
+3.  Select the checkbox to the left of the folder you want to exclude.
+4.  Select **Done**.
+
+#### 13.1.3 Settings profiles
+
+Obsidian Sync can sync multiple [configuration folders](https://help.obsidian.md/Files+and+folders/Configuration+folder) to the same remote vault. You can use this to create different profiles, for example, one for mobile devices and another for your laptop.
+
+
+Create a settings profile
+
+To set your settings folder:
+
+1.  Open **Settings → General**.
+2.  In **Override config folder**, type the name of your profile, starting with a period (`.`). For example, `.obsidian-mobile`.
+3.  Relaunch Obsidian to have the changes take effect.
+
+>[!Note]
+> Changing your settings profile will require you to adjust your sync settings again. You will also need to redownload plugins and themes.
+> You can prevent this by making a copy of your `.obsidian` folder, and renaming it to your new config folder name (`.obsidian-mobile`) before making the changes.
+
 
 ![[Obsidian-mini-graph.gif]]
 
