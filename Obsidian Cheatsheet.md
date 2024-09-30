@@ -49,6 +49,7 @@ number headings: first-level 1, max 6, _.1.1
 - [Minimal Theme Settings](https://minimal.guide/Plugins/Minimal+Theme+Settings)
 - [Modular CSS Layout](https://github.com/efemkay/obsidian-modular-css-layout) **ESSENTIAL** For multi-column/text justifying/cards/and image grids
 - [Numerals](https://github.com/gtg922r/obsidian-numerals)
+- [Omnivore](https://github.com/omnivore-app/obsidian-omnivore)
 - Open Vault in VS Code
 - [Outliner](https://github.com/vslinko/obsidian-outliner)
 - Ozan's image in editor plugin
@@ -2130,7 +2131,81 @@ Then select _multiple sources_. From here you can select multiple papers, or sel
 ![[zotero-classic-mode-multiple-sources.PNG| center| 800]]
 ![[zotero-classic-mode-select-papers.PNG| center| 800]]
 
-## 26 Cross Compile
+## 30 Omnivore
+
+### 30.1 Omnivore Templates
+#### 30.1.1 Capture Highlights Only with varying Color Levels
+
+```
+---
+id: {{{id}}}
+title: >
+  {{{title}}}
+{{#author}}
+author: >
+  {{{author}}}
+{{/author}}
+{{#labels.length}}
+tags:
+{{#labels}} - {{{name}}}
+{{/labels}}
+{{/labels.length}}
+date_saved: {{{dateSaved}}}
+{{#datePublished}}
+date_published: {{{datePublished}}}
+{{/datePublished}}
+---
+
+[Read on Omnivore]({{{omnivoreUrl}}})
+[Read Original]({{{originalUrl}}})
+
+{{#highlights.length}}
+## Highlights
+
+{{#highlights}}
+>[!{{color}}]+ [⤴️]({{{highlightUrl}}})
+> {{{text}}} {{#labels}} #{{name}} {{/labels}}
+{{#note}}
+
+{{{note}}}
+{{/note}}
+
+{{/highlights}}
+{{/highlights.length}}
+```
+
+#### 30.1.2 Capture full article highlighting lines
+
+```
+---
+id: {{{id}}}
+title: >
+  {{{title}}}
+{{#author}}
+author: >
+  {{{author}}}
+{{/author}}
+{{#labels.length}}
+tags:
+{{#labels}} - {{{name}}}
+{{/labels}}
+{{/labels.length}}
+date_saved: {{{dateSaved}}}
+{{#datePublished}}
+date_published: {{{datePublished}}}
+{{/datePublished}}
+---
+
+[Read on Omnivore]({{{omnivoreUrl}}})
+[Read Original]({{{originalUrl}}})
+
+## Content
+{{{ content }}}
+```
+
+
+
+## 31 Cross Compile
 
 ### 26.1 Sphinx
 
