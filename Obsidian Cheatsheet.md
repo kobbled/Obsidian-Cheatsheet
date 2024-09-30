@@ -9,6 +9,10 @@ number headings: first-level 1, max 6, _.1.1
 > [!info] 
 > If you have any helpful additions to this document, please contribute!
 
+>[!info]
+> Check [Obsidian Roadmap](https://obsidian.md/roadmap/) for what obsidian will add in the future
+
+
 [[__TOC__]]
 
 ## 1 Plugins
@@ -24,11 +28,13 @@ number headings: first-level 1, max 6, _.1.1
 - [Commander](https://github.com/phibr0/obsidian-commander) **ESSENTIAL** -> Add quick UI buttons
 - [Dataview](https://github.com/blacksmithgu/obsidian-dataview)   **ESSENTIAL** -> Data querying, and databasing, and data visualizer
 - dictionary
+- [DB Folder)](https://github.com/RafaelGB/obsidian-db-folder)**ESSENTIAL** -> Simplified Databasing Plugin
 - [Dynamic Table of Contents](https://github.com/Aidurber/obsidian-plugin-dynamic-toc)
 - Editor Syntax Highlight
 - [Excalibrain](https://github.com/zsviczian/excalibrain)
 - [Excalidraw](https://github.com/zsviczian/obsidian-excalidraw-plugin)          **ESSENTIAL**
 - [Excel to Markdown Table](https://github.com/ganesshkumar/obsidian-excel-to-markdown-table)
+-  [Frontmatter Modified Date](https://github.com/alangrainger/obsidian-frontmatter-modified-date) -> Automatically update modified date in properties
 - [Functionplot](https://github.com/leonhma/obsidian-functionplot)
 - [Heatmap Calendar](https://github.com/Richardsl/heatmap-calendar-obsidian)
 - [Highlightr](https://github.com/chetachiezikeuzor/Highlightr-Plugin)
@@ -42,6 +48,7 @@ number headings: first-level 1, max 6, _.1.1
 - [Kanban](https://github.com/mgmeyers/obsidian-kanban)
 - Kindle Highlights
 - Link Favicons
+- [Leaflet](https://github.com/javalent/obsidian-leaflet) - Map Making
 -  [Math+](https://github.com/ocapraro/obsidian-math-plus) 
 - [Mathpad](https://github.com/Canna71/obsidian-mathpad) **ESSENTIAL** -> jupytr like support for math and plotting. uses [nerdamer](https://nerdamer.com/documentation.html)
 - [Metadata Menu](https://github.com/mdelobelle/metadatamenu) Change metadata from a menu (needed for Mobile)
@@ -49,6 +56,7 @@ number headings: first-level 1, max 6, _.1.1
 - [Minimal Theme Settings](https://minimal.guide/Plugins/Minimal+Theme+Settings)
 - [Modular CSS Layout](https://github.com/efemkay/obsidian-modular-css-layout) **ESSENTIAL** For multi-column/text justifying/cards/and image grids
 - [Numerals](https://github.com/gtg922r/obsidian-numerals)
+- [Obsidian Arrows](https://github.com/xefyrdev/obsidian-arrows)
 - [Omnivore](https://github.com/omnivore-app/obsidian-omnivore)
 - Open Vault in VS Code
 - [Outliner](https://github.com/vslinko/obsidian-outliner)
@@ -64,6 +72,7 @@ number headings: first-level 1, max 6, _.1.1
 - [Sort & Permute lines](https://github.com/Vinzent03/obsidian-sort-and-permute-lines)
 - [Spaced-Repetition: Flashcard Plugin](https://github.com/st3v3nmw/obsidian-spaced-repetition)
 - [Style Settings](https://github.com/mgmeyers/obsidian-style-settings)  **ESSENTIAL**
+- [Tag Many](https://github.com/joshua-martius/tagmany)
 - [Tag Wrangler](https://github.com/pjeby/tag-wrangler)
 - [Tasks](https://github.com/obsidian-tasks-group/obsidian-tasks)
 - [Templater](https://github.com/SilentVoid13/Templater)           **ESSENTIAL**
@@ -76,6 +85,12 @@ number headings: first-level 1, max 6, _.1.1
 - [Text Generator](https://github.com/nhaouari/obsidian-textgenerator-plugin)
 - [Smart Connections](https://github.com/brianpetro/obsidian-smart-connections)
 - [AI Assistant in QuickAdd](https://quickadd.obsidian.guide/docs/AIAssistant)
+
+### 1.2 Music
+
+* [egradman/scales-chords (github.com)](https://github.com/egradman/scales-chords)
+* [abcjs-music/obsidian-plugin-abcjs: Plugin which renders music notations from code blocks (github.com)](https://github.com/abcjs-music/obsidian-plugin-abcjs)
+* 
 
 ## 2 Themes
 
