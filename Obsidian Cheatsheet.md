@@ -757,7 +757,17 @@ Then add that family to the classes you would like to use it in:
 
 #### 18.2.1 Image Centering
 
-##### 18.2.1.1 Page Level
+(ref: [ElsaTam/Obsidian-Stuff](https://github.com/ElsaTam/Obsidian-Stuff/tree/main/snippets/callouts))
+
+Install the CSS snippet from repo. Check the [documentation](https://github.com/ElsaTam/Obsidian-Stuff/tree/main/snippets/callouts) for usage. 
+
+![](https://github.com/ElsaTam/Obsidian-Stuff/raw/main/snippets/callouts/screenshots/callouts-banner.png)
+
+### 18.3 Images
+
+#### 18.3.1 Image Centering
+
+##### 18.3.1.1 Page Level
 Centering can be done at the page level, centering all images on the page with the following:
 
 Enter this CSS into a `.css` file in the code snippets folder:
