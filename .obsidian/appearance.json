@@ -4,7 +4,8 @@
   "enabledCssSnippets": [
     "mermaid",
     "images",
-    "properties"
+    "properties",
+    "canvas-candy"
   ],
   "translucency": false,
   "theme": "obsidian"
