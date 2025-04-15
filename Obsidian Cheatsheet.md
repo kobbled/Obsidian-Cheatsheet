@@ -93,6 +93,11 @@ cssClasses: hide-properties
 * [abcjs-music/obsidian-plugin-abcjs: Plugin which renders music notations from code blocks (github.com)](https://github.com/abcjs-music/obsidian-plugin-abcjs)
 * 
 
+### 1.3 Canvas
+
+* [ddalexb/obsidian-simple-canvasearch](https://github.com/ddalexb/obsidian-simple-canvasearch) Search Canvas
+* [Developer-Mike/obsidian-advanced-canvas: ⚡ Supercharge your Obsidian.md canvas](https://github.com/Developer-Mike/obsidian-advanced-canvas)
+* [Canvas Candy - TfT Hacker](https://tfthacker.com/canvas-candy)
 ## 2 Themes
 
 * [Things](https://github.com/colineckert/obsidian-things)
@@ -1031,6 +1036,29 @@ body.background-settings-workplace-background-image {
 }
 ```
 
+
+### 18.11 Canvas Candy
+
+(ref: [Reimagining Obsidian’s Canvas: A Look at Canvas Candy | by TfTHacker | Obsidian Observer | Medium](https://medium.com/obsidian-observer/reimagining-obsidians-canvas-a-look-at-canvas-candy-ab1ffe8c8773))
+
+Docs Here -> [Quick Reference - TfT Hacker](https://tfthacker.com/cc-qr)
+
+>[!note]
+> canvas_candy.css can be found in the *css snippets* folder.
+
+>[!example]
+> [[Canvas Candy Test.canvas|Canvas Candy Test]]
+
+>[!important]
+> Some classes need to be added in as a callout. Check the css file and if it is in:
+> ```
+>  [data-callout^="cc-label-left"]
+> ```
+> It needs to be in a callout.
+> i.e:
+> ```
+>  > [!cc-label-left] Header Tile
+> ```
 
 ## 19 Update Settings
 

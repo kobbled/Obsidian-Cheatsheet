@@ -1,0 +1,250 @@
+{
+  "nodes": [
+    {
+      "id": "d664e6a85164d9e9",
+      "type": "group",
+      "styleAttributes": {},
+      "x": -680,
+      "y": 0,
+      "width": 1040,
+      "height": 1400,
+      "color": "4",
+      "label": "Rotate Group"
+    },
+    {
+      "id": "6159f74b675055a9",
+      "type": "group",
+      "styleAttributes": {},
+      "x": -680,
+      "y": -520,
+      "width": 1000,
+      "height": 400,
+      "color": "1",
+      "label": "Shape Group"
+    },
+    {
+      "id": "93be1f8f4c7df278",
+      "type": "text",
+      "text": "> [!cc-label-left] Header Tile\n\nNote contents\n",
+      "styleAttributes": {},
+      "x": -580,
+      "y": -840,
+      "width": 340,
+      "height": 180,
+      "color": "5"
+    },
+    {
+      "id": "f6238c14b96d5176",
+      "type": "text",
+      "text": "> [!cc-header] Header Tile\n\nNote contents\n\n>[!cc-footer] Footer",
+      "styleAttributes": {},
+      "x": -120,
+      "y": -840,
+      "width": 340,
+      "height": 180,
+      "color": "6"
+    },
+    {
+      "id": "4c773773ec97b6f2",
+      "type": "text",
+      "text": "---\ncssClass: cc-rotate-card-315 cc-rotate-text-270\n---\n# Title\n\nNote contents\n\n\n\n",
+      "styleAttributes": {},
+      "x": -560,
+      "y": 160,
+      "width": 340,
+      "height": 320
+    },
+    {
+      "id": "306930a8db9acce4",
+      "type": "text",
+      "text": "\n\n# Parallelegram",
+      "styleAttributes": {
+        "shape": "parallelogram",
+        "textAlign": "center"
+      },
+      "x": -385,
+      "y": -390,
+      "width": 330,
+      "height": 60,
+      "color": "5"
+    },
+    {
+      "id": "994dc8feb33ed140",
+      "type": "text",
+      "text": "---\ncssClass: cc-shape-parallelogram-left cc-card-gradient-90deg\n---\n# Candy Parallelegram\n",
+      "styleAttributes": {
+        "textAlign": "center"
+      },
+      "x": -385,
+      "y": -310,
+      "width": 330,
+      "height": 70,
+      "color": "5"
+    },
+    {
+      "id": "8050f47d9a0979a9",
+      "type": "file",
+      "file": "Images/rocket-launch.png",
+      "styleAttributes": {
+        "border": "invisible"
+      },
+      "x": -820,
+      "y": 40,
+      "width": 240,
+      "height": 240
+    },
+    {
+      "id": "c55400eb4480172e",
+      "type": "text",
+      "text": "---\ncssClass: cc-card-fill\n---\n# Circle Note",
+      "styleAttributes": {
+        "shape": "circle",
+        "textAlign": "center"
+      },
+      "x": -665,
+      "y": -440,
+      "width": 210,
+      "height": 200,
+      "color": "2"
+    },
+    {
+      "id": "f4aa8aa4c8b0bd1c",
+      "type": "text",
+      "text": "---\ncssClass: cc-card-fill cc-border-dropshadow\n---\n\n# Triangle",
+      "styleAttributes": {
+        "shape": "diamond",
+        "textAlign": "center"
+      },
+      "x": 30,
+      "y": -400,
+      "width": 260,
+      "height": 160,
+      "color": "6"
+    },
+    {
+      "id": "d9b100285844fe39",
+      "type": "text",
+      "text": "---\ncssClass: cc-rotate-card-270 cc-rotate-text-180\n---\n# Title\n\nNote contents\n\n\n\n",
+      "styleAttributes": {},
+      "x": -560,
+      "y": 560,
+      "width": 340,
+      "height": 320
+    },
+    {
+      "id": "7b7ee48c86df0bb0",
+      "type": "text",
+      "text": "---\ncssClass: cc-rotate-card-90 cc-rotate-text-180\n---\n# Title\n\nNote contents\n\n\n\n",
+      "styleAttributes": {},
+      "x": -140,
+      "y": 560,
+      "width": 340,
+      "height": 320
+    },
+    {
+      "id": "51ac443bfb11852f",
+      "type": "text",
+      "text": "---\ncssClass: cc-rotate-card-135 cc-rotate-text-270\n---\n# Title\n\nNote contents\n\n\n\n",
+      "styleAttributes": {},
+      "x": -100,
+      "y": 960,
+      "width": 340,
+      "height": 320
+    },
+    {
+      "id": "0ff4241f21dada1c",
+      "type": "text",
+      "text": "---\ncssClass: cc-rotate-card-315 cc-rotate-text-180\n---\n# Title\n\nNote contents\n\n\n\n",
+      "styleAttributes": {},
+      "x": -580,
+      "y": 960,
+      "width": 340,
+      "height": 320
+    },
+    {
+      "id": "48d11b86510e519a",
+      "type": "text",
+      "text": "---\ncssClass: cc-rotate-card-45 cc-rotate-text-90\n---\n# Title\n\nNote contents\n\n\n\n",
+      "styleAttributes": {},
+      "x": -100,
+      "y": 160,
+      "width": 340,
+      "height": 320
+    }
+  ],
+  "edges": [
+    {
+      "id": "69180e33465d35f1",
+      "styleAttributes": {},
+      "fromNode": "48d11b86510e519a",
+      "fromSide": "top",
+      "toNode": "4c773773ec97b6f2",
+      "toSide": "top"
+    },
+    {
+      "id": "0dd14d4f29d43463",
+      "styleAttributes": {},
+      "fromNode": "4c773773ec97b6f2",
+      "fromSide": "left",
+      "toNode": "0ff4241f21dada1c",
+      "toSide": "left"
+    },
+    {
+      "id": "e495e14240d04ea2",
+      "styleAttributes": {},
+      "fromNode": "48d11b86510e519a",
+      "fromSide": "right",
+      "toNode": "51ac443bfb11852f",
+      "toSide": "right"
+    },
+    {
+      "id": "ac7b3da94d59d1de",
+      "styleAttributes": {},
+      "fromNode": "d9b100285844fe39",
+      "fromSide": "right",
+      "toNode": "7b7ee48c86df0bb0",
+      "toSide": "left"
+    },
+    {
+      "id": "7235fa58daabdf8c",
+      "styleAttributes": {},
+      "fromNode": "0ff4241f21dada1c",
+      "fromSide": "bottom",
+      "toNode": "51ac443bfb11852f",
+      "toSide": "bottom"
+    },
+    {
+      "id": "0399b70006b1adba",
+      "styleAttributes": {},
+      "fromNode": "7b7ee48c86df0bb0",
+      "fromSide": "left",
+      "toNode": "d9b100285844fe39",
+      "toSide": "right"
+    },
+    {
+      "id": "d8b4f0da941888a9",
+      "styleAttributes": {},
+      "fromNode": "93be1f8f4c7df278",
+      "fromSide": "right",
+      "toNode": "f6238c14b96d5176",
+      "toSide": "left"
+    },
+    {
+      "id": "d16ae5e3e7ef0dba",
+      "styleAttributes": {},
+      "fromNode": "306930a8db9acce4",
+      "fromSide": "left",
+      "toNode": "994dc8feb33ed140",
+      "toSide": "left"
+    },
+    {
+      "id": "e96740b917c7fdaf",
+      "styleAttributes": {},
+      "fromNode": "994dc8feb33ed140",
+      "fromSide": "right",
+      "toNode": "306930a8db9acce4",
+      "toSide": "right"
+    }
+  ],
+  "metadata": {}
+}
