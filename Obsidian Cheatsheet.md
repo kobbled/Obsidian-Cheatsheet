@@ -1207,6 +1207,18 @@ For links use *\[\[Link\]\]* format without quotations
  WHERE contains(genre, [[Animation]])
 ```
 
+### 20.10 Sum/Group/Pivot Tables
+(ref: [Dataview sum of all prices in table - Help - Obsidian Forum](https://forum.obsidian.md/t/dataview-sum-of-all-prices-in-table/56297))
+
+add *sum*, and/or *map* functions with the `GROUP BY true` to create a pivot table from a dataview query.
+
+```dataview
+TABLE WITHOUT ID sum(map(rows, (r) => default(r.value, 0))) AS "Total"
+FROM #personal/finance
+WHERE Subfolder = "accounts"
+GROUP BY true
+```
+
 ## 21 Database Folder
 
 ### 21.1 Filtering
