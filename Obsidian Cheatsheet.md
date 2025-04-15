@@ -753,9 +753,9 @@ Then add that family to the classes you would like to use it in:
 >[!important]
 > Reload Obsidian to take effect of newly installed fonts!
 
-### 18.2 Images
+### 18.2 CSS Custom Community Snippets 
 
-#### 18.2.1 Image Centering
+#### 18.2.1 Obsidian-Stuff
 
 (ref: [ElsaTam/Obsidian-Stuff](https://github.com/ElsaTam/Obsidian-Stuff/tree/main/snippets/callouts))
 
@@ -786,7 +786,7 @@ cssclass: centerImg
 ---
 ```
 
-##### 18.2.1.2 Individual images
+##### 18.3.1.2 Individual images
 
 Add this css snippet:
 ```css
@@ -806,7 +806,7 @@ or
 ```
 
 
-#### 18.2.2 Image Enlarging
+#### 18.3.2 Image Enlarging
 
 >[!note] 
 > This can also be achieved with a better effect using the [the Modular CSS Layout](https://github.com/efemkay/obsidian-modular-css-layout)
@@ -827,7 +827,7 @@ or
 >[!Info]
 > Enlarging an image can be done when hovering over the image replacing `img:active` with `img:hover`
 
-#### 18.2.3 img-grid
+#### 18.3.3 img-grid
 
 >[!Note]
 >A more robust package for using image grids can be found in the section for [Modular CSS Layout](https://github.com/efemkay/obsidian-modular-css-layout)
@@ -891,7 +891,7 @@ cssclass: img-grid
 ---
 ```
 
-### 18.3 Light/Dark Mode
+### 18.4 Light/Dark Mode
 
 CSS between light and dark mode can be distinguished with `:is(.theme-light)`, or `:is(.theme-dark)`.
 
@@ -906,7 +906,7 @@ CSS between light and dark mode can be distinguished with `:is(.theme-light)`, o
 }
 ```
 
-### 18.4 Callouts
+### 18.5 Callouts
 
 (ref: https://gist.github.com/kepano/cde61ac7db1afd3f173a16157c627f93)
 
@@ -932,7 +932,7 @@ body {
 }
 ```
 
-### 18.5 Tables
+### 18.6 Tables
 
 <dt>Center tables</dt>
 
@@ -944,7 +944,7 @@ table:not(.table-view-table) {
 }
 ```
 
-### 18.6 Math
+### 18.7 Math
 
 <dt> Increase sie of Latex Math </dt>
 
@@ -954,7 +954,7 @@ mjx-math {
 }
 ```
 
-### 18.7 Mermaid
+### 18.8 Mermaid
 
 <dt>Get mermaid charts to not overflow</dt>
 
@@ -971,7 +971,7 @@ mjx-math {
 }
 ```
 
-### 18.8 Exporting to PDF
+### 18.9 Exporting to PDF
 
 (ref: https://github.com/phibr0/obsidian-latex-css)
 
@@ -988,7 +988,7 @@ To modify the page use:
 }
 ```
 
-### 18.9 Adding Backgrounds
+### 18.10 Adding Backgrounds
 
 (ref: https://beingpax.medium.com/how-to-customize-obsidian-with-a-translucent-background-image-db6f95e5c533)
 
@@ -1076,6 +1076,12 @@ Docs Here -> [Quick Reference - TfT Hacker](https://tfthacker.com/cc-qr)
 > ```
 >  > [!cc-label-left] Header Tile
 > ```
+
+#### 18.11.1 Adding CSS in Canvas Nodes
+
+>[!important]
+> You may have to change editing to *Source Mode* in order to be able to add the **---** metadata properties to the node.
+
 
 ## 19 Update Settings
 
