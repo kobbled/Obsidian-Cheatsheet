@@ -1261,7 +1261,7 @@ let pages = dv.pages(searchterm).where(p => p.img != undefined).sort(p => p.file
 dv.table(["File", "Image"],  
   pages   
     .map(p => [    
- 	   `<img class="myTableImg" src="${this.app.vault.adapter.basePath}/${p.img.path}">`,
+ 	   `<img class="myTableImg" src="/${p.img.path}">`,
 		p.file.link
   ])  
 );
@@ -1291,7 +1291,7 @@ The `.where` clause will further filter the results, and exclude pages where the
 The first column (or card row) is specified as an image by
 ```javascript
 .map(p => [ 
-	`<img class="myTableImg" src="${this.app.vault.adapter.basePath}/${p.img.path}">`
+	`<img class="myTableImg" src="/${p.img.path}">`
 	])
 ```
 
