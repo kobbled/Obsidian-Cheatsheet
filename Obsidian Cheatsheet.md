@@ -391,6 +391,11 @@ If you want a split pane (left/right) of the same note, one in edit mode, and on
 
 Now when you scroll the view pane will keep in sync with the edit pane
 
+### 14.3 Pdfs In Dark mode have color inverted
+
+![[pdf_darkmode_issue.png|300]]
+
+
 ## 15 Commands (CNTRL+P)
 
 | **Command**                                  | **Action**                                                               |
