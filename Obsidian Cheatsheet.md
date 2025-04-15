@@ -283,7 +283,7 @@ or in a different file like:
 > Any _SPACES_ in the file address **MUST** be replaces with `\%20`, or else it will say it cannot find the file
 
 > [!important]
-> **Goto section** [[#20.8 Get Relative Links]] for programmbly setting external file/folder links. This is useful    for cross platform support of external file/folder links.
+> **Goto section** [[#22.9 Get Relative Links]] for programmebly setting external file/folder links. This is useful    for cross platform support of external file/folder links.
 
 #### 12.3.1 Symbolic Linking (Windows)
 
@@ -1470,6 +1470,27 @@ The require statement will import from the vaults root folder + "/scripts/getRel
 
 >[!info]
 > The same can be done with **Templater**, found [[#21.3 Get Relative Links|here]].
+
+#### 22.9.1 Using a Path that changes from device to device
+
+Sometimes a folder will reside on a different filepath from computer to computer. For instance The drive for cloud storage might be `C:\`, or `D:\`. Obsidian does not have access to environment variables, so the best you can do is make a main note (i.e. *config.md*), and store the location of the cloud storage i.e.:
+
+```
+---
+dropbox: D:\Dropbox
+---
+```
+
+And then access that variables with:
+
+```javascript
+const dropbox = dv.page("config").dropbox;
+
+dv.paragraph(`${getRelFileLink(dv.current().file.path, -1, "Link Alias Name", `${dropbox}/Games/TTRPGs/Dragonbane/Dragonbane%20rpg%20rules.pdf`)}`);
+```
+
+>[!important]
+> When changing devices you will have to update *config.md* properties to properly link
 
 ### 22.10 Returning Regex from Notes
 
