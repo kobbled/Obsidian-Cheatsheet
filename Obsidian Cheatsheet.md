@@ -26,7 +26,9 @@ cssClasses: hide-properties
 - [Charts View](https://github.com/caronchen/obsidian-chartsview-plugin)
 - [Citations](https://github.com/hans/obsidian-citation-plugin)
 - Contextual Typography   ->  (Useful with Minimal Theme Settings for using img-grid)
+- [Code Emitter](https://github.com/mokeyish/obsidian-code-emitter) Run code blocks in Obsidian.
 - [Commander](https://github.com/phibr0/obsidian-commander) **ESSENTIAL** -> Add quick UI buttons
+- [Custom Frames](https://github.com/Ellpeck/ObsidianCustomFrames)embedded web iframes
 - [Dataview](https://github.com/blacksmithgu/obsidian-dataview)   **ESSENTIAL** -> Data querying, and databasing, and data visualizer
 - dictionary
 - [DB Folder)](https://github.com/RafaelGB/obsidian-db-folder)**ESSENTIAL** -> Simplified Databasing Plugin
@@ -38,7 +40,7 @@ cssClasses: hide-properties
 -  [Frontmatter Modified Date](https://github.com/alangrainger/obsidian-frontmatter-modified-date) -> Automatically update modified date in properties
 - [Functionplot](https://github.com/leonhma/obsidian-functionplot)
 - [Heatmap Calendar](https://github.com/Richardsl/heatmap-calendar-obsidian)
-- [Highlightr](https://github.com/chetachiezikeuzor/Highlightr-Plugin)
+- [Highlightr](https://github.com/chetachiezikeuzor/Highlightr-Plugin) **ESSENTIAL**
 - Hotkeys++
 - [Icon Folder](https://github.com/FlorianWoelki/obsidian-icon-folder)
 - [Image Captions](https://github.com/alangrainger/obsidian-image-captions) - **Currently Broken**
@@ -77,6 +79,7 @@ cssClasses: hide-properties
 - [Tag Wrangler](https://github.com/pjeby/tag-wrangler)
 - [Tasks](https://github.com/obsidian-tasks-group/obsidian-tasks)
 - [Templater](https://github.com/SilentVoid13/Templater)           **ESSENTIAL**
+- [TikZ](https://github.com/artisticat1/obsidian-tikzjax) Graphing
 - Tracker
 - Vantage  ->  Advanced search builder
 - [Zotero Integration](https://github.com/mgmeyers/obsidian-zotero-integration) **ESSENTIAL**
@@ -91,7 +94,6 @@ cssClasses: hide-properties
 
 * [egradman/scales-chords (github.com)](https://github.com/egradman/scales-chords)
 * [abcjs-music/obsidian-plugin-abcjs: Plugin which renders music notations from code blocks (github.com)](https://github.com/abcjs-music/obsidian-plugin-abcjs)
-* 
 
 ### 1.3 Canvas
 
