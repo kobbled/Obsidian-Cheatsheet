@@ -1726,6 +1726,8 @@ Custom css can be used to sytle the button by giving it a css class `.button-new
 
 Buttons can also be added to the UI of obsidian through the [Commander](https://github.com/phibr0/obsidian-commander)  plugin. Once installed a *plus* icon will be available on the each UI bar to add commands.
 
+![[commander_buttons_added.png]]
+
 #### 26.2.2 Next/Previous Buttons
 
 Next/Previous buttons on the bottom of a page can be done with the following html:
